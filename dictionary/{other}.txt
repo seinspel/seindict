@@ -1,0 +1,4 @@
+ÉABHA  AY1 V AX #@@{ "name": "female", "lang": "ga" }@@ Éabha McMahon
+ÓRLA  AO1 R L AX #@@{ "name": "female", "lang": "ga" }@@ Órlagh/Órla Fallon
+ÓRLAGH  AO1 R L AX #@@{ "name": "female", "lang": "ga" }@@ Órlagh/Órla Fallon
+ŠERBEDŽIJA  SH AXR B EH1 JH IY0 AX #@@{ "name": "family" }@@ Rade Šerbedžija/Sherbedgia
