@@ -1531,9 +1531,8 @@ BASEMENT  B EY1 S M AX N T
 BASEMENTS  B EY1 S M AX N T S
 BASENJI  B AX S EH1 N JH IY0
 BASER  B EY1 S AXR
-BASES(noun)  B EY1 S IH0 Z #@@{ "root": "BASE" }@@
-BASES(verb)  B EY1 S IH0 Z #@@{ "root": "BASE" }@@
-BASES(noun)  B EY1 S IY0 Z #@@{ "root": "BASIS" }@@
+BASES  B EY1 S IH0 Z #@@{ "root": "BASE" }@@
+BASES(2)  B EY1 S IY0 Z #@@{ "root": "BASIS" }@@
 BASEY  B EY1 S IY0
 BASFORD  B AE1 S F AXR D
 BASGALL  B AE1 S G AX L
@@ -1607,16 +1606,15 @@ BASQUE  B AE1 S K
 BASQUES  B AE1 S K S
 BASQUEZ  B AA0 S K EH1 Z
 BASRA  B AA1 S R AA0
-BASS(noun)  B EY1 S #@@{ "usage": "sound" }@@
-BASS(adj)  B EY1 S #@@{ "usage": "sound" }@@
-BASS(noun)  B AE1 S #@@{ "usage": "fish" }@@
-BASS'S(noun)  B EY1 S IH0 Z #@@{ "usage": "sound" }@@
-BASS'S(noun)  B AE1 S IH0 Z #@@{ "usage": "fish" }@@
+BASS  B EY1 S #@@{ "usage": "sound" }@@
+BASS(2)  B AE1 S #@@{ "usage": "fish" }@@
+BASS'S  B EY1 S IH0 Z #@@{ "usage": "sound" }@@
+BASS'S(2)  B AE1 S IH0 Z #@@{ "usage": "fish" }@@
 BASSA  B AE1 S AX
 BASSAM  B AE1 S AX M
 BASSE  B AE1 S
-BASSES(noun)  B EY1 S IH0 Z #@@{ "usage": "sound" }@@
-BASSES(noun)  B AE1 S IH0 Z #@@{ "usage": "fish" }@@
+BASSES  B EY1 S IH0 Z #@@{ "usage": "sound" }@@
+BASSES(2)  B AE1 S IH0 Z #@@{ "usage": "fish" }@@
 BASSET  B AE1 S IH0 T
 BASSETT  B AE1 S IH0 T
 BASSETTE  B AX S EH1 T
@@ -1687,8 +1685,8 @@ BATESVILLE  B EY1 T S V IH2 L
 BATEY  B EY1 T IY0
 BATH  B AE1 TH
 BATHE  B EY1 DH
-BATHED(verb@past)  B EY1 DH D #@@{ "root": "BATHE" }@@
-BATHED(verb@past)  B AE1 TH D #@@{ "root": "BATH" }@@
+BATHED  B EY1 DH D #@@{ "root": "BATHE" }@@
+BATHED(2)  B AE1 TH T #@@{ "root": "BATH" }@@
 BATHER  B EY1 DH AXR
 BATHERS  B EY1 DH AXR Z
 BATHES  B EY1 DH Z
@@ -6479,10 +6477,8 @@ BOVIN  B OW1 V IH0 N
 BOVINA  B OW0 V IY1 N AX
 BOVINE  B OW1 V AY2 N
 BOVINO  B OW0 V IY1 N OW0
-BOW(noun)  B OW1
-BOW(verb)  B OW1
-BOW(noun)  B AW1 #@@{ "usage": ["nautical", "bend", "debut"] }@@
-BOW(verb)  B AW1 #@@{ "usage": ["bend", "debut"] }@@
+BOW  B OW1
+BOW(2)  B AW1 #@@{ "usage": ["nautical", "bend", "debut"] }@@
 BOWAR  B OW1 AXR
 BOWARD  B OW1 AXR D
 BOWATER  B AW1 AH2 T AXR
@@ -6496,8 +6492,8 @@ BOWDITCH  B OW1 D IH0 CH
 BOWDLE  B OW1 D AX L
 BOWDOIN  B OW0 D OY1 N
 BOWE  B OW1
-BOWED(verb)  B OW1 D
-BOWED(verb)  B AW1 D #@@{ "usage": ["bend", "debut"] }@@
+BOWED  B OW1 D
+BOWED(2)  B AW1 D #@@{ "usage": ["bend", "debut"] }@@
 BOWEL  B AW1 AX L
 BOWELL  B AA1 W EH0 L
 BOWELS  B AW1 AX L Z
@@ -6515,8 +6511,8 @@ BOWERY'S  B AW1 AXR IY0 Z
 BOWES  B OW1 Z
 BOWICK  B OW1 IH0 K
 BOWIE  B OW1 IY0
-BOWING(verb)  B OW1 IH0 NG
-BOWING(verb)  B AW1 IH0 NG #@@{ "usage": ["bend", "debut"] }@@
+BOWING  B OW1 IH0 NG
+BOWING(2)  B AW1 IH0 NG #@@{ "usage": ["bend", "debut"] }@@
 BOWKER  B OW1 K AXR
 BOWL  B OW1 L
 BOWLAND  B OW1 L AX N D
@@ -6534,12 +6530,12 @@ BOWLING  B OW1 L IH0 NG
 BOWLING'S  B OW1 L IH0 NG Z
 BOWLS  B OW1 L Z
 BOWLUS  B OW1 L AX S
-BOWMAN(noun)  B OW1 M AX N #@@{ "usage": "archery" }@@
-BOWMAN(noun)  B AW1 M AX N #@@{ "usage": "nautical" }@@
-BOWMAN'S(noun)  B OW1 M AX N Z #@@{ "usage": "archery" }@@
-BOWMAN'S(noun)  B AW1 M AX N Z #@@{ "usage": "nautical" }@@
-BOWMEN(noun)  B OW1 M AX N #@@{ "usage": "archery" }@@
-BOWMEN(noun)  B AW1 M AX N #@@{ "usage": "nautical" }@@
+BOWMAN  B OW1 M AX N #@@{ "usage": "archery" }@@
+BOWMAN(2)  B AW1 M AX N #@@{ "usage": "nautical" }@@
+BOWMAN'S  B OW1 M AX N Z #@@{ "usage": "archery" }@@
+BOWMAN'S(2)  B AW1 M AX N Z #@@{ "usage": "nautical" }@@
+BOWMEN  B OW1 M AX N #@@{ "usage": "archery" }@@
+BOWMEN(2)  B AW1 M AX N #@@{ "usage": "nautical" }@@
 BOWMER  B OW1 M AXR
 BOWN  B OW1 N
 BOWNDS  B OW1 N D Z
@@ -6547,10 +6543,8 @@ BOWNE  B OW1 N
 BOWRING  B OW1 R IH0 NG
 BOWRON  B OW1 R AX N
 BOWRON(2)  B OW1 R AA2 N
-BOWS(noun)  B OW1 Z
-BOWS(verb)  B OW1 Z
-BOWS(noun)  B AW1 Z #@@{ "usage": ["nautical", "bend", "debut"] }@@
-BOWS(verb)  B AW1 Z #@@{ "usage": ["nautical", "bend", "debut"] }@@
+BOWS  B OW1 Z
+BOWS(2)  B AW1 Z #@@{ "usage": ["nautical", "bend", "debut"] }@@
 BOWSE  B OW1 S
 BOWSED  B AW1 Z D
 BOWSER  B OW1 Z AXR
@@ -8454,16 +8448,14 @@ BUFFERED  B AH1 F AXR D
 BUFFERIN  B AH1 F AXR IH0 N
 BUFFERING  B AH1 F AXR IH0 NG
 BUFFERS  B AH1 F AXR Z
-BUFFET(noun)  B AH1 F IH0 T #@@{ "usage": ["blow", "collision", "cuff"] }@@
-BUFFET(noun)  B AH1 F EY0 #@@{ "usage": "food" }@@
-BUFFET(verb)  B AH1 F IH0 T #@@{ "usage": ["blow", "collision", "cuff"] }@@
-BUFFETED(verb)  B AH1 F IH0 T IH0 D #@@{ "usage": ["blow", "collision", "cuff"] }@@
-BUFFETED(verb)  B AH1 F EY0 IH0 D #@@{ "usage": "food" }@@
-BUFFETING(verb)  B AH1 F IH0 T IH0 NG #@@{ "usage": ["blow", "collision", "cuff"] }@@
-BUFFETING(verb)  B AH1 F EY0 IH0 NG #@@{ "usage": "food" }@@
-BUFFETS(noun)  B AH1 F IH0 T S #@@{ "usage": ["blow", "collision", "cuff"] }@@
-BUFFETS(noun)  B AH1 F EY0 Z #@@{ "usage": "food" }@@
-BUFFETS(verb)  B AH1 F IH0 T S #@@{ "usage": ["blow", "collision", "cuff"] }@@
+BUFFET  B AX F EY1 #@@{ "usage": "food" }@@
+BUFFET(2)  B AH1 F IH0 T #@@{ "usage": ["blow", "collision", "cuff"] }@@
+BUFFETED  B AH1 F IH0 T IH0 D #@@{ "usage": ["blow", "collision", "cuff"] }@@
+BUFFETED(2)  B AH1 F EY0 IH0 D #@@{ "usage": "food" }@@
+BUFFETING  B AH1 F IH0 T IH0 NG #@@{ "usage": ["blow", "collision", "cuff"] }@@
+BUFFETING(2)  B AH1 F EY0 IH0 NG #@@{ "usage": "food" }@@
+BUFFETS  B AH1 F EY0 Z #@@{ "usage": "food" }@@
+BUFFETS(2)  B AH1 F IH0 T S #@@{ "usage": ["blow", "collision", "cuff"] }@@
 BUFFETT  B AH1 F IH0 T
 BUFFETT'S  B AH1 F IH0 T S
 BUFFIN  B AH1 F IH0 N

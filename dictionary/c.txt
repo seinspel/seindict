@@ -2442,9 +2442,8 @@ CELS  S EH1 L Z
 CELSIUS  S EH1 L S IY0 AX S
 CELSO  S EH1 L S OW0
 CELT  K EH1 L T
-CELTIC(noun)  K EH1 L T IH0 K
-CELTIC(adj)  K EH1 L T IH0 K
-CELTIC(noun)  S EH1 L T IH0 K #@@{ "usage": "sport" }@@
+CELTIC  K EH1 L T IH0 K
+CELTIC(2)  S EH1 L T IH0 K #@@{ "usage": "sport" }@@
 CELTICS  S EH1 L T IH0 K S
 CELTS  K EH1 L T S
 CEMENT  S IH0 M EH1 N T
@@ -3500,10 +3499,10 @@ CHEYNE  CH EY1 N
 CHEYNEY  CH EY1 N IY0
 CHEZ  SH EY1
 CHEZ(2)  CH EH1 Z
-CHI(noun)  K AY1 #@@{ "group": "alphabet/greek", "lang": "el", "usage": "mathematics" }@@ chi squared, etc.
-CHI(noun)  CH IY1 #@@{ "lang": "zh", "usage": "energy" }@@ Tai Chi, etc.
-CHI'S(noun)  K AY1 Z #@@{ "lang": "el", "usage": "mathematics" }@@ chi squared, etc.
-CHI'S(noun)  CH IY1 Z #@@{ "lang": "zh", "usage": "energy" }@@ Tai Chi, etc.
+CHI  K AY1 #@@{ "group": "alphabet/greek", "lang": "el", "usage": "mathematics" }@@ chi squared, etc.
+CHI(2)  CH IY1 #@@{ "lang": "zh", "usage": "energy" }@@ Tai Chi, etc.
+CHI'S  K AY1 Z #@@{ "lang": "el", "usage": "mathematics" }@@ chi squared, etc.
+CHI'S(2)  CH IY1 Z #@@{ "lang": "zh", "usage": "energy" }@@ Tai Chi, etc.
 CHIA  CH IY1 AX
 CHIANESE  K IY0 AA0 N EY1 Z IY0
 CHIANG  CH AE1 NG
@@ -4998,7 +4997,7 @@ CLOS  K L AA1 S
 CLOSE(adj)  K L OW1 S
 CLOSE(verb)  K L OW1 Z
 CLOSE(noun)  K L OW1 Z
-CLOSE(noun)  K L OW1 S #@@{ "usage": ["street", "alley", "architecture", "law"] }@@
+CLOSE(noun2)  K L OW1 S #@@{ "usage": ["street", "alley", "architecture", "law"] }@@
 CLOSED  K L OW1 Z D
 CLOSEDOWN  K L OW1 Z D AW2 N
 CLOSEDOWNS  K L OW1 Z D AW2 N Z
@@ -5920,10 +5919,10 @@ COMBATTING  K AX M B AE1 T IH0 NG
 COMBE  K OW1 M
 COMBED  K OW1 M D
 COMBEE  K AA1 M B IY2
-COMBER(noun)  K OW1 M AXR #@@{ "root": "COMB" }@@
-COMBER(noun)  K AA1 M B AXR #@@{ "usage": "fish" }@@
-COMBERS(noun)  K OW1 M AXR Z #@@{ "root": "COMB" }@@
-COMBERS(noun)  K AA1 M B AXR Z #@@{ "usage": "fish" }@@
+COMBER  K OW1 M AXR #@@{ "root": "COMB" }@@
+COMBER(2)  K AA1 M B AXR #@@{ "usage": "fish" }@@
+COMBERS  K OW1 M AXR Z #@@{ "root": "COMB" }@@
+COMBERS(2)  K AA1 M B AXR Z #@@{ "usage": "fish" }@@
 COMBES  K OW1 M Z
 COMBEST  K OW1 M IH0 S T
 COMBINABILITY  K AX M B AY2 N AX B IH1 L AX T IY0
@@ -7632,9 +7631,8 @@ COONRADT  K UW1 N R AE0 T
 COONROD  K UW1 N R AA2 D
 COONS  K UW1 N Z
 COONTZ  K UW1 N T S
-COOP(noun)  K UW1 P
-COOP(verb)  K UW1 P
-COOP(noun)  K OW1 AA0 P #@@{ "root": "CO-OP" }@@
+COOP  K UW1 P
+COOP(2)  K OW1 AA0 P #@@{ "root": "CO-OP" }@@
 COOPED  K UW1 P T
 COOPER  K UW1 P AXR
 COOPER'S  K UW1 P AXR Z
@@ -7658,9 +7656,8 @@ COOPERSTOWN  K UW1 P AXR Z T AW2 N
 COOPERVISION  K UW1 P AXR V IH2 ZH AX N
 COOPMAN  K UW1 P M AX N
 COOPRIDER  K UW1 P R AY2 D AXR
-COOPS(noun)  K UW1 P S
-COOPS(verb)  K UW1 P S
-COOPS(noun)  K OW1 AA0 P S #@@{ "root": "CO-OP" }@@
+COOPS  K UW1 P S
+COOPS(2)  K OW1 AA0 P S #@@{ "root": "CO-OP" }@@
 COORDINATE(noun)  K OW0 AO1 R D IH0 N IH0 T
 COORDINATE(adj)  K OW0 AO1 R D IH0 N IH0 T
 COORDINATE(verb)  K OW0 AO1 R D IH0 N EY2 T
@@ -8639,10 +8636,10 @@ COVES  K OW1 V Z
 COVET  K AH1 V AX T
 COVETED  K AH1 V AX T IH0 D
 COVETS  K AH1 V AX T S
-COVEY(noun)  K AH1 V IY0 #@@{ "usage": ["bird", "group"] }@@
-COVEY(noun)  K OW1 V IY0 #@@{ "usage": "a man" }@@
-COVEYS(noun)  K AH1 V IY0 Z #@@{ "usage": ["bird", "group"] }@@
-COVEYS(noun)  K OW1 V IY0 Z #@@{ "usage": "a man" }@@
+COVEY  K AH1 V IY0 #@@{ "usage": ["bird", "group"] }@@
+COVEY(2)  K OW1 V IY0 #@@{ "usage": "a man" }@@
+COVEYS  K AH1 V IY0 Z #@@{ "usage": ["bird", "group"] }@@
+COVEYS(2)  K OW1 V IY0 Z #@@{ "usage": "a man" }@@
 COVIA  K OW1 V IY0 AX
 COVIELLO  K OW2 V IY0 EH1 L OW0
 COVILL  K AA1 V AX L

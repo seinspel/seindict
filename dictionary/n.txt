@@ -197,10 +197,8 @@ NAMIS  N AE1 M IH0 S
 NAMPHY  N AE1 M F IY0
 NAN  N AE1 N
 NAN'S  N AE1 N Z
-NANA(noun)  N AE1 N AX #@@{ "usage": "grandmother" }@@
-NANA(noun)  N AA1 N AX #@@{ "usage": ["banana", "fool"] }@@
-NANAS(noun)  N AE1 N AX Z #@@{ "usage": "grandmother" }@@
-NANAS(noun)  N AA1 N AX Z #@@{ "usage": ["banana", "fool"] }@@
+NANA  N AE1 N AX #@@{ "usage": "grandmother" }@@
+NANAS  N AE1 N AX Z #@@{ "usage": "grandmother" }@@
 NANCARROW  N AE2 NG K EH1 R OW0
 NANCE  N AE1 N S
 NANCHANG  N AE1 N CH AE1 NG

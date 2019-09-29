@@ -328,12 +328,11 @@ SAKAMOTO  S AA0 K AA0 M OW1 T OW0
 SAKAROV  S AA1 K AXR AO2 V
 SAKATA  S AA0 K AA1 T AX
 SAKAU  S AA0 K AA1 UW0
-SAKE(noun)  S EY1 K
-SAKE(noun)  S AA1 K IY0 #@@{ "lang": "jp", "usage": "wine" }@@
+SAKE  S EY1 K
+SAKE(2)  S AA1 K IY0 #@@{ "lang": "jp", "usage": "wine" }@@
 SAKE'S  S EY1 K S
 SAKER  S EY1 K AXR
-SAKES(noun)  S EY1 K S
-SAKES(noun)  S AA1 K IY0 Z #@@{ "lang": "jp", "usage": "wine" }@@
+SAKES  S EY1 K S
 SAKHALIN  S AE1 K AX L IH0 N
 SAKHALINSK  S AE2 K AX L IH1 N S K
 SAKHAROV  S AA1 K AXR AO2 V
@@ -3167,10 +3166,8 @@ SECRETARIES  S EH1 K R IH0 T EH2 R IY0 Z
 SECRETARY  S EH1 K R IH0 T EH2 R IY0
 SECRETARY'S  S EH1 K R IH0 T EH2 R IY0 Z
 SECRETE  S IH0 K R IY1 T
-SECRETED(verb)  S IH0 K R IY1 T IH0 D #@@{ "root": "SECRETE" }@@
-SECRETED(verb)  S IY1 K R IH0 T IH0 D #@@{ "root": "SECRET" }@@
-SECRETING(verb)  S IH0 K R IY1 T IH0 NG #@@{ "root": "SECRETE" }@@
-SECRETING(verb)  S IY1 K R IH0 T IH0 NG #@@{ "root": "SECRET" }@@
+SECRETED  S IH0 K R IY1 T IH0 D #@@{ "root": "SECRETE" }@@
+SECRETING  S IH0 K R IY1 T IH0 NG #@@{ "root": "SECRETE" }@@
 SECRETION  S IH0 K R IY1 SH AX N
 SECRETIONS  S IH0 K R IY1 SH AX N Z
 SECRETIVE  S IY1 K R IH0 T IH0 V
@@ -4150,13 +4147,11 @@ SEWARD  S UW1 AXR D
 SEWARD'S  S UW1 AXR D Z
 SEWED  S OW1 D
 SEWELL  S UW1 IH0 L
-SEWER(noun)  S UW1 AXR #@@{ "usage": ["pipe", "inanimate"] }@@
-SEWER(verb)  S UW1 AXR #@@{ "usage": ["pipe", "inanimate"] }@@
-SEWER(noun)  S OW1 AXR #@@{ "usage": "person", "root": "SEW" }@@
+SEWER  S UW1 AXR #@@{ "usage": ["pipe", "inanimate"] }@@
+SEWER(2)  S OW1 AXR #@@{ "usage": "person", "root": "SEW" }@@
 SEWERAGE  S UW1 AXR IH0 JH
-SEWERS(noun)  S UW1 AXR Z #@@{ "usage": ["pipe", "inanimate"] }@@
-SEWERS(verb)  S UW1 AXR Z #@@{ "usage": ["pipe", "inanimate"] }@@
-SEWERS(noun)  S OW1 AXR Z #@@{ "usage": "person", "root": "SEW" }@@
+SEWERS  S UW1 AXR Z #@@{ "usage": ["pipe", "inanimate"] }@@
+SEWERS(2)  S OW1 AXR Z #@@{ "usage": "person", "root": "SEW" }@@
 SEWING  S OW1 IH0 NG
 SEWN  S OW1 N
 SEX  S EH1 K S
@@ -5367,14 +5362,10 @@ SHOWDOWN  SH OW1 D AW2 N
 SHOWDOWNS  SH OW1 D AW2 N Z
 SHOWED  SH OW1 D
 SHOWELL  SH AA1 W EH0 L
-SHOWER(noun)  SH AW1 AXR
-SHOWER(verb)  SH AW1 AXR
-SHOWER(noun)  SH OW1 AXR #@@{ "root": "SHOW" }@@
+SHOWER  SH AW1 AXR
 SHOWERED  SH AW1 AXR D
 SHOWERING  SH AW1 AXR IH0 NG
-SHOWERS(noun)  SH AW1 AXR Z
-SHOWERS(verb)  SH AW1 AXR Z
-SHOWERS(noun)  SH OW1 AXR Z #@@{ "root": "SHOW" }@@
+SHOWERS  SH AW1 AXR Z
 SHOWGIRL  SH OW1 G ER2 L
 SHOWGIRLS  SH OW1 G ER2 L Z
 SHOWIEST  SH OW1 IY0 IH0 S T
@@ -6539,8 +6530,7 @@ SKIDDING  S K IH1 D IH0 NG
 SKIDGEL  S K IH1 JH AX L
 SKIDMORE  S K IH1 D M AO0 R
 SKIDS  S K IH1 D Z
-SKIED(verb)  S K IY1 D #@@{ "root": "SKI" }@@
-SKIED(verb)  S K AY1 D #@@{ "root": "SKY" }@@
+SKIED  S K IY1 D #@@{ "root": "SKI" }@@
 SKIER  S K AY1 AXR
 SKIER(2)  S K IY1 AXR
 SKIERS  S K IY1 AXR Z
@@ -7026,12 +7016,10 @@ SLOTTING  S L AA1 T IH0 NG
 SLOUCH  S L AW1 CH
 SLOUCHES  S L AW1 CH IH0 Z
 SLOUCHING  S L AW1 CH IH0 NG
-SLOUGH(noun)  S L AH1 F #@@{ "usage": "skin" }@@
-SLOUGH(verb)  S L AH1 F #@@{ "usage": ["skin", "discard"] }@@
-SLOUGH(noun)  S L AW1 #@@{ "usage": ["town", "marsh", "swamp", "pond", "lake", "river"] }@@
-SLOUGHS(noun)  S L AH1 F S #@@{ "usage": "skin" }@@
-SLOUGHS(verb)  S L AH1 F S #@@{ "usage": ["skin", "discard"] }@@
-SLOUGHS(noun)  S L AW1 Z #@@{ "usage": ["marsh", "swamp", "pond", "lake", "river"] }@@
+SLOUGH  S L AH1 F #@@{ "usage": ["skin", "discard"] }@@
+SLOUGH(2)  S L AW1 #@@{ "usage": ["town", "marsh", "swamp", "pond", "lake", "river"] }@@
+SLOUGHS  S L AH1 F S #@@{ "usage": ["skin", "discard"] }@@
+SLOUGHS(2)  S L AW1 Z #@@{ "usage": ["marsh", "swamp", "pond", "lake", "river"] }@@
 SLOVACEK  S L AA1 V AX CH EH0 K
 SLOVAK  S L OW1 V AE0 K
 SLOVAKIA  S L OW0 V AE1 K IY0 AX
@@ -9084,16 +9072,10 @@ SPONTANEOUS  S P AA0 N T EY1 N IY0 AX S
 SPONTANEOUSLY  S P AA0 N T EY1 N IY0 AX S L IY0
 SPOOF(noun)  S P UW1 F #@@{ "usage": ["hoax", "parody", "satire", "game"] }@@
 SPOOF(verb)  S P UW1 F #@@{ "usage": ["hoax", "parody", "satire", "game"] }@@
-SPOOF(noun)  S P UH1 F #@@{ "lang": ["en-AU", "en-NZ"], "usage": "semen" }@@
-SPOOF(verb)  S P UH1 F #@@{ "lang": ["en-AU", "en-NZ"], "usage": "ejaculate" }@@
 SPOOFED(verb)  S P UW1 F T #@@{ "usage": ["hoax", "parody", "satire", "game"] }@@
-SPOOFED(verb)  S P UH1 F T #@@{ "lang": ["en-AU", "en-NZ"], "usage": "ejaculate" }@@
 SPOOFING(verb)  S P UW1 F IH0 NG #@@{ "usage": ["hoax", "parody", "satire", "game"] }@@
-SPOOFING(verb)  S P UH1 F IH0 NG #@@{ "lang": ["en-AU", "en-NZ"], "usage": "ejaculate" }@@
 SPOOFS(noun)  S P UW1 F S #@@{ "usage": ["hoax", "parody", "satire", "game"] }@@
 SPOOFS(verb)  S P UW1 F S #@@{ "usage": ["hoax", "parody", "satire", "game"] }@@
-SPOOFS(noun)  S P UH1 F S #@@{ "lang": ["en-AU", "en-NZ"], "usage": "semen" }@@
-SPOOFS(verb)  S P UH1 F S #@@{ "lang": ["en-AU", "en-NZ"], "usage": "ejaculate" }@@
 SPOOK  S P UW1 K
 SPOOKED  S P UW1 K T
 SPOOKS  S P UW1 K S
@@ -10728,8 +10710,8 @@ STINGINESS  S T IH1 N JH IY0 N AX S
 STINGING  S T IH1 NG IH0 NG
 STINGLEY  S T IH1 NG G L IY0
 STINGS  S T IH1 NG Z
-STINGY(adj)  S T IH1 N JH IY0
-STINGY(adj)  S T IH1 NG IY0 #@@{ "root": "STING" }@@
+STINGY  S T IH1 N JH IY0
+STINGY(2)  S T IH1 NG IY0 #@@{ "root": "STING" }@@
 STINK  S T IH1 NG K
 STINKBUG  S T IH1 NG K B AX G
 STINKBUGS  S T IH1 NG K B AX G Z
@@ -13471,8 +13453,7 @@ SYRIAN  S IH1 R IY0 AX N
 SYRIANS  S IH1 R IY0 AX N Z
 SYRING  S AY1 R IH0 NG
 SYRINGE  S IH0 R IH1 N JH
-SYRINGES(noun)  S IH0 R IH1 N JH IH0 Z #@@{ "root": "SYRINGE" }@@
-SYRINGES(noun)  S IH0 R IH1 N JH IY0 Z #@@{ "root": "SYRINX" }@@
+SYRINGES  S IH0 R IH1 N JH IH0 Z #@@{ "root": "SYRINGE" }@@
 SYRINX  S IH1 R IH1 NG K S
 SYRON  S AY1 R AX N
 SYRUP  S ER1 AX P

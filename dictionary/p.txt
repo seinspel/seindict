@@ -16,10 +16,7 @@ PACA  P AA1 K AX
 PACA(2)  P AE1 K AX
 PACCAR  P AX K AA1 R
 PACCIONE  P AA0 K CH OW1 N IY0
-PACE(noun)  P EY1 S #@@{ "lang": "en" }@@
-PACE(adj)  P EY1 S #@@{ "lang": "en" }@@
-PACE(verb)  P EY1 S #@@{ "lang": "en" }@@
-PACE(noun)  P AA1 CH EY0 #@@{ "lang": "la" }@@ "In pace requiescat"@la = "Rest in peace"@en
+PACE  P EY1 S
 PACE'S  P EY1 S IH0 Z
 PACED  P EY1 S T
 PACELLA  P AX S EH1 L AX
@@ -319,8 +316,8 @@ PALLADINO  P AA0 L AA0 D IY1 N OW0
 PALLADIUM  P AX L EY1 D IY0 AX M
 PALLANTE  P AA0 L AA1 N T IY0
 PALLAS  P AE1 L AX S
-PALLED(verb)  P AO1 L D #@@{ "root": "PALL" }@@
-PALLED(verb)  P AE1 L D #@@{ "root": "PAL" }@@
+PALLED  P AO1 L D #@@{ "root": "PALL" }@@
+PALLED(2)  P AE1 L D #@@{ "root": "PAL" }@@
 PALLER  P AE1 L AXR
 PALLESCHI  P AA0 L EH1 S K IY0
 PALLET  P AE1 L IH0 T
@@ -330,8 +327,8 @@ PALLIATIVE  P AE1 L IY0 IH0 T IH0 V
 PALLIATIVES  P AE1 L IY0 IH0 T IH0 V Z
 PALLID  P AE1 L IH0 D
 PALLIDOTOMY  P AE2 L IH0 D AA1 T AX M IY0
-PALLING(verb)  P AO1 L IH0 NG #@@{ "root": "PALL" }@@
-PALLING(verb)  P AE1 L IH0 NG #@@{ "root": "PAL" }@@
+PALLING  P AO1 L IH0 NG #@@{ "root": "PALL" }@@
+PALLING(2)  P AE1 L IH0 NG #@@{ "root": "PAL" }@@
 PALLO  P AE1 L OW0
 PALLONE  P AA0 L OW1 N IY0
 PALM  P AA1 M
@@ -1223,9 +1220,8 @@ PASTS  P AE1 S T S
 PASTULA  P AA0 S T UW1 L AX
 PASTURE  P AE1 S CH AXR
 PASTURES  P AE1 S CH AXR Z
-PASTY(adj)  P EY1 S T IY0
-PASTY(noun)  P AE1 S T IY0 #@@{ "usage": "food" }@@
-PASTY(noun)  P EY1 S T IY0
+PASTY  P AE1 S T IY0 #@@{ "usage": "food" }@@
+PASTY(2)  P EY1 S T IY0
 PASZEK  P AA1 SH EH0 K
 PASZKIEWICZ  P AA1 SH K AX V IH0 CH
 PASZTOR  P AE1 S T AXR
@@ -2421,14 +2417,12 @@ PERMISSIVE  P AXR M IH1 S IH0 V
 PERMISSIVENESS  P AXR M IH1 S IH0 V N AX S
 PERMIT(verb)  P AXR M IH1 T #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
 PERMIT(noun)  P ER1 M IH0 T
-PERMIT(verb)  P ER1 M IH0 T #@@{ "usage": "authorization" }@@
+PERMIT(verb2)  P ER1 M IH0 T #@@{ "usage": "authorization" }@@
 PERMITS(verb)  P AXR M IH1 T S #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
 PERMITS(noun)  P ER1 M IH0 T S
-PERMITS(verb)  P ER1 M IH0 T S #@@{ "usage": "authorization" }@@
-PERMITTED(verb)  P AXR M IH1 T IH0 D #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
-PERMITTED(verb)  P ER1 M IH0 T IH0 D #@@{ "usage": "authorization" }@@
-PERMITTING(verb)  P AXR M IH1 T IH0 NG #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
-PERMITTING(verb)  P ER1 M IH0 T IH0 NG #@@{ "usage": "authorization" }@@
+PERMITS(verb2)  P ER1 M IH0 T S #@@{ "usage": "authorization" }@@
+PERMITTED  P AXR M IH1 T IH0 D #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
+PERMITTING  P AXR M IH1 T IH0 NG #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
 PERMOUNT  P ER1 M AW2 N T
 PERMUT  P ER1 M AX T
 PERMUTATE  P ER1 M Y UW0 T EY2 T
@@ -4807,9 +4801,8 @@ POLIQUIN  P OW0 L IY0 K W IY1 N
 POLIS  P OW1 L AX S
 POLIS(2)  P OW1 L AY0 Z
 POLISARIO  P OW2 L IH0 S EH1 R IY0 OW0
-POLISH(noun)  P AA1 L IH0 SH
-POLISH(adj)  P OW1 L IH0 SH
-POLISH(noun)  P OW1 L IH0 SH #@@{ "usage": ["language", "capitalized"] }@@
+POLISH  P AA1 L IH0 SH
+POLISH(2)  P OW1 L IH0 SH #@@{ "usage": ["language", "capitalized"] }@@
 POLISHED  P AA1 L IH0 SH T
 POLISHING  P AA1 L IH0 SH IH0 NG
 POLITANO  P OW0 L IY0 T AA1 N OW0
@@ -5715,8 +5708,8 @@ PRAISING  P R EY1 Z IH0 NG
 PRAKASH  P R AA0 K AA1 SH
 PRALL  P R AO1 L
 PRALLE  P R EY1 L
-PRAM(noun)  P R AE1 M #@@{ "usage": "pushchair" }@@
-PRAM(noun)  P R AA1 M #@@{ "usage": "nautical" }@@
+PRAM  P R AE1 M #@@{ "usage": "pushchair" }@@
+PRAM(2)  P R AA1 M #@@{ "usage": "nautical" }@@
 PRAMOD  P R AE1 M AA0 D #@@{ "name": "male" }@@ Ramon Pramod Junior Tikaram
 PRAN  P R AA1 N
 PRAN(2)  P R AE1 N
@@ -5759,11 +5752,9 @@ PRAXAIR  P R AE1 K S EH1 R
 PRAXIS  P R AE1 K S IH0 S
 PRAY  P R EY1
 PRAYED  P R EY1 D
-PRAYER(noun)  P R EH1 R #@@{ "usage": "action" }@@
-PRAYER(noun)  P R EY1 AXR #@@{ "usage": "person", "root": "PRAY" }@@
+PRAYER  P R EH1 R #@@{ "usage": "action" }@@
 PRAYERFUL  P R EH1 R F AX L
-PRAYERS(noun)  P R EH1 R Z #@@{ "usage": "action" }@@
-PRAYERS(noun)  P R EY1 AXR Z #@@{ "usage": "person", "root": "PRAY" }@@
+PRAYERS  P R EH1 R Z #@@{ "usage": "action" }@@
 PRAYING  P R EY1 IH0 NG
 PRAYS  P R EY1 Z
 PRAYTOR  P R EY1 T AXR
@@ -5861,15 +5852,12 @@ PRECRASH  P R IY0 K R AE1 SH
 PRECURSOR  P R IY0 K ER1 S AXR
 PRECURSORS  P R IY0 K ER1 S AXR Z
 PREDACEOUS  P R IY0 D EY1 SH AX S
-PREDATE(verb)  P R IH0 D EY1 T #@@{ "usage": "action" }@@
-PREDATE(verb)  P R IY1 D EY1 T #@@{ "usage": "time" }@@
-PREDATE(noun)  P R IY1 D EY1 T
-PREDATED(verb)  P R IH0 D EY1 T IH0 D #@@{ "usage": "action" }@@
-PREDATED(verb)  P R IY1 D EY1 T IH0 D #@@{ "usage": "time" }@@
-PREDATES(verb)  P R IH0 D EY1 T S #@@{ "usage": "action" }@@
-PREDATES(verb)  P R IY1 D EY1 T S #@@{ "usage": "time" }@@
-PREDATES(noun)  P R IY1 D EY1 T S
-PREDATES  P R IY1 D EY1 T S
+PREDATE  P R IH0 D EY1 T #@@{ "usage": "action" }@@
+PREDATE(2)  P R IY1 D EY1 T #@@{ "usage": "time" }@@
+PREDATED  P R IH0 D EY1 T IH0 D #@@{ "usage": "action" }@@
+PREDATED(2)  P R IY1 D EY1 T IH0 D #@@{ "usage": "time" }@@
+PREDATES  P R IH0 D EY1 T S #@@{ "usage": "action" }@@
+PREDATES(2)  P R IY1 D EY1 T S #@@{ "usage": "time" }@@
 PREDATION  P R AX D EY1 SH AX N
 PREDATOR  P R EH1 D AX T AXR
 PREDATORS  P R EH1 D AX T AXR Z
@@ -7873,19 +7861,15 @@ PUTT  P AH1 T
 PUTTABLE  P AH1 T AX B AX L
 PUTTED  P AH1 T IH0 D
 PUTTENBAY  P AH1 T IH0 N B EY2
-PUTTER(noun)  P AH1 T AXR #@@{ "root": "PUTT", "usage": "golf" }@@
-PUTTER(noun)  P UH1 T AXR #@@{ "root": "PUT" }@@
-PUTTER(verb)  P AH1 T AXR
+PUTTER  P AH1 T AXR #@@{ "root": "PUTT", "usage": "golf" }@@
+PUTTER(2)  P UH1 T AXR #@@{ "root": "PUT" }@@
 PUTTERER  P AH1 T AXR AXR
 PUTTERING  P AH1 T AXR IH0 NG
 PUTTERMAN  P AH1 T AXR M AX N
-PUTTERS(noun)  P AH1 T AXR Z #@@{ "root": "PUTT", "usage": "golf" }@@
-PUTTERS(noun)  P UH1 T AXR Z #@@{ "root": "PUT" }@@
-PUTTERS(verb)  P AH1 T AXR Z
-PUTTING(noun)  P UH1 T IH0 NG #@@{ "root": "PUT" }@@
-PUTTING(verb)  P UH1 T IH0 NG #@@{ "root": "PUT" }@@
-PUTTING(noun)  P AH1 T IH0 NG #@@{ "root": "PUTT", "usage": "golf" }@@
-PUTTING(verb)  P AH1 T IH0 NG #@@{ "root": "PUTT", "usage": "golf" }@@
+PUTTERS  P AH1 T AXR Z #@@{ "root": "PUTT", "usage": "golf" }@@
+PUTTERS(2)  P UH1 T AXR Z #@@{ "root": "PUT" }@@
+PUTTING  P UH1 T IH0 NG #@@{ "root": "PUT" }@@
+PUTTING(2)  P AH1 T IH0 NG #@@{ "root": "PUTT", "usage": "golf" }@@
 PUTTNAM  P AH1 T N AX M
 PUTTNAM'S  P AH1 T N AX M Z
 PUTTS  P AH1 T S

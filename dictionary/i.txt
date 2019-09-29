@@ -784,8 +784,8 @@ IMPULSE  IH1 M P AH0 L S
 IMPULSES  IH1 M P AH0 L S IH0 Z
 IMPULSIVE  IH0 M P AH1 L S IH0 V
 IMPULSIVELY  IH0 M P AH1 L S IH0 V L IY0
-IMPUNE(adj)  IH0 M P Y UW1 N #@@{ "lang": "en" }@@
-IMPUNE(adj)  IH0 M P UW1 N EY0 #@@{ "lang": "la" }@@ "Nemo me impune lacessit"@la : Order of the Thistle motto.
+IMPUNE  IH0 M P Y UW1 N #@@{ "lang": "en" }@@
+IMPUNE(2)  IH0 M P UW1 N EY0 #@@{ "lang": "la" }@@ "Nemo me impune lacessit"@la : Order of the Thistle motto.
 IMPUNITY  IH0 M P Y UW1 N IH0 T IY0
 IMPURE  IH0 M P Y UH1 R
 IMPURITIES  IH0 M P Y UH1 R IH0 T IY0 Z

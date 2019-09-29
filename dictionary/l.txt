@@ -1601,9 +1601,8 @@ LEACHING  L IY1 CH IH0 NG
 LEACHMAN  L IY1 CH M AX N
 LEACHMAN'S  L IY1 CH M AX N Z
 LEACOCK  L IY1 K AA2 K
-LEAD(noun)  L EH1 D #@@{ "usage": "metal" }@@
-LEAD(noun)  L IY1 D #@@{ "root": "LEAD(verb)" }@@ e.g. "a dog lead"
-LEAD(verb)  L IY1 D
+LEAD  L EH1 D #@@{ "usage": "metal" }@@
+LEAD(2)  L IY1 D #@@{ "root": "LEAD(verb)" }@@ e.g. "a dog lead"
 LEADBELLY  L EH1 D B EH0 L IY0
 LEADBETTER  L EH1 D B EH0 T AXR
 LEADED  L EH1 D IH0 D
@@ -1618,9 +1617,8 @@ LEADERSHIPS  L IY1 D AXR SH IH2 P S
 LEADING  L IY1 D IH0 NG
 LEADINGHAM  L IY1 D IH0 NG HH AE2 M
 LEADOFF  L IY1 D AO2 F
-LEADS(noun)  L EH1 D Z #@@{ "usage": "metal" }@@
-LEADS(noun)  L IY1 D Z #@@{ "root": "LEAD(verb)" }@@ e.g. "a dog lead"
-LEADS(verb)  L IY1 D Z
+LEADS  L EH1 D Z #@@{ "usage": "metal" }@@
+LEADS(2)  L IY1 D Z #@@{ "root": "LEAD(verb)" }@@ e.g. "a dog lead"
 LEADVILLE  L EH1 D V IH2 L
 LEADWORK  L EH1 D W ER2 K
 LEAF  L IY1 F #@@{ "name": "family" }@@ Richard Leaf
@@ -1800,9 +1798,8 @@ LEBSACK  L EH1 B S AX K
 LEBUDDE  L AX B AH1 D
 LECATES  L IH0 K EY1 T S
 LECCESE  L EH0 CH EY1 Z IY0
-LECH(noun)  L EH1 CH
-LECH(verb)  L EH1 CH
-LECH(noun)  L EH1 K #@@{ "lang": "cy", "usage": ["slate", "slab"] }@@
+LECH  L EH1 CH
+LECH(2)  L EH1 K #@@{ "lang": "cy", "usage": ["slate", "slab"] }@@
 LECHER  L EH1 CH AXR
 LECHEROUS  L EH1 CH AXR AX S
 LECHES  L EH1 CH IH0 Z

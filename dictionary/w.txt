@@ -1532,9 +1532,7 @@ WERBER  W ER1 B AXR
 WERDEN  W ER1 D AX N
 WERDER  W ER1 D AXR
 WERDESHEIM  W ER1 D Z HH AY2 M
-WERE(verb)  W AXR #@@{ "usage": "unstressed" }@@
-WERE(verb)  W ER1 #@@{ "usage": "stressed" }@@
-WERE(noun)  W EH1 R
+WERE  W ER1 #@@{ "usage": "stressed" }@@
 WERELDHAVE  W EH1 R AX L D HH AA2 V EY0
 WEREN'T  W ER1 N T
 WEREWOLF  W EH1 R W UH2 L F
@@ -2200,11 +2198,8 @@ WICHMANN  W IH1 CH M AX N
 WICK  W IH1 K
 WICKARD  W IH1 K AXR D
 WICKE  W IH1 K
-WICKED(adj)  W IH1 K IH0 D
-WICKED(adv)  W IH1 K IH0 D
-WICKED(noun)  W IH1 K IH0 D
-WICKED(verb)  W IH1 K T #@@{ "root": "WICK" }@@
-WICKED(adj)  W IH1 K T #@@{ "root": "WICK" }@@
+WICKED  W IH1 K IH0 D
+WICKED(2)  W IH1 K T #@@{ "root": "WICK" }@@
 WICKEDER  W IH1 K IH0 D AXR
 WICKEDEST  W IH1 K IH0 D IH0 S T
 WICKEDLY  W IH1 K IH0 D L IY0
@@ -2737,14 +2732,12 @@ WINDECKER  W IH1 N D EH2 K AXR
 WINDED  W IH1 N D IH0 D
 WINDELL  W IH1 N D AX L
 WINDELS  W IH1 N D AX L Z
-WINDER(noun)  W IH1 N D AXR #@@{ "root": ["WIND(noun)", "WINDOW"] }@@
-WINDER(noun)  W AY1 N D AXR #@@{ "root": "WIND(verb)" }@@
-WINDER(verb)  W IH1 N D AXR #@@{ "root": "WIND(noun)" }@@ to fan
+WINDER  W IH1 N D AXR #@@{ "root": ["WIND(noun)", "WINDOW"] }@@
+WINDER(2)  W AY1 N D AXR #@@{ "root": "WIND(verb)" }@@ to fan
 WINDERED  W IH1 N D AXR D #@@{ "root": "WIND(noun)" }@@ to fan
 WINDERING  W IH1 N D AXR IH0 NG #@@{ "root": "WIND(noun)" }@@ to fan
-WINDERS(noun)  W IH1 N D AXR Z #@@{ "root": ["WIND(noun)", "WINDOW"] }@@
-WINDERS(noun)  W AY1 N D AXR Z #@@{ "root": "WIND(verb)" }@@
-WINDERS(verb)  W IH1 N D AXR Z #@@{ "root": "WIND(noun)" }@@ to fan
+WINDERS  W IH1 N D AXR Z #@@{ "root": ["WIND(noun)", "WINDOW"] }@@
+WINDERS(2)  W IH1 N D AXR Z #@@{ "root": "WIND(verb)" }@@ to fan
 WINDES  W IH1 N D Z #@@{ "lang": "en-emodeng", "root": "WINDS(noun)" }@@
 WINDFALL  W IH1 N D F AO2 L
 WINDFALLS  W IH1 N D F AO2 L Z
@@ -2789,9 +2782,8 @@ WINDSWEPT  W IH1 N S W EH2 P T
 WINDT  W IH1 N T
 WINDUP  W AY1 N D AH2 P
 WINDWARD  W IH1 N D W AXR D
-WINDY(adj)  W IH1 N D IY0 #@@{ "root": "WIND(noun)" }@@
-WINDY(noun)  W IH1 N D IY0 #@@{ "root": "WIND(noun)" }@@
-WINDY(adj)  W AY1 N D IY0 #@@{ "root": "WIND(verb)" }@@
+WINDY  W IH1 N D IY0 #@@{ "root": "WIND(noun)" }@@
+WINDY(2)  W AY1 N D IY0 #@@{ "root": "WIND(verb)" }@@
 WINE  W AY1 N
 WINE'S  W AY1 N Z
 WINEBARGER  W IH1 N IH0 B AA0 R G AXR

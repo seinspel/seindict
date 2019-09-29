@@ -489,8 +489,8 @@ RALLS  R AO1 L Z
 RALLY  R AE1 L IY0
 RALLY'S  R AE1 L IY0 Z
 RALLYING  R AE1 L IY0 IH0 NG
-RALPH(noun)  R AE1 L F #@@{ "name": "male" }@@ Ralph Michael Ineson
-RALPH(noun)  R EY1 F #@@{ "name": "male" }@@ Ralph Nathaniel Twisleton-Wykeham-Fiennes
+RALPH  R AE1 L F #@@{ "name": "male" }@@ Ralph Michael Ineson
+RALPH(2)  R EY1 F #@@{ "name": "male" }@@ Ralph Nathaniel Twisleton-Wykeham-Fiennes
 RALPH'S  R AE1 L F S
 RALPHS  R AE1 L F S
 RALSTON  R AO1 L S T AX N
@@ -1207,10 +1207,7 @@ REAGENT  R IY0 EY1 JH AX N T
 REAGENTS  R IY0 EY1 JH AX N T S
 REAGLE  R IY1 G AX L
 REAGOR  R IY1 G AXR
-REAL(adj)  R IY1 L
-REAL(adv)  R IY1 L
-REAL(noun)  R IY1 L
-REAL(noun)  R EY1 AA0 L #@@{ "lang": ["es", "pt"], "usage": ["currency", "sport"] }@@ e.g. Real Madrid
+REAL  R IY1 L
 REALAMERICA  R IY2 L AX M EH1 R IH0 K AX
 REALCAP  R IY1 L K AE2 P
 REALE  R IY1 AE0 L
@@ -1251,8 +1248,7 @@ REALM  R EH1 L M
 REALMS  R EH1 L M Z
 REALMUTO  R IY0 L M UW1 T OW0
 REALPOLITIK  R IY2 L P AO2 L IH0 T IH1 K
-REALS(noun)  R IY1 L Z
-REALS(noun)  R EY1 AA0 L Z #@@{ "lang": ["es", "pt"], "usage": "currency" }@@
+REALS  R IY1 L Z
 REALTIME  R IY1 AX L T AY2 M
 REALTOR  R IY1 AX L T AXR
 REALTOR'S  R IY1 AX L T AXR Z
@@ -1632,16 +1628,16 @@ RECOIL  R IY0 K OY1 L
 RECOILED  R IY0 K OY1 L D
 RECOILING  R IY0 K OY1 L IH0 NG
 RECOILS  R IY0 K OY1 L Z
-RECOLLECT(verb)  R EH2 K AX L EH1 K T #@@{ "usage": ["memory", "thoughts"] }@@
-RECOLLECT(verb)  R IY2 K AX L EH1 K T #@@{ "root": "COLLECT" }@@
-RECOLLECTED(verb)  R EH2 K AX L EH1 K T IH0 D #@@{ "usage": ["memory", "thoughts"] }@@
-RECOLLECTED(verb)  R IY2 K AX L EH1 K T IH0 D #@@{ "root": "COLLECT" }@@
-RECOLLECTING(verb)  R EH2 K AX L EH1 K T IH0 NG #@@{ "usage": ["memory", "thoughts"] }@@
-RECOLLECTING(verb)  R IY2 K AX L EH1 K T IH0 NG #@@{ "root": "COLLECT" }@@
+RECOLLECT  R EH2 K AX L EH1 K T #@@{ "usage": ["memory", "thoughts"] }@@
+RECOLLECT(2)  R IY2 K AX L EH1 K T #@@{ "root": "COLLECT" }@@
+RECOLLECTED  R EH2 K AX L EH1 K T IH0 D #@@{ "usage": ["memory", "thoughts"] }@@
+RECOLLECTED(2)  R IY2 K AX L EH1 K T IH0 D #@@{ "root": "COLLECT" }@@
+RECOLLECTING  R EH2 K AX L EH1 K T IH0 NG #@@{ "usage": ["memory", "thoughts"] }@@
+RECOLLECTING(2)  R IY2 K AX L EH1 K T IH0 NG #@@{ "root": "COLLECT" }@@
 RECOLLECTION  R EH2 K AX L EH1 K SH AX N
 RECOLLECTIONS  R EH2 K AX L EH1 K SH AX N Z
-RECOLLECTS(verb)  R EH2 K AX L EH1 K T S #@@{ "usage": ["memory", "thoughts"] }@@
-RECOLLECTS(verb)  R IY2 K AX L EH1 K T S #@@{ "root": "COLLECT" }@@
+RECOLLECTS  R EH2 K AX L EH1 K T S #@@{ "usage": ["memory", "thoughts"] }@@
+RECOLLECTS(2)  R IY2 K AX L EH1 K T S #@@{ "root": "COLLECT" }@@
 RECOMBINANT  R IY0 K AA1 M B IH0 N AX N T
 RECOMBINATION  R IY0 K AA2 M B IH0 N EY1 SH AX N
 RECOMBINE  R IY2 K AX M B AY1 N
@@ -1713,18 +1709,14 @@ RECORDS(noun)  R EH1 K AXR D Z
 RECORDS(verb)  R IH0 K AO1 R D Z
 RECORE  R EH0 K AO1 R IY0
 RECOTON  R IH0 K AA1 T AX N
-RECOUNT(noun)  R IH0 K AW1 N T #@@{ "usage": ["retell", "narration", "rehearse"] }@@
-RECOUNT(verb)  R IH0 K AW1 N T #@@{ "usage": ["retell", "narration", "rehearse"] }@@
-RECOUNT(noun)  R IY2 K AW1 N T #@@{ "root": "COUNT" }@@
-RECOUNT(verb)  R IY2 K AW1 N T #@@{ "root": "COUNT" }@@
-RECOUNTED(verb)  R IH0 K AW1 N T IH0 D #@@{ "usage": ["retell", "narration", "rehearse"] }@@
-RECOUNTED(verb)  R IY2 K AW1 N T IH0 D #@@{ "root": "COUNT" }@@
-RECOUNTING(verb)  R IH0 K AW1 N T IH0 D #@@{ "usage": ["retell", "narration", "rehearse"] }@@
-RECOUNTING(verb)  R IY2 K AW1 N T IH0 D #@@{ "root": "COUNT" }@@
-RECOUNTS(noun)  R IY2 K AW1 N T S #@@{ "root": "COUNT" }@@
-RECOUNTS(verb)  R IY2 K AW1 N T S #@@{ "root": "COUNT" }@@
-RECOUNTS(noun)  R IH0 K AW1 N T S #@@{ "usage": ["retell", "narration", "rehearse"] }@@
-RECOUNTS(verb)  R IH0 K AW1 N T S #@@{ "usage": ["retell", "narration", "rehearse"] }@@
+RECOUNT  R IH0 K AW1 N T #@@{ "usage": ["retell", "narration", "rehearse"] }@@
+RECOUNT(2)  R IY2 K AW1 N T #@@{ "root": "COUNT" }@@
+RECOUNTED  R IH0 K AW1 N T IH0 D #@@{ "usage": ["retell", "narration", "rehearse"] }@@
+RECOUNTED(2)  R IY2 K AW1 N T IH0 D #@@{ "root": "COUNT" }@@
+RECOUNTING  R IH0 K AW1 N T IH0 D #@@{ "usage": ["retell", "narration", "rehearse"] }@@
+RECOUNTING(2)  R IY2 K AW1 N T IH0 D #@@{ "root": "COUNT" }@@
+RECOUNTS  R IY2 K AW1 N T S #@@{ "root": "COUNT" }@@
+RECOUNTS(2)  R IH0 K AW1 N T S #@@{ "usage": ["retell", "narration", "rehearse"] }@@
 RECOUP  R IH0 K UW1 P
 RECOUPED  R IH0 K UW1 P T
 RECOUPING  R IH0 K UW1 P IH0 NG
@@ -1742,11 +1734,11 @@ RECREATE  R IY0 K R IY0 EY1 T
 RECREATED  R IY0 K R IY0 EY1 T IH0 D
 RECREATES  R IY0 K R IY0 EY1 T S
 RECREATING  R IY0 K R IY0 EY1 T IH0 NG
-RECREATION(noun)  R EH2 K R IY0 EY1 SH AX N #@@{ "usage": "activity" }@@
-RECREATION(noun)  R IY2 K R IY0 EY1 SH AX N #@@{ "root": "CREATION" }@@
+RECREATION  R EH2 K R IY0 EY1 SH AX N #@@{ "usage": "activity" }@@
+RECREATION(2)  R IY2 K R IY0 EY1 SH AX N #@@{ "root": "CREATION" }@@
 RECREATIONAL  R EH2 K R IY0 EY1 SH AX N AX L
-RECREATIONS(noun)  R EH2 K R IY0 EY1 SH AX N Z #@@{ "usage": "activity" }@@
-RECREATIONS(noun)  R IY2 K R IY0 EY1 SH AX N Z #@@{ "root": "CREATION" }@@
+RECREATIONS  R EH2 K R IY0 EY1 SH AX N Z #@@{ "usage": "activity" }@@
+RECREATIONS(2)  R IY2 K R IY0 EY1 SH AX N Z #@@{ "root": "CREATION" }@@
 RECRIMINATE  R IH0 K R IH2 M IH0 N EY1 T
 RECRIMINATION  R IH0 K R IH2 M IH0 N EY1 SH AX N
 RECRIMINATIONS  R IH0 K R IH2 M IH0 N EY1 SH AX N Z
@@ -1962,17 +1954,13 @@ REDRAFTED  R IY0 D R AE1 F T IH0 D
 REDRAW  R IY0 D R AO1
 REDRAWING  R IY0 D R AO1 IH0 NG
 REDRAWN  R IY0 D R AO1 N
-REDRESS(noun)  R IH0 D R EH1 S #@@{ "usage": ["correct", "restore"] }@@
-REDRESS(verb)  R IH0 D R EH1 S #@@{ "usage": ["correct", "restore"] }@@
-REDRESS(noun)  R IY0 D R EH1 S #@@{ "root": "DRESS" }@@
-REDRESS(verb)  R IY0 D R EH1 S #@@{ "root": "DRESS" }@@
+REDRESS  R IH0 D R EH1 S #@@{ "usage": ["correct", "restore"] }@@
+REDRESS(2)  R IY0 D R EH1 S #@@{ "root": "DRESS" }@@
 REDRESSER  R IH0 D R EH1 S AXR
-REDRESSES(noun)  R IH0 D R EH1 S IH0 Z #@@{ "usage": ["correct", "restore"] }@@
-REDRESSES(verb)  R IH0 D R EH1 S IH0 Z #@@{ "usage": ["correct", "restore"] }@@
-REDRESSES(noun)  R IY0 D R EH1 S IH0 Z #@@{ "root": "DRESS" }@@
-REDRESSES(verb)  R IY0 D R EH1 S IH0 Z #@@{ "root": "DRESS" }@@
-REDRESSING(verb)  R IH0 D R EH1 S IH0 NG #@@{ "usage": ["correct", "restore"] }@@
-REDRESSING(verb)  R IY0 D R EH1 S IH0 NG #@@{ "root": "DRESS" }@@
+REDRESSES  R IH0 D R EH1 S IH0 Z #@@{ "usage": ["correct", "restore"] }@@
+REDRESSES(2)  R IY0 D R EH1 S IH0 Z #@@{ "root": "DRESS" }@@
+REDRESSING  R IH0 D R EH1 S IH0 NG #@@{ "usage": ["correct", "restore"] }@@
+REDRESSING(2)  R IY0 D R EH1 S IH0 NG #@@{ "root": "DRESS" }@@
 REDS  R EH1 D Z
 REDSHAW  R EH1 D SH AO2
 REDSKIN  R EH1 D S K IH2 N
@@ -3598,19 +3586,19 @@ RESIDUAL  R IH0 Z IH1 JH UW0 AX L
 RESIDUALS  R IH0 Z IH1 JH UW0 AX L Z
 RESIDUE  R EH1 Z AX D UW2
 RESIDUES  R EH1 Z AX D UW2 Z
-RESIGN(verb)  R IH0 Z AY1 N #@@{ "usage": "quit" }@@
-RESIGN(verb)  R IY0 S AY1 N #@@{ "root": "SIGN" }@@
+RESIGN  R IH0 Z AY1 N #@@{ "usage": "quit" }@@
+RESIGN(2)  R IY0 S AY1 N #@@{ "root": "SIGN" }@@
 RESIGNATION  R EH2 Z IH0 G N EY1 SH AX N
 RESIGNATIONS  R EH2 Z IH0 G N EY1 SH AX N Z
-RESIGNED(verb)  R IH0 Z AY1 N D #@@{ "usage": "quit" }@@
-RESIGNED(verb)  R IY0 S AY1 N D #@@{ "root": "SIGN" }@@
+RESIGNED  R IH0 Z AY1 N D #@@{ "usage": "quit" }@@
+RESIGNED(2)  R IY0 S AY1 N D #@@{ "root": "SIGN" }@@
 RESIGNEDLY  R IH0 Z AY1 N IH0 D L IY0
 RESIGNEE  R EH2 Z IH0 G N IY1
 RESIGNEES  R EH2 Z IH0 G N IY1 Z
-RESIGNING(verb)  R IH0 Z AY1 N IH0 NG #@@{ "usage": "quit" }@@
-RESIGNING(verb)  R IY0 S AY1 N IH0 NG #@@{ "root": "SIGN" }@@
-RESIGNS(verb)  R IH0 Z AY1 N Z #@@{ "usage": "quit" }@@
-RESIGNS(verb)  R IY0 S AY1 N Z #@@{ "root": "SIGN" }@@
+RESIGNING  R IH0 Z AY1 N IH0 NG #@@{ "usage": "quit" }@@
+RESIGNING(2)  R IY0 S AY1 N IH0 NG #@@{ "root": "SIGN" }@@
+RESIGNS  R IH0 Z AY1 N Z #@@{ "usage": "quit" }@@
+RESIGNS(2)  R IY0 S AY1 N Z #@@{ "root": "SIGN" }@@
 RESILIENCE  R IH0 Z IH1 L IY0 AX N S
 RESILIENCY  R IH0 Z IH1 L IY0 AX N S IY0
 RESILIENT  R IH0 Z IH1 L IY0 AX N T
@@ -3673,12 +3661,9 @@ RESORTING(3)  R IY0 S AO1 R T IH0 NG
 RESORTS  R IH0 Z AO1 R T S
 RESORTS(2)  R IY0 Z AO1 R T S
 RESORTS(3)  R IY0 S AO1 R T S
-RESOUND(verb)  R IH0 Z AW1 N D
-RESOUND(verb)  R IY2 S AW1 N D #@@{ "root": "SOUND" }@@
-RESOUNDED(verb)  R IH0 Z AW1 N D IH0 D
-RESOUNDED(verb)  R IY2 S AW1 N D IH0 D #@@{ "root": "SOUND" }@@
-RESOUNDING(verb)  R IH0 Z AW1 N D IH0 NG
-RESOUNDING(verb)  R IY2 S AW1 N D IH0 NG #@@{ "root": "SOUND" }@@
+RESOUND  R IH0 Z AW1 N D
+RESOUNDED  R IH0 Z AW1 N D IH0 D
+RESOUNDING  R IH0 Z AW1 N D IH0 NG
 RESOUNDINGLY  R IH0 Z AW1 N D IH0 NG L IY0
 RESOURCE  R IY1 S AO0 R S
 RESOURCEFUL  R IY0 S AO1 R S F AX L
@@ -3889,16 +3874,14 @@ RETALIATING  R IH0 T AE1 L IY0 EY2 T IH0 NG
 RETALIATION  R IY0 T AE2 L IY0 EY1 SH AX N
 RETALIATORY  R IY0 T AE1 L Y AX T AO2 R IY0
 RETANA  R EH0 T AE1 N AX
-RETARD(noun)  R IH0 T AA1 R D #@@{ "usage": "delay" }@@
-RETARD(verb)  R IH0 T AA1 R D
-RETARD(noun)  R IY0 T AA1 R D
+RETARD  R IH0 T AA1 R D #@@{ "usage": "delay" }@@
+RETARD(2)  R IY0 T AA1 R D
 RETARDANT  R IY0 T AA1 R D AX N T
 RETARDATION  R IY0 T AA0 R D EY1 SH AX N
 RETARDED  R IH0 T AA1 R D IH0 D
 RETARDING  R IH0 T AA1 R D IH0 NG
-RETARDS(noun)  R IH0 T AA1 R D Z #@@{ "usage": "delay" }@@
-RETARDS(verb)  R IH0 T AA1 R D Z
-RETARDS(noun)  R IY0 T AA1 R D Z
+RETARDS  R IH0 T AA1 R D Z #@@{ "usage": "delay" }@@
+RETARDS(2)  R IY0 T AA1 R D Z
 RETARGET  R IY2 T AA1 R G IH0 T
 RETARGETER  R IY2 T AA1 R G IH0 T AXR
 RETARGETERS  R IY2 T AA1 R G IH0 T AXR Z
@@ -6308,10 +6291,8 @@ ROVINGS  R OW1 V IH0 NG Z
 ROVIRA  R OW0 V IH1 R AX
 ROVITO  R OW0 V IY1 T OW0
 ROVNER  R AA1 V N AXR
-ROW(noun)  R OW1 #@@{ "usage": ["line", "weightlifting"] }@@
-ROW(verb)  R OW1 #@@{ "usage": "nautical" }@@
-ROW(noun)  R AW1 #@@{ "usage": ["argument", "noise"] }@@
-ROW(verb)  R AW1 #@@{ "usage": "argument" }@@
+ROW  R OW1 #@@{ "usage": ["line", "weightlifting", "nautical"] }@@
+ROW(2)  R AW1 #@@{ "usage": ["argument", "noise"] }@@
 ROW'S  R OW1 Z
 ROWAINE  R OW0 EY1 N
 ROWAINE'S  R OW0 EY1 N Z
@@ -6350,10 +6331,8 @@ ROWNEY  R OW1 N IY0
 ROWNTREE  R OW1 N T R IY2
 ROWNTREE'S  R OW1 N T R IY2 Z
 ROWNY  R OW1 N IY0
-ROWS(noun)  R OW1 Z #@@{ "usage": ["line", "weightlifting"] }@@
-ROWS(verb)  R OW1 Z #@@{ "usage": "nautical" }@@
-ROWS(noun)  R AW1 Z #@@{ "usage": ["argument", "noise"] }@@
-ROWS(verb)  R AW1 Z #@@{ "usage": "argument" }@@
+ROWS  R OW1 Z #@@{ "usage": ["line", "weightlifting", "nautical"] }@@
+ROWS(2)  R AW1 Z #@@{ "usage": ["argument", "noise"] }@@
 ROWSE  R OW1 S
 ROWSER  R OW1 Z AXR
 ROWSEY  R OW1 S IY0
@@ -6630,8 +6609,7 @@ RUGEN  R AH1 G AX N
 RUGER  R UW1 G AXR
 RUGERONI  R UW2 JH EH0 R OW1 N IY0
 RUGG  R AH1 G
-RUGGED(adj)  R AH1 G IH0 D
-RUGGED(adj)  R AH1 G D #@@{ "root": "RUG" }@@
+RUGGED  R AH1 G IH0 D
 RUGGEDLY  R AH1 G IH0 D L IY0
 RUGGERI  R UW0 JH EH1 R IY0
 RUGGERIO  R UW0 JH EH1 R IY0 OW0

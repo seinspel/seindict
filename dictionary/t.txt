@@ -273,8 +273,8 @@ TALENT  T AE1 L AX N T
 TALENTED  T AE1 L AX N T IH0 D
 TALENTS  T AE1 L AX N T S
 TALERICO  T AA0 L AXR IY1 K OW0
-TALES(noun)  T EY1 L Z
-TALES(noun)  T EY1 L IY0 Z #@@{ "lang": "la", "usage": ["law", "jury"] }@@
+TALES  T EY1 L Z
+TALES(2)  T EY1 L IY0 Z #@@{ "lang": "la", "usage": ["law", "jury"] }@@
 TALESE  T AX L IY1 Z
 TALESE(2)  T AX L IY1 Z IY0
 TALFORD  T AE1 L F AXR D
@@ -800,8 +800,8 @@ TAXCUT  T AE1 K S K AH2 T
 TAXED  T AE1 K S T
 TAXER  T AE1 K S AXR
 TAXERS  T AE1 K S AXR Z
-TAXES(noun)  T AE1 K S IH0 Z #@@{ "root": "TAX" }@@
-TAXES(noun)  T AE1 K S IY0 Z #@@{ "root": "TAXIS", "usage": ["biology", "medicine", "arrangement", "order"] }@@
+TAXES  T AE1 K S IH0 Z #@@{ "root": "TAX" }@@
+TAXES(2)  T AE1 K S IY0 Z #@@{ "root": "TAXIS", "usage": ["biology", "medicine", "arrangement", "order"] }@@
 TAXI  T AE1 K S IY0
 TAXI'S  T AE1 K S IY0 Z
 TAXICAB  T AE1 K S IY0 K AE2 B
@@ -812,8 +812,8 @@ TAXIDERMY  T AE1 K S AX D ER2 M IY0
 TAXIED  T AE1 K S IY0 D
 TAXIING  T AE1 K S IY0 IH0 NG
 TAXING  T AE1 K S IH0 NG
-TAXIS(noun)  T AE1 K S IY0 Z #@@{ "root": "TAXI" }@@
-TAXIS(noun)  T AE1 K S IH0 S #@@{ "usage": ["biology", "medicine", "arrangement", "order"] }@@
+TAXIS  T AE1 K S IY0 Z #@@{ "root": "TAXI" }@@
+TAXIS(2)  T AE1 K S IH0 S #@@{ "usage": ["biology", "medicine", "arrangement", "order"] }@@
 TAXIWAY  T AE1 K S IY0 W EY0
 TAXOL  T AE1 K S AA2 L
 TAXONOMIES  T AE2 K S AA1 N AX M IY0 Z
@@ -881,20 +881,16 @@ TEAMWORK  T IY1 M W ER2 K
 TEANECK  T IY1 N EH2 K
 TEANEY  T IY1 N IY0
 TEAPOT  T IY1 P AA2 T
-TEAR(noun)  T EH1 R #@@{ "usage": ["hole", "object"] }@@
-TEAR(verb)  T EH1 R #@@{ "usage": ["rip", "break", "rend", "speed"] }@@
-TEAR(noun)  T IH1 R #@@{ "usage": ["crying", "person"] }@@
-TEAR(verb)  T IH1 R #@@{ "usage": ["crying", "person"] }@@
+TEAR  T EH1 R #@@{ "usage": ["rip", "break", "rend", "speed"] }@@
+TEAR(2)  T IH1 R #@@{ "usage": ["crying", "person"] }@@
 TEARE  T IH1 R
 TEARFUL  T IH1 R F AX L
 TEARFULLY  T IH1 R F AX L IY0
-TEARING(verb)  T EH1 R IH0 NG #@@{ "usage": ["rip", "break", "rend", "speed"] }@@
-TEARING(verb)  T IH1 R IH0 NG #@@{ "usage": ["crying", "person"] }@@
+TEARING  T EH1 R IH0 NG #@@{ "usage": ["rip", "break", "rend", "speed"] }@@
+TEARING(2)  T IH1 R IH0 NG #@@{ "usage": ["crying", "person"] }@@
 TEARLE  T AO1 R AX L
-TEARS(noun)  T EH1 R Z #@@{ "usage": ["hole", "object"] }@@
-TEARS(verb)  T EH1 R Z #@@{ "usage": ["rip", "break", "rend", "speed"] }@@
-TEARS(noun)  T IH1 R Z #@@{ "usage": ["crying", "person"] }@@
-TEARS(verb)  T IH1 R Z #@@{ "usage": ["crying", "person"] }@@
+TEARS  T EH1 R Z #@@{ "usage": ["rip", "break", "rend", "speed"] }@@
+TEARS(2)  T IH1 R Z #@@{ "usage": ["crying", "person"] }@@
 TEARY  T IH1 R IY0
 TEAS  T IY1 Z
 TEASDALE  T IY1 Z D EY2 L
@@ -1812,8 +1808,8 @@ THAYER  TH EY1 AXR
 THAYER'S  TH EY1 AXR Z
 THAYERS  TH EY1 AXR Z
 THAYNE  TH EY1 N
-THE(det)  DH IY1 #@@{ "usage": ["prevocalic", "stressed"] }@@
-THE(det)  DH AX #@@{ "usage": "unstressed" }@@
+THE  DH AX #@@{ "usage": "unstressed" }@@
+THE(2)  DH IY1 #@@{ "usage": ["prevocalic", "stressed"] }@@
 THEA  TH IY1 AX
 THEAKSTON  TH IY1 K S T AX N #@@{ "name": "family" }@@ William "Will" Theakston
 THEALL  TH IY1 L
@@ -2530,18 +2526,16 @@ TIEMANN  T IY1 M AX N
 TIEMEYER  T IY1 M AY0 AXR
 TIEN  T Y EH1 N
 TIENANMEN  T Y EH0 N AX N M EH1 N
-TIER(noun)  T IH1 R
-TIER(verb)  T IH1 R
-TIER(noun)  T AY1 AXR #@@{ "root": "TIE" }@@
+TIER  T IH1 R
+TIER(2)  T AY1 AXR #@@{ "root": "TIE" }@@
 TIERCE  T IH1 R S
 TIERCO  T IH1 R K OW0
 TIERED  T IH1 R D
 TIERNAN  T IH1 R N AX N
 TIERNEY  T IH1 R N IY0 #@@{ "name": "family" }@@ Annette Tierney
 TIERNO  T IH1 R N OW0
-TIERS(noun)  T IH1 R Z
-TIERS(verb)  T IH1 R Z
-TIERS(noun)  T AY1 AXR Z #@@{ "root": "TIE" }@@
+TIERS  T IH1 R Z
+TIERS(2)  T AY1 AXR Z #@@{ "root": "TIE" }@@
 TIES  T AY1 Z
 TIESZEN  T IY1 SH AX N
 TIETJE  T IY1 T JH
@@ -5237,13 +5231,10 @@ TUSCALOOSA  T AH2 S K AX L UW1 S AX
 TUSCALOOSA'S  T AH2 S K AX L UW1 S AX Z
 TUSCAN  T AH1 S K AX N
 TUSCANY  T AH1 S K AX N IY0
-TUSH(noun)  T UH1 SH #@@{ "usage": "buttocks" }@@
-TUSH(noun)  T AH1 SH
-TUSH(intj)  T AH1 SH
-TUSH(verb)  T AH1 SH
-TUSHES(noun)  T UH1 SH IH0 Z #@@{ "usage": "buttocks" }@@
-TUSHES(noun)  T AH1 SH IH0 Z
-TUSHES(verb)  T AH1 SH IH0 Z
+TUSH  T UH1 SH #@@{ "usage": "buttocks" }@@
+TUSH(2)  T AH1 SH
+TUSHES  T UH1 SH IH0 Z #@@{ "usage": "buttocks" }@@
+TUSHES(2)  T AH1 SH IH0 Z
 TUSING  T UW1 S IH0 NG
 TUSK  T AH1 S K
 TUSKEGEE  T AH1 S K AX G IY2

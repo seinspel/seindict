@@ -425,8 +425,8 @@ MAGAZINES  M AE1 G AX Z IY2 N Z
 MAGBY  M AE1 G B IY0
 MAGDA  M AE1 G D AX
 MAGDALA  M AA0 G D AA1 L AX
-MAGDALEN(noun)  M AE1 G D AX L IH0 N #@@{ "name": "family" }@@ Myra Magdalen
-MAGDALEN(noun)  M AO1 D L IH0 N #@@{ "usage": "college" }@@ Magdalen College, Oxford
+MAGDALEN  M AE1 G D AX L IH0 N #@@{ "name": "family" }@@ Myra Magdalen
+MAGDALEN(2)  M AO1 D L IH0 N #@@{ "usage": "college" }@@ Magdalen College, Oxford
 MAGDALENA  M AE2 G D AX L IY1 N AX
 MAGDALENE  M AE1 G D AX L IY2 N
 MAGDALENO  M AA0 G D AA0 L EY1 N OW0
@@ -1172,8 +1172,8 @@ MANED  M EY1 N D
 MANELLA  M AX N EH1 L AX
 MANER  M EY1 N AXR
 MANERS  M EY1 N AXR Z
-MANES(noun)  M EY1 N Z
-MANES(noun)  M AA1 N EY0 Z #@@{ "lang": "la", "usage": ["spirit/dead", "capitalized"] }@@
+MANES  M EY1 N Z
+MANES(2)  M AA1 N EY0 Z #@@{ "lang": "la", "usage": ["spirit/dead", "capitalized"] }@@
 MANESS  M AA1 N IH0 S
 MANET  M AE0 N EY1
 MANET(2)  M AA0 N EY1
@@ -1649,8 +1649,8 @@ MARDI  M AA1 R D IY0
 MARDIS  M AA1 R D IH0 S
 MARDIS(2)  M AA1 R D IY0 S
 MARDON  M AA1 R D AX N
-MARE(noun)  M EH1 R
-MARE(noun)  M AA1 R EY0 #@@{ "lang": "la", "usage": ["sea", "planets"] }@@
+MARE  M EH1 R
+MARE(2)  M AA1 R EY0 #@@{ "lang": "la", "usage": ["sea", "planets"] }@@
 MARE'S  M EH1 R Z
 MAREADY  M AXR EH1 D IY0
 MAREAN  M AA0 R IY1 N
@@ -1724,8 +1724,8 @@ MARGUS  M AA1 R G AX S
 MARGY  M AA1 R JH IY0
 MARHEFKA  M AXR HH EH1 F K AX
 MARI  M AA1 R IY0
-MARIA(noun)  M AXR IY1 AX #@@{ "name": "female" }@@ Maria Elena Bello
-MARIA(noun)  M AA1 R IY0 AX #@@{ "lang": "la", "usage": ["sea", "planets"] }@@
+MARIA  M AXR IY1 AX #@@{ "name": "female" }@@ Maria Elena Bello
+MARIA(2)  M AA1 R IY0 AX #@@{ "lang": "la", "usage": ["sea", "planets"] }@@
 MARIA'S  M AXR IY1 AX Z
 MARIACHI  M AA2 R IY0 AA1 CH IY0
 MARIAH  M AXR AY1 AX
@@ -4061,9 +4061,7 @@ MCWILLIAM  M AX K W IH1 L Y AX M
 MCWILLIAMS  M AX K W IH1 L Y AX M Z
 MCWRIGHT  M AX K R AY1 T
 MCZEAL  M AX K Z IY1 L
-ME(pron)  M IY1 #@@{ "lang": "en" }@@
-ME(pron)  M EY1 #@@{ "lang": "la" }@@ "Nemo me impune lacessit"@la : Order of the Thistle motto.
-ME(det)  M IY1
+ME  M IY1
 MEA  M IY1
 MEACHAM  M IY1 CH AX M
 MEACHUM  M IY1 CH AX M

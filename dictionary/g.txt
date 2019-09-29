@@ -4044,8 +4044,8 @@ GRAVAMEN  G R AA0 V EY1 M AX N
 GRAVANO  G R AX V AA1 N OW0
 GRAVANO(2)  G R AX V AE1 N OW0
 GRAVATT  G R AE1 V AX T
-GRAVE(noun)  G R EY1 V
-GRAVE(noun)  G R AA1 V #@@{ "lang": "fr", "usage": ["wine", "place"] }@@ "De Grave"@fr (Wine)
+GRAVE  G R EY1 V
+GRAVE(2)  G R AA1 V #@@{ "lang": "fr", "usage": ["wine", "place"] }@@ "De Grave"@fr (Wine)
 GRAVEL  G R AE1 V AX L
 GRAVELINE  G R EY1 V L AY2 N
 GRAVELL  G R AE1 V AX L

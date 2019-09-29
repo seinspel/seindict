@@ -2942,9 +2942,8 @@ DESENSITIZING  D IH0 S EH1 N S AX T AY2 Z IH0 NG
 DESERET  D EH2 S AXR EH1 T
 DESERET(2)  D EH2 Z AXR EY1
 DESERT(noun)  D EH1 Z AXR T #@@{ "usage": "terrain" }@@
-DESERT(adj)  D EH1 Z AXR T #@@{ "usage": "terrain" }@@
 DESERT(verb)  D IH0 Z ER1 T
-DESERT(noun)  D IH0 Z ER1 T #@@{ "usage": ["punishment", "reward"] }@@
+DESERT(noun2)  D IH0 Z ER1 T #@@{ "usage": ["punishment", "reward"] }@@
 DESERTED  D IH0 Z ER1 T IH0 D
 DESERTER  D IH0 Z ER1 T AXR
 DESERTERS  D IH0 Z ER1 T AXR Z
@@ -2953,7 +2952,7 @@ DESERTION  D IH0 Z ER1 SH AX N
 DESERTIONS  D IH0 Z ER1 SH AX N Z
 DESERTS(noun)  D EH1 Z AXR T S #@@{ "usage": "terrain" }@@
 DESERTS(verb)  D IH0 Z ER1 T S
-DESERTS(noun)  D IH0 Z ER1 T S #@@{ "usage": ["punishment", "reward"] }@@
+DESERTS(noun2)  D IH0 Z ER1 T S #@@{ "usage": ["punishment", "reward"] }@@
 DESERVE  D IH0 Z ER1 V
 DESERVED  D IH0 Z ER1 V D
 DESERVEDLY  D IH0 Z ER1 V IH0 D L IY0
@@ -4518,19 +4517,15 @@ DISCORDANT  D IH0 S K AO1 R D AX N T
 DISCOS  D IH1 S K OW0 Z
 DISCOTHEQUE  D IH1 S K OW0 T EH2 K
 DISCOTHEQUES  D IH1 S K OW0 T EH2 K S
-DISCOUNT(noun)  D IH1 S K AW0 N T #@@{ "usage": "money" }@@
-DISCOUNT(adj)  D IH1 S K AW0 N T #@@{ "usage": "money" }@@
-DISCOUNT(verb)  D IH0 S K AW1 N T #@@{ "usage": "ignore", "root": "COUNT" }@@
-DISCOUNT(verb)  D IH1 S K AW0 N T #@@{ "usage": "money" }@@
+DISCOUNT  D IH1 S K AW0 N T #@@{ "usage": "money" }@@
+DISCOUNT(2)  D IH0 S K AW1 N T #@@{ "usage": "ignore", "root": "COUNT" }@@
 DISCOUNTABLE  D IH1 S K AW2 N T AX B AX L
 DISCOUNTED  D IH1 S K AW2 N T IH0 D
 DISCOUNTER  D IH1 S K AW2 N T AXR
 DISCOUNTERS  D IH0 S K AW1 N T AXR Z
 DISCOUNTING  D IH1 S K AW2 N T IH0 NG
-DISCOUNTS(noun)  D IH1 S K AW0 N T S #@@{ "usage": "money" }@@
-DISCOUNTS(adj)  D IH1 S K AW0 N T S #@@{ "usage": "money" }@@
-DISCOUNTS(verb)  D IH0 S K AW1 N T S #@@{ "usage": "ignore", "root": "COUNT" }@@
-DISCOUNTS(verb)  D IH1 S K AW0 N T S #@@{ "usage": "money" }@@
+DISCOUNTS  D IH1 S K AW0 N T S #@@{ "usage": "money" }@@
+DISCOUNTS(2)  D IH0 S K AW1 N T S #@@{ "usage": "ignore", "root": "COUNT" }@@
 DISCOURAGE  D IH0 S K ER1 IH0 JH
 DISCOURAGED  D IH0 S K ER1 IH0 JH D
 DISCOURAGEMENT  D IH0 S K ER1 IH0 JH M AX N T
@@ -5206,9 +5201,7 @@ DMITRI(2)  D M IY1 T R IY0
 DNASE  D IY1 EH2 N EY2 S
 DNASE(2)  D IY1 EH2 N EY2 Z
 DNIESTER  D AX N IY1 S T AXR
-DO(verb)  D UW1
-DO(noun)  D UW1
-DO(noun)  D OW1 #@@{ "usage": "music" }@@
+DO  D UW1
 DO'S  D UW1 Z
 DOABLE  D UW1 AX B AX L
 DOAK  D OW1 K
@@ -5913,9 +5906,9 @@ DORVAL  D AO1 R V AX L
 DORWARD  D AO1 R W AXR D
 DORWART  D AO1 R W AO0 R T
 DORY  D AO1 R IY0
-DOS(noun)  D UW1 Z
-DOS(noun)  D OW1 Z #@@{ "usage": "music" }@@
-DOS(num)  D AO1 S #@@{ "lang": "es" }@@
+DOS  D UW1 Z
+DOS(2)  D OW1 Z #@@{ "usage": "music" }@@
+DOS(3)  D AO1 S #@@{ "lang": "es" }@@
 DOSAGE  D OW1 S IH0 JH
 DOSAGES  D OW1 S IH0 JH IH0 Z
 DOSCH  D AO1 SH
@@ -6321,10 +6314,10 @@ DRAWBRIDGE  D R AO1 B R IH2 JH
 DRAWDOWN  D R AO1 D AW2 N
 DRAWDOWNS  D R AO1 D AW2 N Z
 DRAWDY  D R AO1 D IY0
-DRAWER(noun)  D R AO1 R #@@{ "usage": "box" }@@
-DRAWER(noun)  D R AO1 R AXR #@@{ "usage": "person", "root": "DRAW" }@@
-DRAWERS(noun)  D R AO1 R Z #@@{ "usage": "box" }@@
-DRAWERS(noun)  D R AO1 R AXR Z #@@{ "usage": "person", "root": "DRAW" }@@
+DRAWER  D R AO1 R #@@{ "usage": "box" }@@
+DRAWER(2)  D R AO1 R AXR #@@{ "usage": "person", "root": "DRAW" }@@
+DRAWERS  D R AO1 R Z #@@{ "usage": "box" }@@
+DRAWERS(2)  D R AO1 R AXR Z #@@{ "usage": "person", "root": "DRAW" }@@
 DRAWING  D R AO1 IH0 NG
 DRAWINGS  D R AO1 IH0 NG Z
 DRAWL  D R AO1 L
