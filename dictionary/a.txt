@@ -1,4 +1,3 @@
-A(det)  AX #@@{ "usage": "unstressed" }@@
 A(det)  EY1 #@@{ "usage": "stressed" }@@
 A(noun)  EY1
 A'S  EY1 Z
@@ -3629,9 +3628,7 @@ AMYLOID  AE1 M IH0 L OY2 D
 AMYOTROPHIC  AE2 M AY0 AX T R OW1 F IH0 K
 AMYOTROPHIC(2)  AE2 M IY0 AX T R OW1 F IH0 K
 AMYX  AE1 M IH0 K S
-AN(det)  AX N #@@{ "usage": "unstressed" }@@
-AN(det)  AE1 N #@@{ "usage": "stressed" }@@
-AN(conj)  AE1 N
+AN  AE1 N #@@{ "usage": "stressed" }@@
 ANA  AA1 N AX
 ANA(2)  AE1 N AX
 ANABAPTIST  AE2 N AX B AE1 P T IH0 S T
@@ -3769,8 +3766,7 @@ ANCIRA  AA0 N CH IH1 R AX
 ANCONA  AA0 NG K OW1 N AX
 ANCRUM  AX NG K R AH1 M
 ANCTIL  AE1 NG K T IH0 L
-AND  AX N D
-AND(2)  AE1 N D
+AND  AE1 N D
 ANDAL  AE1 N D AX L
 ANDALUSIA  AE2 N D AX L UW1 ZH AX
 ANDALUSIAN  AE2 N D AX L UW1 SH AX N
@@ -6842,9 +6838,8 @@ AXELRAD  AE0 K S EH1 L R AA0 D
 AXELROD  AE1 K S AX L R AA2 D
 AXELSEN  AE0 K S EH1 L S AX N
 AXELSON  AE1 K S IH0 L S AX N
-AXES(noun)  AE1 K S IH0 Z #@@{ "root": "AXE" }@@
-AXES(verb)  AE1 K S IH0 Z #@@{ "root": "AXE" }@@
-AXES(noun)  AE1 K S IY0 Z #@@{ "root": "AXIS" }@@
+AXES  AE1 K S IH0 Z #@@{ "root": "AXE" }@@
+AXES(2)  AE1 K S IY0 Z #@@{ "root": "AXIS" }@@
 AXFORD  AE0 K S F AO1 R D
 AXIAL  AE1 K S IY0 AX L
 AXID  AE1 K S IH0 D
