@@ -6,6 +6,7 @@ import json
 from typing import Union, List
 from strictyaml import load, MapPattern, Str, Seq
 
+
 def main() -> None:
     raw_data = (Path(".") / "dictionary" / "a.yaml").open().read()
     schema = MapPattern(Str(), Str() | MapPattern(Str(), Str()) | Seq(Str()))
