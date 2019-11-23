@@ -133,6 +133,9 @@ def convert(raw_pronun: str) -> Pronunciation:
         stress = symbol[-1] if has_stress else ""
         ahead1: Optional[str] = symbols[i + 1] if len(symbols) > i + 1 else None
         ahead2: Optional[str] = symbols[i + 2] if len(symbols) > i + 2 else None
+        # ignore apostrophes when determining whether the next phoneme is intervocalic
+        if ahead2 == "'":
+            ahead2 = symbols[i + 3] if len(symbols) > i + 3 else None
         # whether or not the next phoneme is intervocalic
         next_intervocalic = count_vowels([ahead2]) != 0
         if symbol_no_s == "AA":
