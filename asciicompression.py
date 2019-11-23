@@ -2,14 +2,11 @@
 from typing import Dict
 
 ASCIICOMPRESSION: Dict[str, str] = {
-    "AX": " ",
-    "AXR": "!",
-    "AA0": "\"",
+    "AA0": "!",
     "AA1": "#",
     "AA2": "$",
     "AE0": "%",
     "AE1": "&",
-    "'": "'", # apostrophe remains apostrophe
     "AE2": "(",
     "AH0": ")",
     "AH1": "*",
@@ -92,5 +89,8 @@ ASCIICOMPRESSION: Dict[str, str] = {
     "YR1": "x",
     "YR2": "y",
     "Z": "z",
-    "ZH": "{",
+    "ZH": "~",
+    "'": "'", # apostrophe remains apostrophe
+    "AX": "{",
+    "AXR": "}",
 }
