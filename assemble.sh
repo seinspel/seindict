@@ -1,3 +1,5 @@
 #!/bin/bash
 
-cat dictionary/* > cmudict
+# merge all dictionary files into a single file
+
+cat entries/* > cmudict.yaml
