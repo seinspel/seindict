@@ -48,6 +48,8 @@ VOWELS: List[str] = [
     "AO",
     "AW",
     "AY",
+    "AX",
+    "AXR",
     "EH",
     "ER",
     "EY",
@@ -70,7 +72,7 @@ Dictionary = Dict[str, Union[Pronunciation, List[Pronunciation]]]
 
 
 def main() -> None:
-    base_path = Path(".") / "dictionary"
+    base_path = Path("..") / "entries"
     dictionary: RawDictionary = OrderedDict()
     for yaml_file in YAML_FILES:
         dictionary.update(read_yaml_file(base_path / yaml_file))
