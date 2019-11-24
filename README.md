@@ -1,6 +1,6 @@
 # Pronunciation dictionary for Sein spel
 
-The dictionary is based on "cmudict".
+This dictionary is based on [cmudict](https://en.wikipedia.org/wiki/CMU_Pronouncing_Dictionary).
 The entries can be found in `entries/` separated by the first letter of the words.
 
 The dictionary follows North American pronunciation.
