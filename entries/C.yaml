@@ -4149,7 +4149,6 @@ CLOSE:
   adj: K L OW1 S
   verb: K L OW1 Z
   noun: K L OW1 Z
-  noun2: K L OW1 S #@@{ "usage": ["street", "alley", "architecture", "law"] }@@
 CLOSED: K L OW1 Z D
 CLOSEDOWN: K L OW1 Z D AW2 N
 CLOSELY: K L OW1 S L IY0

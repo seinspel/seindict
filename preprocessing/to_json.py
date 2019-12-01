@@ -6,12 +6,13 @@ from pathlib import Path
 from collections import OrderedDict
 import json
 from typing import Union, List, Optional, Dict, TYPE_CHECKING, Tuple
+from typing_extensions import Final, Literal
 
 from strictyaml import load, MapPattern, Str, Seq
 
 from asciicompression import ASCIICOMPRESSION
 
-YAML_FILES: List[str] = [
+YAML_FILES: Final = (
     "A.yaml",
     "B.yaml",
     "C.yaml",
@@ -39,9 +40,9 @@ YAML_FILES: List[str] = [
     "Y.yaml",
     "Z.yaml",
     "_other.yaml",
-]
+)
 
-VOWELS: List[str] = [
+VOWELS: Final = (
     "AA",
     "AE",
     "AH",
@@ -59,7 +60,59 @@ VOWELS: List[str] = [
     "OY",
     "UH",
     "UW",
+)
+
+UNAMBIGUOUS_BEFORE_LMN: Final = (
+    "B",
+    "CH",
+    "D",
+    "DH",
+    "F",
+    "G",
+    "JH",
+    "K",
+    "P",
+    "S",
+    "SH",
+    "T",
+    "TH",
+    "V",
+    "Z",
+    "ZH",
+)
+UNAMBIGUOUS_BEFORE_L: Final = UNAMBIGUOUS_BEFORE_LMN
+UNAMBIGUOUS_BEFORE_M: Final = UNAMBIGUOUS_BEFORE_LMN
+UNAMBIGUOUS_BEFORE_N: Final = UNAMBIGUOUS_BEFORE_LMN
+
+Identifier = Literal[
+    "adj", "adv", "conj", "det", "intj", "noun", "num", "prep", "pron", "verb", "verb@past"
 ]
+ENSURE_IDENT: Dict[str, Identifier] = {
+    "adj": "adj",  # adjective
+    "adv": "adv",  # adverb
+    "conj": "conj",  # conjuction
+    "det": "det",  # determiner
+    "intj": "intj",  # interjection
+    "noun": "noun",  # noun
+    "num": "num",  # number
+    "prep": "prep",  # preposition
+    "pron": "pron",  # pronoun
+    "verb": "verb",  # verb
+    "verb@past": "verb@past",  # past form of a verb
+}
+SHORT_IDENTIFIERS: Dict[Identifier, str] = {
+    "adj": "j",
+    "adv": "a",
+    "conj": "c",
+    "det": "d",
+    "intj": "i",
+    "noun": "n",
+    "num": "u",
+    "prep": "p",
+    "pron": "o",
+    "verb": "v",
+    "verb@past": "s",
+}
 
 
 class Pronunciation(List[str]):
@@ -68,7 +121,7 @@ class Pronunciation(List[str]):
 
 if TYPE_CHECKING:
     RawDictionary = OrderedDict[str, Union[str, List[str], OrderedDict[str, str]]]
-Dictionary = Dict[str, Union[Pronunciation, List[Pronunciation]]]
+Dictionary = Dict[str, Union[Pronunciation, List[Pronunciation], Dict[Identifier, Pronunciation]]]
 
 
 def main() -> None:
@@ -100,7 +153,7 @@ def read_yaml_file(fpath: Path) -> RawDictionary:
 
 def convert_all(dictionary: RawDictionary) -> Dictionary:
     """Convert all entries in the raw dictionary from YAML file to our format"""
-    converted: Dict[str, Union[Pronunciation, List[Pronunciation]]] = {}
+    converted: Dictionary = {}
     for word, value in dictionary.items():
         if isinstance(value, str):
             raw_pronun: str = value
@@ -110,7 +163,10 @@ def convert_all(dictionary: RawDictionary) -> Dictionary:
             converted[word] = [convert(raw_pronun) for raw_pronun in raw_pronun_list]
         elif isinstance(value, OrderedDict):
             raw_pronun_dict: OrderedDict[str, str] = value
-            converted[word] = [convert(raw_pronun) for raw_pronun in raw_pronun_dict.values()]
+            converted[word] = {
+                ENSURE_IDENT[ident]: convert(raw_pronun)
+                for ident, raw_pronun in raw_pronun_dict.items()
+            }
         else:
             raise ValueError(f"unexpected type: {type(value)}")
     return converted
@@ -134,12 +190,19 @@ def convert(raw_pronun: str) -> Pronunciation:
         symbol_no_s = symbol[0:-1] if has_stress else symbol
         stress = symbol[-1] if has_stress else ""
         ahead1: Optional[str] = symbols[i + 1] if len(symbols) > i + 1 else None
+
+        # whether or not the next phoneme is intervocalic
         ahead2: Optional[str] = symbols[i + 2] if len(symbols) > i + 2 else None
         # ignore apostrophes when determining whether the next phoneme is intervocalic
         if ahead2 == "'":
             ahead2 = symbols[i + 3] if len(symbols) > i + 3 else None
-        # whether or not the next phoneme is intervocalic
         next_intervocalic = count_vowels([ahead2]) != 0
+
+        behind1: Optional[str] = symbols[i - 1] if i > 0 else None
+        if behind1 == "'":
+            behind1 = symbols[i - 2] if i > 1 else None
+
+        # ================================== convert symbols ======================================
         if symbol_no_s == "AA":
             if ahead1 == "R":
                 out.append("AR" + stress)
@@ -158,17 +221,17 @@ def convert(raw_pronun: str) -> Pronunciation:
         elif symbol_no_s == "AX":
             if not next_intervocalic:
                 # syllablic consonants
-                if ahead1 == "L":
+                if ahead1 == "L" and behind1 in UNAMBIGUOUS_BEFORE_L:
                     out.append("EL")
-                    next(symbol_iterator)
+                    next(symbol_iterator)  # skip the next symbol
                     continue
-                elif ahead1 == "M":
+                elif ahead1 == "M" and behind1 in UNAMBIGUOUS_BEFORE_M:
                     out.append("EM")
-                    next(symbol_iterator)
+                    next(symbol_iterator)  # skip the next symbol
                     continue
-                elif ahead1 == "N":
+                elif ahead1 == "N" and behind1 in UNAMBIGUOUS_BEFORE_N:
                     out.append("EN")
-                    next(symbol_iterator)
+                    next(symbol_iterator)  # skip the next symbol
                     continue
         elif symbol_no_s == "EH":
             if ahead1 == "R":
@@ -234,6 +297,11 @@ def dictionary_improvement(dictionary: Dictionary) -> None:
         if isinstance(pronun_or_list, Pronunciation):
             pronun: Pronunciation = pronun_or_list
             dictionary[word] = fix_unstressed_vowels(word, pronun)
+        elif isinstance(pronun_or_list, dict):
+            pronun_dict: Dict[Identifier, Pronunciation] = pronun_or_list
+            dictionary[word] = {
+                ident: fix_unstressed_vowels(word, pronun) for ident, pronun in pronun_dict.items()
+            }
         else:
             pronun_list: List[Pronunciation] = pronun_or_list
             new_list = maybe_discard_variants(pronun_list)
@@ -336,15 +404,24 @@ def get_differences(pronun1: Pronunciation, pronun2: Pronunciation) -> List[Tupl
     return diffs
 
 
-def minimize_all(dictionary: Dictionary) -> Dict[str, Union[str, List[str]]]:
+def minimize_all(dictionary: Dictionary) -> Dict[str, Union[str, List[str], Dict[str, str]]]:
     """Convert the symbols based on two letters to one-letter symbols"""
-    minimized_dict: Dict[str, Union[str, List[str]]] = {}
+    minimized_dict: Dict[str, Union[str, List[str], Dict[str, str]]] = {}
 
     for word, pronun_or_list in dictionary.items():
-        if isinstance(pronun_or_list, Pronunciation):
+        if isinstance(pronun_or_list, Pronunciation):  # only a single pronunciations
             pronun = pronun_or_list
             minimized_dict[word] = minimize(pronun)
-        else:  # there were multiple pronunciations
+        elif isinstance(pronun_or_list, dict):
+            pronun_dict: Dict[Identifier, Pronunciation] = pronun_or_list
+            minimized = {
+                SHORT_IDENTIFIERS[ident]: minimize(pronun) for ident, pronun in pronun_dict.items()
+            }
+            if len(set(minimized.values())) == 1:  # if all the pronunciations are the same
+                minimized_dict[word] = next(iter(minimized.values()))
+            else:
+                minimized_dict[word] = minimized
+        else:
             # minimize them all and remove duplicates with `set()`
             deduplicated = list(set(minimize(pronun) for pronun in pronun_or_list))
             # if it's just one entry after de-duplication, then don't store it as a list

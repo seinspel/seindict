@@ -2006,7 +2006,6 @@ PERMISSIVENESS: P AXR M IH1 S IH0 V N AX S
 PERMIT:
   verb: P AXR M IH1 T #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
   noun: P ER1 M IH0 T
-  verb2: P ER1 M IH0 T #@@{ "usage": "authorization" }@@
 PERMITTED: P AXR M IH1 T IH0 D #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
 PERMITTING: P AXR M IH1 T IH0 NG #@@{ "usage": ["allow", "admit", "hand over", "resign"] }@@
 PERMOUNT: P ER1 M AW2 N T

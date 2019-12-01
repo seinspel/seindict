@@ -693,7 +693,6 @@ IMPULSIVE: IH0 M P AH1 L S IH0 V
 IMPULSIVELY: IH0 M P AH1 L S IH0 V L IY0
 IMPUNE:
 - IH0 M P Y UW1 N   #@@{ "lang": "en" }@@
-- IH0 M P UW1 N EY0   #@@{ "lang": "la" }@@ "Nemo me impune lacessit"@la : Order of the Thistle motto.
 IMPUNITY: IH0 M P Y UW1 N IH0 T IY0
 IMPURE: IH0 M P Y UH1 R
 IMPURITIES: IH0 M P Y UH1 R IH0 T IY0 Z
@@ -705,7 +704,7 @@ IMRE: IH1 M R AX
 IMREG: IH2 M R EH1 G
 IMRIE: IH1 M AXR IY0
 IMUS: AY1 M AX S
-IN: IH1 N #@@{ "lang": ["en", "la"] }@@ "In pace requiescat"@la = "Rest in peace"@en
+IN: IH1 N
 INA: IY1 N AX
 INABILITY: IH2 N AX B IH1 L IH0 T IY0
 INABINET: IH0 N AX B IH1 N IH0 T

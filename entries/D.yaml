@@ -748,10 +748,6 @@ DAZZLING:
 - D AE1 Z L IH0 NG
 DAZZO: D AE1 Z OW0
 DBASE: D IY1 B EY2 S
-DE:
-  det: D AX #@@{ "lang": ["fr", "en"] }@@ "De Grave"@fr
-  prep: D AX #@@{ "lang": "fr" }@@
-  verb: D IY1 #@@{ "lang": ["en-GB-x-nhumber", "en-GB-x-geordie"], "root": "DO(verb)" }@@
 DEA: D IY1
 DEACON: D IY1 K AX N
 DEACONESS: D IY1 K AX N EH2 S
@@ -2504,7 +2500,6 @@ DESERET:
 DESERT:
   noun: D EH1 Z AXR T #@@{ "usage": "terrain" }@@
   verb: D IH0 Z ER1 T
-  noun2: D IH0 Z ER1 T #@@{ "usage": ["punishment", "reward"] }@@
 DESERTED: D IH0 Z ER1 T IH0 D
 DESERTER: D IH0 Z ER1 T AXR
 DESERTION: D IH0 Z ER1 SH AX N
