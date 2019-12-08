@@ -434,7 +434,8 @@ def minimize(pronun: Pronunciation) -> str:
     assert isinstance(pronun, Pronunciation)
     out: str = ""
     for symbol in pronun:
-        ascii_symbol = ASCIICOMPRESSION.get(symbol)
+        # we don't really need to distinguish between no stress (0) and secondary stress (2)
+        ascii_symbol = ASCIICOMPRESSION.get(symbol.replace("2", "0"))
         if ascii_symbol is None:
             raise ValueError(f'undefined ascii symbol for "{symbol}"')
         out += ascii_symbol
