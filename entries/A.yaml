@@ -4682,8 +4682,8 @@ AYER:
 - AY1 AXR
 - EY1 AXR
 AYER'S:
-- EH1 R ' Z
-- EY1 R ' Z
+- "EH1 R ' Z"
+- "EY1 R ' Z"
 AYERST:
 - EY1 AXR S T
 - EH1 R AX S T
