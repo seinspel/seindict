@@ -1,4 +1,4 @@
-M: EH1 M
+M: M
 MA: M AA1
 MA'AM: "M AE1 ' M"
 MAACO: M EY1 K OW0
@@ -5588,17 +5588,13 @@ MOZINGO: M OW0 Z IY1 NG G OW0
 MOZLEY: M AA1 Z L IY0
 MOZZARELLA: M AA2 T S AX R EH1 L AX
 MPEG: EH1 M P EH2 G
-MPG: M AY1 L Z P AXR G AE1 L AX N #@@{ "expanded": "MILES PER GALLON" }@@
-MPH: M AY1 L Z P AXR AW1 AXR #@@{ "expanded": "MILES PER HOUR" }@@
-MR: M IH1 S T AXR #@@{ "expanded": "MISTER" }@@
+MR: M AXR
 MRAZ: M R AE1 Z
 MRAZEK: M R AA1 Z EH0 K
 MROZ: M R AA1 Z
 MROZEK: M R OW1 Z EH0 K
-MRS: M IH1 S IH0 Z #@@{ "expanded": "MIS'ES" }@@ From MISTRESS.
-MS: M IH1 Z #@@{ "expanded": "MISS" }@@ From MISTRESS.
-MSGR: M AA0 N S IY1 N Y AXR #@@{ "expanded": "MONSIGNOR" }@@
-MT: M AW1 N T #@@{ "expanded": "MOUNT" }@@
+MRS: M AXR S
+MS: M S
 MTEL: EH1 M T EH2 L
 MU: M UW1 #@@{ "group": "alphabet/greek", "lang": "el" }@@
 MUAMMAR: M UW0 AE1 M AXR

@@ -1,4 +1,4 @@
-S: EH1 S
+S: S
 SA: S AA1
 SAAB: S AA1 B
 SAAD: S AA1 D
@@ -5777,9 +5777,7 @@ SQUIRT: S K W ER1 T
 SQUIRTED: S K W ER1 T IH0 D
 SQUISHY: S K W IH1 SH IY0
 SQUYRES: S K W AY1 R Z
-SR:
-- S IY1 N Y AXR   #@@{ "expanded": "SENIOR" }@@
-- S IH1 S T AXR   #@@{ "expanded": "SISTER" }@@
+SR: S AXR
 SRAM:
 - SH R AE1 M
 - EH1 S R AE1 M
@@ -5804,9 +5802,7 @@ SROCK: SH R AA1 K
 SROKA: SH R OW1 K AX
 SRPSKA: S R AH1 P S K AX
 SSANGYONG: S AE1 NG Y AO2 NG
-ST:
-- S T R IY1 T   #@@{ "expanded": "STREET" }@@
-- S EY1 N T   #@@{ "expanded": "SAINT" }@@
+ST: S T
 STA: S T AH1
 STAAB: S T AA1 B
 STAAL: S T AA1 L
