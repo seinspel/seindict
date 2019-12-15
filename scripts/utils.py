@@ -74,10 +74,10 @@ def apply(
 
     assert mode in ("filter", "transform")
     deleted_words: RawDictionary = OrderedDict()
-    num_removed = 0
-    num_changed = 0
     base_path = Path("..") / "entries"
     for yaml_file in YAML_FILES:
+        num_removed = 0
+        num_changed = 0
         yaml_path = base_path / yaml_file
         yaml_dict = read_yaml_file(yaml_path)
         dictionary: RawDictionary = yaml_dict.data

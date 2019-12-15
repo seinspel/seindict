@@ -8,7 +8,6 @@ Using John Wells' lexical sets, it has the following mergers:
 
  *  TRAP-BATH
  *  PALM-LOT (COT)
- *  THOUGHT-CLOTH (CAUGHT)
  *  NORTH-FORCE
  *  FLEECE-HAPPY
  *  KIT-EXPLORE
@@ -29,7 +28,7 @@ The dictionary uses the ARPABET symbols to indicate pronunciation:
 | AA      | ɑ   | b**al**m |
 | AE      | æ   | b**a**t |
 | AH      | ʌ   | b**u**tt |
-| AO      | ɔ   | st**o**ry |
+| AO      | ɔ   | b**ough**t |
 | AW      | aʊ  | b**ou**t |
 | AX      | ə   | comma**a** |
 | AXR     | ɚ   | lett**er** |
@@ -39,6 +38,8 @@ The dictionary uses the ARPABET symbols to indicate pronunciation:
 | EY      | eɪ  | b**ai**t |
 | IH      | ɪ   | b**i**t |
 | IY      | i   | b**ea**t |
+| OH      | ɒ   | b**o**t |
+| OO      | ɔ   | b**o**ss (CLOTH vowel)|
 | OW      | oʊ  | b**oa**t |
 | OY      | ɔɪ  | b**oy** |
 | UH      | ʊ   | b**oo**k |
@@ -67,6 +68,7 @@ The dictionary uses the ARPABET symbols to indicate pronunciation:
 | TH      | θ   | **th**igh |
 | V       | v   | **v**ie |
 | W       | w   | **w**ise |
+| WH      | ʍ   | **wh**y |
 | Y       | j   | **y**acht |
 | Z       | z   | **z**oo |
 | ZH      | ʒ   | plea**s**ure |
