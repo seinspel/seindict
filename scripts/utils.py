@@ -1,8 +1,10 @@
+"""Useful functions for writing scripts that change the dicionary"""
 from __future__ import annotations
 
 from pathlib import Path
-from typing import TYPE_CHECKING, List, Callable, Union, Dict, Optional
 from collections import OrderedDict
+from typing import TYPE_CHECKING, List, Callable, Union, Dict, Optional, Iterator, Tuple
+from typing_extensions import Literal
 
 from strictyaml import as_document, load, MapPattern, Str, Seq
 from strictyaml.dumper import StrictYAMLDumper
@@ -53,14 +55,27 @@ def read_yaml_file(fpath: Path):
 
 def apply(
     single_pronun_func: Callable[[str, str, RawDictionary], Union[bool, EntryType]],
-    pronun_list_func: Optional[Callable[[str, List[str], RawDictionary], Union[bool, EntryType]]] = None,
-    pronun_dict_func: Optional[Callable[[str, OrderedDict[str, str], RawDictionary], Union[bool, EntryType]]] = None,
+    pronun_list_func: Optional[
+        Callable[[str, List[str], RawDictionary], Union[bool, EntryType]]
+    ] = None,
+    pronun_dict_func: Optional[
+        Callable[[str, OrderedDict[str, str], RawDictionary], Union[bool, EntryType]]
+    ] = None,
     save_deleted_words: Optional[Path] = None,
     save_result: bool = False,
     only_first_file: bool = False,
+    mode: Literal["filter", "transform"] = "filter",
 ):
+    """This function is ugly so that your code doesn't have to be.
+
+    This function takes three functions and applies them to entries in a dictionary depending on
+    what the type of the entry is.
+    """
+
+    assert mode in ("filter", "transform")
     deleted_words: RawDictionary = OrderedDict()
     num_removed = 0
+    num_changed = 0
     base_path = Path("..") / "entries"
     for yaml_file in YAML_FILES:
         yaml_path = base_path / yaml_file
@@ -82,16 +97,38 @@ def apply(
                     result = pronun_list_func(word, list(pronun_dict.values()), dictionary)
                 else:
                     raise ValueError(f"Unexpected type {type(value)}")
-            else: # pronun_list_func is None
-                if isinstance(value, list):
-                    pronun_list = value
-                elif isinstance(value, OrderedDict):
-                    pronun_list = list(value.values())
-                else:
-                    raise ValueError(f"Unexpected type {type(value)}")
+            else:
+                # At this point, `pronun_list_func` is None and `pronun_dict_func` is also None if
+                # `value` is an OrderedDict.
 
-                # take the result of just looking at the first pronunciation
-                result = single_pronun_func(word, pronun_list[0], dictionary)
+                # what we do now, depends on the mode
+                if mode == "filter":
+                    if isinstance(value, list):
+                        pronun_list = value
+                    elif isinstance(value, OrderedDict):
+                        pronun_list = list(value.values())
+                    else:
+                        raise ValueError(f"Unexpected type {type(value)}")
+                    # take the result of just looking at the first pronunciation
+                    result = single_pronun_func(word, pronun_list[0], dictionary)
+                elif mode == "transform":
+                    # iterate over the pronunciations and transform them one-by-one
+                    new_pronuns: Union[OrderedDict[str, str], List[str]]
+                    entries: Union[Iterator[Tuple[str, str]], Iterator[Tuple[int, str]]]
+                    if isinstance(value, list):
+                        pronun_list = value
+                        new_pronuns = [p for p in pronun_list]  # copy list
+                        entries = enumerate(pronun_list)
+                    elif isinstance(value, OrderedDict):
+                        pronun_dict = value
+                        new_pronuns = OrderedDict()
+                        entries = pronun_dict.items()
+                    else:
+                        raise ValueError(f"Unexpected type {type(value)}")
+
+                    result = _iterate_over_subentries(
+                        new_pronuns, entries, single_pronun_func, word, dictionary
+                    )
 
             if isinstance(result, bool):
                 if not result:  # delete word
@@ -100,13 +137,41 @@ def apply(
                     num_removed += 1
             else:
                 yaml_dict[word] = result
-        print(f"removed {num_removed} entries in {yaml_file}")
+                num_changed += 1
+        if num_removed:
+            print(f"removed {num_removed} entries in {yaml_file}")
+        elif num_changed:
+            print(f"changed {num_changed} entries in {yaml_file}")
+        else:
+            print(f"nothing changed or removed in {yaml_file}")
         if save_result:
             yaml_path.open("w").write(dump(yaml_dict))
         if only_first_file:
             break
     if save_deleted_words is not None:
         write_to_yaml(save_deleted_words, deleted_words)
+
+
+def _iterate_over_subentries(
+    container: Union[OrderedDict[str, str], List[str]],
+    entries: Union[Iterator[Tuple[str, str]], Iterator[Tuple[int, str]]],
+    single_pronun_func: Callable[[str, str, RawDictionary], Union[bool, EntryType]],
+    word: str,
+    dictionary: RawDictionary,
+) -> Union[bool, EntryType]:
+    was_one_entry_changed = False
+    for k, pronun in entries:
+        new_pronun = single_pronun_func(word, pronun, dictionary)
+        if isinstance(new_pronun, bool):  # True means 'keep the entry', False means 'delete it'
+            assert new_pronun is True, "can't filter words in 'transform' mode"
+            container[k] = pronun
+            continue
+        assert isinstance(new_pronun, str), "can't return more than one pronun in 'transform' mode"
+        was_one_entry_changed = True
+        container[k] = new_pronun
+    if not was_one_entry_changed:
+        return True
+    return container
 
 
 def write_to_yaml(fpath: Path, content: OrderedDict) -> None:
