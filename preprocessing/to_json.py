@@ -56,6 +56,7 @@ VOWELS: Final = (
     "EY",
     "IH",
     "IY",
+    "OO",
     "OW",
     "OY",
     "UH",
@@ -259,6 +260,9 @@ def convert(raw_pronun: str) -> Pronunciation:
             elif ahead1 is None and stress == "0":
                 out.append("II")
                 continue
+        elif symbol_no_s == "OO":
+            out.append("AA" + stress)
+            continue
         elif symbol_no_s == "OW":
             if ahead1 == "R" and not next_intervocalic:
                 out.append("OR" + stress)
