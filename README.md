@@ -30,7 +30,7 @@ The dictionary uses the ARPABET symbols to indicate pronunciation:
 | AH      | ʌ   | b**u**tt |
 | AO      | ɔ   | b**ough**t |
 | AW      | aʊ  | b**ou**t |
-| AX      | ə   | comma**a** |
+| AX      | ə   | comm**a** |
 | AXR     | ɚ   | lett**er** |
 | AY      | aɪ  | b**i**te |
 | EH      | ɛ   | b**e**t |
