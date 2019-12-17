@@ -278,6 +278,9 @@ def convert(raw_pronun: str) -> Pronunciation:
                 out.append("UR" + stress)
                 next(symbol_iterator)  # skip the next symbol
                 continue
+        elif symbol_no_s == "WH":
+            out.append("W")
+            continue
         # TODO: handle `elif symbolNoS == 'R':` to turn `AW R` and `AY R` into `AW YR0` and `AY YR0`
 
         out.append(symbol)  # do nothing
