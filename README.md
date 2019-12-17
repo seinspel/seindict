@@ -1,13 +1,13 @@
-# Pronunciation dictionary for Sein spel
+# Pronunciation dictionary for Seinspel
 
 This dictionary is based on [cmudict](https://en.wikipedia.org/wiki/CMU_Pronouncing_Dictionary).
 The entries can be found in `entries/` separated by the first letter of the words.
 
-The dictionary follows North American pronunciation.
+The pronunciations in the dictionary don't follow a real spoken accent;
+rather they represent an amalgamation of the North American and British pronunciation.
 Using John Wells' lexical sets, it has the following mergers:
 
  *  TRAP-BATH
- *  PALM-LOT (COT)
  *  NORTH-FORCE
  *  FLEECE-HAPPY
  *  KIT-EXPLORE
