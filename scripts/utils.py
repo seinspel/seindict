@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 from collections import OrderedDict
-from typing import TYPE_CHECKING, List, Callable, Union, Dict, Optional, Iterator, Tuple
+from typing import TYPE_CHECKING, List, Callable, Union, Dict, Optional, Iterator, Tuple, NamedTuple
 from typing_extensions import Literal
 
 from strictyaml import as_document, load, MapPattern, Str, Seq
@@ -199,6 +199,8 @@ REPLACEMENTS = {
     "NN": "n",
     "LL": "l",
     "TT": "t",
+    "OU": "u",
+    # "ER": "r",  # causes problems
 }
 
 
@@ -216,3 +218,76 @@ def find_indices(word: str, pattern_list: List[str]) -> List[int]:
     for pattern in pattern_list:
         indices += [m.start() for m in re.finditer(pattern, word_with_better_letters)]
     return indices
+
+
+class Replacement(NamedTuple):
+    """A tuple that specifies a replacement"""
+
+    pattern: str
+    source: str
+    target: str
+
+
+class VowelReplacement:
+    """Class for changing vowels"""
+
+    def __init__(
+        self,
+        spelling_patterns: List[str],
+        phoneme_patterns: List[Replacement],
+        overrides: Optional[Dict[str, str]] = None,
+        exclude: str = "",
+    ):
+        self.spelling_patterns = spelling_patterns
+        self.phoneme_patterns = phoneme_patterns
+
+        self.overrides: Dict[str, str] = overrides if overrides is not None else {}
+
+        self.exclude: List[str] = exclude.split()
+
+        self.is_active = False
+
+    def __call__(self, word: str, pronun: str, dictionary):
+        if word in self.overrides:
+            return self.overrides[word]
+
+        if word in self.exclude:
+            return True
+
+        pattern_indices = find_indices(word, self.spelling_patterns)
+
+        if not pattern_indices:  # no suitable letters found
+            return True
+
+        present_stresses: List[Tuple[str, str]] = []
+        for rep in self.phoneme_patterns:
+            if re.search(rep.pattern, pronun) is not None:
+                present_stresses.append((rep.source, rep.target))
+        if not present_stresses:
+            return True
+
+        leeway = 1
+
+        changed_anything = False
+        new_pronun = pronun
+        for source, target in present_stresses:
+            new_pronun_split = new_pronun.split()
+            source_split = source.split()
+            # find index where `source` begins
+            phoneme_index = new_pronun_split.index(source_split[0])
+            if (
+                min(abs(pattern_index - phoneme_index) for pattern_index in pattern_indices)
+                > leeway
+            ):
+                print(
+                    f"probably no candiate '{word}', letter indices: {pattern_indices}, sound index: {phoneme_index}"
+                )
+                continue
+            new_pronun = new_pronun.replace(source, target)
+            changed_anything = True
+        if not changed_anything:
+            return True
+        print(f"change '{word}', new pronun: '{new_pronun.replace(target, target.lower())}'")
+        if self.is_active:
+            return new_pronun
+        return True
