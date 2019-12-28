@@ -1,6 +1,7 @@
 """Useful functions for writing scripts that change the dicionary"""
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from collections import OrderedDict
 from typing import TYPE_CHECKING, List, Callable, Union, Dict, Optional, Iterator, Tuple
@@ -187,3 +188,31 @@ def dump(yaml_dict):
     return ruamel.yaml.dump(
         yaml_dict.as_marked_up(), Dumper=StrictYAMLDumper, allow_unicode=True, width=1000
     )
+
+
+REPLACEMENTS = {
+    "SH": "ʃ",
+    "TH": "θ",
+    "WH": "ʍ",
+    "CH": "ʒ",
+    "AU": "a",
+    "NN": "n",
+    "LL": "l",
+    "TT": "t",
+}
+
+
+def replace_digraphs(word: str) -> str:
+    """Replace common digraphs with a single letter"""
+    for digraph, replacement in REPLACEMENTS.items():
+        word = word.replace(digraph, replacement)
+    return word
+
+
+def find_indices(word: str, pattern_list: List[str]) -> List[int]:
+    """Find indices where the given pattern occur"""
+    word_with_better_letters = replace_digraphs(word)
+    indices: List[int] = []
+    for pattern in pattern_list:
+        indices += [m.start() for m in re.finditer(pattern, word_with_better_letters)]
+    return indices
