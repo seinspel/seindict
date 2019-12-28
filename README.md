@@ -37,6 +37,7 @@ The dictionary uses the ARPABET symbols to indicate pronunciation:
 | ER      | ɝ   | b**ir**d |
 | EY      | eɪ  | b**ai**t |
 | IH      | ɪ   | b**i**t |
+| IW      | ju  | b**eau**ty |
 | IY      | i   | b**ea**t |
 | OH      | ɒ   | b**o**t |
 | OO      | ɔ   | b**o**ss (CLOTH vowel)|
