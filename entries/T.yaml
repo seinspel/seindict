@@ -200,9 +200,8 @@ TAROT: T EY2 R OW1
 TARP: T AA1 R P
 TARPON: T AA1 R P AX N
 TARRY:
-  verb: T EY1 R IY0 AXR
-  noun: T EY1 R IY0 AXR
-  adj: T AA1 R IY0 AXR #@@{ "root": "TAR" }@@
+  verb: T EY1 R IY0
+  adj: T AA1 R IY0 #@@{ "root": "TAR" }@@
 TARRYTOWN: T EY1 R IY0 T AW2 N
 TARSUS: T AA1 R S AX S
 TART: T AA1 R T
