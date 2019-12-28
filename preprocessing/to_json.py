@@ -55,7 +55,9 @@ VOWELS: Final = (
     "ER",
     "EY",
     "IH",
+    "IW",
     "IY",
+    "OH",
     "OO",
     "OW",
     "OY",
@@ -209,11 +211,6 @@ def convert(raw_pronun: str) -> Pronunciation:
                 out.append("AR" + stress)
                 next(symbol_iterator)  # skip the next symbol
                 continue
-        elif symbol_no_s == "AE":
-            if ahead1 == "R":
-                out.append("ER" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
         elif symbol_no_s == "AO":
             if ahead1 == "R":
                 out.append("OR" + stress)
@@ -234,22 +231,12 @@ def convert(raw_pronun: str) -> Pronunciation:
                     out.append("EN")
                     next(symbol_iterator)  # skip the next symbol
                     continue
-        elif symbol_no_s == "EH":
-            if ahead1 == "R":
-                out.append("ER" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
         elif symbol_no_s == "ER":
             out.append("YR" + stress)
             continue
         elif symbol_no_s == "EY":
             if ahead1 == "R":
                 out.append("ER" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-        elif symbol_no_s == "IH":
-            if ahead1 == "R":
-                out.append("IR" + stress)
                 next(symbol_iterator)  # skip the next symbol
                 continue
         elif symbol_no_s == "IY":
@@ -261,26 +248,19 @@ def convert(raw_pronun: str) -> Pronunciation:
                 out.append("II")
                 continue
         elif symbol_no_s == "OO":
-            out.append("AA" + stress)
-            continue
+            assert ahead1 != "R", "no OO before R, use AO or OH"
         elif symbol_no_s == "OW":
             if ahead1 == "R" and not next_intervocalic:
                 out.append("OR" + stress)
                 next(symbol_iterator)  # skip the next symbol
                 continue
         elif symbol_no_s == "UH":
-            if ahead1 == "R":
-                out.append("YR" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
+            assert ahead1 != "R", "no UH before R, use UW or IW"
         elif symbol_no_s == "UW":
             if ahead1 == "R":
                 out.append("UR" + stress)
                 next(symbol_iterator)  # skip the next symbol
                 continue
-        elif symbol_no_s == "WH":
-            out.append("W")
-            continue
         # TODO: handle `elif symbolNoS == 'R':` to turn `AW R` and `AY R` into `AW YR0` and `AY YR0`
 
         out.append(symbol)  # do nothing
