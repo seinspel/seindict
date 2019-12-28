@@ -223,12 +223,12 @@ def find_indices(word: str, pattern_list: List[str]) -> List[int]:
 class Replacement(NamedTuple):
     """A tuple that specifies a replacement"""
 
-    pattern: str
+    guard: str
     source: str
     target: str
 
 
-class VowelReplacement:
+class FindAndReplace:
     """Class for changing vowels"""
 
     def __init__(
@@ -261,7 +261,7 @@ class VowelReplacement:
 
         present_stresses: List[Tuple[str, str]] = []
         for rep in self.phoneme_patterns:
-            if re.search(rep.pattern, pronun) is not None:
+            if re.search(rep.guard, pronun) is not None:
                 present_stresses.append((rep.source, rep.target))
         if not present_stresses:
             return True
