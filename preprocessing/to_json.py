@@ -43,26 +43,35 @@ YAML_FILES: Final = (
 )
 
 VOWELS: Final = (
-    "AA",
-    "AE",
+    "A",
     "AH",
-    "AO",
+    "AR",
     "AW",
-    "AY",
-    "AX",
-    "AXR",
+    "EE",
+    "IER",
     "EH",
-    "ER",
+    "EIR",
+    "EW",
+    "EWR",
     "EY",
+    "AHY",
+    "ə",
+    "əR",
     "IH",
-    "IW",
-    "IY",
+    "IRE",
+    "O",
+    "OA",
     "OH",
+    "OIR",
     "OO",
+    "OOR",
+    "OR",
     "OW",
+    "OWR",
     "OY",
     "UH",
-    "UW",
+    "UR",
+    "U",
 )
 
 UNAMBIGUOUS_BEFORE_LMN: Final = (
@@ -72,7 +81,7 @@ UNAMBIGUOUS_BEFORE_LMN: Final = (
     "DH",
     "F",
     "G",
-    "JH",
+    "J",
     "K",
     "P",
     "S",
@@ -205,18 +214,8 @@ def convert(raw_pronun: str) -> Pronunciation:
         if behind1 == "'":
             behind1 = symbols[i - 2] if i > 1 else None
 
-        # ================================== convert symbols ======================================
-        if symbol_no_s == "AA":
-            if ahead1 == "R":
-                out.append("AR" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-        elif symbol_no_s == "AO":
-            if ahead1 == "R":
-                out.append("OR" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-        elif symbol_no_s == "AX":
+        # ================================ handle special cases ===================================
+        if symbol_no_s == "ə":
             if not next_intervocalic:
                 # syllablic consonants
                 if ahead1 == "L" and behind1 in UNAMBIGUOUS_BEFORE_L:
@@ -231,37 +230,12 @@ def convert(raw_pronun: str) -> Pronunciation:
                     out.append("EN")
                     next(symbol_iterator)  # skip the next symbol
                     continue
-        elif symbol_no_s == "ER":
-            out.append("YR" + stress)
-            continue
-        elif symbol_no_s == "EY":
-            if ahead1 == "R":
-                out.append("ER" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-        elif symbol_no_s == "IY":
-            if ahead1 == "R":
-                out.append("IR" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-            elif ahead1 is None and stress == "0":
+        elif symbol_no_s == "EE":
+            if ahead1 is None and stress == "0":
                 out.append("II")
                 continue
-        elif symbol_no_s == "OO":
-            assert ahead1 != "R", "no OO before R, use AO or OH"
-        elif symbol_no_s == "OW":
-            if ahead1 == "R" and not next_intervocalic:
-                out.append("OR" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-        elif symbol_no_s == "UH":
-            assert ahead1 != "R", "no UH before R, use UW or IW"
-        elif symbol_no_s == "UW":
-            if ahead1 == "R":
-                out.append("UR" + stress)
-                next(symbol_iterator)  # skip the next symbol
-                continue
-        # TODO: handle `elif symbolNoS == 'R':` to turn `AW R` and `AY R` into `AW YR0` and `AY YR0`
+        elif symbol_no_s == "OA":
+            assert ahead1 != "R", "no OA before R, use AW or O"
 
         out.append(symbol)  # do nothing
     return out
@@ -273,7 +247,7 @@ def count_vowels(phons: List[Optional[str]]) -> int:
     for phon in phons:
         if phon is None:
             continue
-        if phon[0:-1] in VOWELS or phon in ("AX", "AXR"):
+        if phon[0:-1] in VOWELS or phon in ("ə", "əR"):
             num_vowels += 1
     return num_vowels
 
@@ -298,13 +272,13 @@ def dictionary_improvement(dictionary: Dictionary) -> None:
 
 
 def fix_unstressed_vowels(word: str, pronun: Pronunciation) -> Pronunciation:
-    """Fix inconsistencies with AA0, EH0, IH0"""
+    """Fix inconsistencies with AH0, EH0, IH0"""
     assert isinstance(pronun, Pronunciation)
     # words that start with EN- should always have IH0 at the beginning
     if word[0:2] == "EN" and (pronun[0] == "EH0" or pronun[0] == "EH2"):
         pronun[0] = "IH0"
     # AA0 doesn't exist (AA2 does exist though, e.g. "botox")
-    pronun = Pronunciation(["AX" if phon == "AA0" else phon for phon in pronun])
+    pronun = Pronunciation(["ə" if phon == "AH0" else phon for phon in pronun])
     return pronun
 
 
@@ -327,37 +301,37 @@ def maybe_discard_variants(pronun_list: List[Pronunciation]) -> List[Pronunciati
                 # too many differences; the pronunciations are not comparable
                 add_to_bests = True
                 continue
-            # preference for weak vowels: IH0 > AX > EH0
+            # preference for weak vowels: IH0 > ə > EH0
             # preference for syllabic consonants: prefer them over the alternative
             score_for_switching = 0  # the score for switching out the `currentBest`
             for current_symbol, new_symbol in diffs:
                 change = f"{current_symbol} -> {new_symbol}"
                 if change in (
                     "EH0 -> IH0",
-                    "AX -> IH0",
-                    "AX -> AE0",
+                    "ə -> IH0",
+                    "ə -> A0",
                     "L -> EL",
                     "N -> EN",
                     "M -> EM",
-                    "UH1 -> UW1",
+                    "U1 -> OO1",
                 ):
                     score_for_switching += 1
                     continue
                 elif change in (
                     "IH0 -> EH0",
-                    "IH0 -> AX",
-                    "AE0 -> AX",
+                    "IH0 -> ə",
+                    "A0 -> ə",
                     "EL -> L",
                     "EN -> N",
                     "EM -> M",
-                    "UW1 -> UH1",
+                    "OO1 -> U1",
                 ):
                     score_for_switching -= 1
                     continue
-                # prefer AX over other weak vowels
-                if current_symbol == "AX" and len(new_symbol) > 2 and new_symbol[2] == "0":
+                # prefer ə over other weak vowels
+                if current_symbol == "ə" and len(new_symbol) > 2 and new_symbol[2] == "0":
                     score_for_switching -= 1
-                elif len(current_symbol) > 2 and current_symbol[2] == "0" and new_symbol == "AX":
+                elif len(current_symbol) > 2 and current_symbol[2] == "0" and new_symbol == "ə":
                     score_for_switching += 1
             if score_for_switching > 0:
                 # this pronunciation is better -> replace the old one
