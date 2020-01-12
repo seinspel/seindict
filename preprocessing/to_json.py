@@ -45,18 +45,16 @@ YAML_FILES: Final = (
 VOWELS: Final = (
     "A",
     "AH",
+    "AHY",
     "AR",
     "AW",
     "EE",
-    "IER",
     "EH",
     "EIR",
     "EW",
     "EWR",
     "EY",
-    "AHY",
-    "ə",
-    "əR",
+    "IER",
     "IH",
     "IRE",
     "O",
@@ -69,9 +67,11 @@ VOWELS: Final = (
     "OW",
     "OWR",
     "OY",
+    "U",
     "UH",
     "UR",
-    "U",
+    "ə",
+    "əR",
 )
 
 UNAMBIGUOUS_BEFORE_LMN: Final = (
@@ -176,7 +176,7 @@ def convert_all(dictionary: RawDictionary) -> Dictionary:
         elif isinstance(value, OrderedDict):
             raw_pronun_dict: OrderedDict[str, str] = value
             converted[word] = {
-                ENSURE_IDENT[ident]: convert(raw_pronun, word)
+                ENSURE_IDENT[ident]: convert(raw_pronun, word, is_interjection=ident == "intj")
                 for ident, raw_pronun in raw_pronun_dict.items()
             }
         else:
@@ -184,7 +184,7 @@ def convert_all(dictionary: RawDictionary) -> Dictionary:
     return converted
 
 
-def convert(raw_pronun: str, word: str) -> Pronunciation:
+def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronunciation:
     """
     Convert pronunciation symbols according to spelling rules
 
@@ -196,8 +196,8 @@ def convert(raw_pronun: str, word: str) -> Pronunciation:
     """
     out = Pronunciation([])
     symbols = raw_pronun.strip().split(" ")
-    symbol_iterator = iter(symbols)
-    for i, symbol in enumerate(symbol_iterator):
+    symbol_iterator = enumerate(symbols)
+    for i, symbol in symbol_iterator:
         has_stress = symbol[0:-1] in VOWELS
         symbol_no_s = symbol[0:-1] if has_stress else symbol
         stress = symbol[-1] if has_stress else ""
@@ -212,12 +212,13 @@ def convert(raw_pronun: str, word: str) -> Pronunciation:
         next_vowel = count_vowels([ahead1 if ahead1 != "'" else ahead2])
 
         behind1: Optional[str] = symbols[i - 1] if i > 0 else None
-        if behind1 == "'":
-            behind1 = symbols[i - 2] if i > 1 else None
 
         # ================================ handle special cases ===================================
         if symbol_no_s == "ə":
             if not next_intervocalic:
+                # ignore apostrophes for this
+                if behind1 == "'":
+                    behind1 = symbols[i - 2] if i > 1 else None
                 # syllablic consonants
                 if ahead1 == "L" and behind1 in UNAMBIGUOUS_BEFORE_L:
                     out.append("EL")
@@ -238,11 +239,11 @@ def convert(raw_pronun: str, word: str) -> Pronunciation:
         elif symbol_no_s == "OA":
             assert ahead1 != "R", f"{word}: no OA before R, use AW or O"
         elif symbol_no_s in ("A", "EH", "IH", "O", "U", "UH"):
-            assert (
-                ahead1 is not None and not next_vowel
-            ), f"{word}: checked vowels must be followed by a consonant"
+            is_checked = (ahead1 is not None and not next_vowel) or is_interjection
+            assert is_checked, f"{word}: checked vowels only before consonants (or be interjection)"
         elif symbol_no_s == "RR":
-            assert next_vowel, f"{word}: RR must be followed by a vowel"
+            is_prevocalic = next_vowel or ahead1 == "W" or behind1 == "'"
+            assert is_prevocalic, f"{word}: RR must be followed by a vowel or W, or preceded by '"
 
         out.append(symbol)  # do nothing
     return out
