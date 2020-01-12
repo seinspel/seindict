@@ -1,1 +1,2 @@
 strictyaml
+typing_extensions
