@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  format_and_test:
+  validate_dictionary:
 
     runs-on: ubuntu-latest
 
