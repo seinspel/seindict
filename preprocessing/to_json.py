@@ -169,14 +169,14 @@ def convert_all(dictionary: RawDictionary) -> Dictionary:
     for word, value in dictionary.items():
         if isinstance(value, str):
             raw_pronun: str = value
-            converted[word] = convert(raw_pronun)
+            converted[word] = convert(raw_pronun, word)
         elif isinstance(value, list):
             raw_pronun_list: List[str] = value
-            converted[word] = [convert(raw_pronun) for raw_pronun in raw_pronun_list]
+            converted[word] = [convert(raw_pronun, word) for raw_pronun in raw_pronun_list]
         elif isinstance(value, OrderedDict):
             raw_pronun_dict: OrderedDict[str, str] = value
             converted[word] = {
-                ENSURE_IDENT[ident]: convert(raw_pronun)
+                ENSURE_IDENT[ident]: convert(raw_pronun, word)
                 for ident, raw_pronun in raw_pronun_dict.items()
             }
         else:
@@ -184,7 +184,7 @@ def convert_all(dictionary: RawDictionary) -> Dictionary:
     return converted
 
 
-def convert(raw_pronun: str) -> Pronunciation:
+def convert(raw_pronun: str, word: str) -> Pronunciation:
     """
     Convert pronunciation symbols according to spelling rules
 
@@ -209,6 +209,7 @@ def convert(raw_pronun: str) -> Pronunciation:
         if ahead2 == "'":
             ahead2 = symbols[i + 3] if len(symbols) > i + 3 else None
         next_intervocalic = count_vowels([ahead2]) != 0
+        next_vowel = count_vowels([ahead1 if ahead1 != "'" else ahead2])
 
         behind1: Optional[str] = symbols[i - 1] if i > 0 else None
         if behind1 == "'":
@@ -235,7 +236,13 @@ def convert(raw_pronun: str) -> Pronunciation:
                 out.append("II")
                 continue
         elif symbol_no_s == "OA":
-            assert ahead1 != "R", "no OA before R, use AW or O"
+            assert ahead1 != "R", f"{word}: no OA before R, use AW or O"
+        elif symbol_no_s in ("A", "EH", "IH", "O", "U", "UH"):
+            assert (
+                ahead1 is not None and not next_vowel
+            ), f"{word}: checked vowels must be followed by a consonant"
+        elif symbol_no_s == "RR":
+            assert next_vowel, f"{word}: RR must be followed by a vowel"
 
         out.append(symbol)  # do nothing
     return out

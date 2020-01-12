@@ -4,7 +4,7 @@ This dictionary is based on [cmudict](https://en.wikipedia.org/wiki/CMU_Pronounc
 The entries can be found in `entries/` separated by the first letter of the words.
 
 The pronunciations in the dictionary don't follow a real spoken accent;
-rather they represent an amalgamation of the North American and British pronunciation.
+rather they represent an amalgamation of the North American and British pronunciations.
 Using John Wells' lexical sets, it has the following mergers:
 
  *  TRAP-BATH
@@ -12,39 +12,41 @@ Using John Wells' lexical sets, it has the following mergers:
  *  FLEECE-HAPPY
  *  KIT-EXPLORE
 
-Additionally, the accent has the following mergers at syllable boundaries
-before `/R/`:
-
- *  HURRY-FURRY
- *  MERRY-MARRY-MARY
- *  MIRROR-NEARER
-
 ## Symbols
 
-The dictionary uses the ARPABET symbols to indicate pronunciation:
+The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate pronunciation:
 
-| ARPABET | IPA | Example |
+| Symbol  | IPA | Example |
 |---------|-----|------------------------------|
-| AA      | ɑ   | b**al**m |
-| AE      | æ   | b**a**t |
-| AH      | ʌ   | b**u**tt |
-| AO      | ɔ   | b**ough**t |
-| AW      | aʊ  | b**ou**t |
-| AX      | ə   | comm**a** |
-| AXR     | ɚ   | lett**er** |
-| AY      | aɪ  | b**i**te |
+| A       | æ   | b**a**t |
+| AH      | ɑ   | b**al**m |
+| AHY     | ɑɪ  | b**i**te |
+| AR      | ɑɚ  | b**ar** |
+| AW      | ɔ   | b**ough**t |
+| EE      | i   | b**ea**t |
 | EH      | ɛ   | b**e**t |
-| ER      | ɝ   | b**ir**d |
+| EIR     | eɚ  | b**are** |
+| EW      | ju  | b**eau**ty |
+| EWR     | juɚ | p**ure** |
 | EY      | eɪ  | b**ai**t |
+| IER     | iɚ  | b**eer** |
 | IH      | ɪ   | b**i**t |
-| IW      | ju  | b**eau**ty |
-| IY      | i   | b**ea**t |
-| OH      | ɒ   | b**o**t |
-| OO      | ɔ   | b**o**ss (CLOTH vowel)|
-| OW      | oʊ  | b**oa**t |
+| IRE     | ɑɪɚ | p**yre** |
+| O       | ɒ   | b**o**t |
+| OA      | ɒ/ɔ | b**o**ss (CLOTH vowel)|
+| OH      | oʊ  | b**oa**t |
+| OIR     | ɔɪɚ | c**oir** |
+| OO      | u   | b**oo**t |
+| OOR     | uɚ  | b**oor** |
+| OR      | oɚ  | b**oar** |
+| OW      | aʊ  | b**ou**t |
+| OWR     | aʊɚ | p**ower** |
 | OY      | ɔɪ  | b**oy** |
-| UH      | ʊ   | b**oo**k |
-| UW      | u   | b**oo**t |
+| U       | ʊ   | b**oo**k |
+| UH      | ʌ   | b**u**tt |
+| UR      | ɝ   | b**ir**d |
+| ə       | ə   | comm**a** |
+| əR      | ɚ   | lett**er** |
 | B       | b   | **b**uy |
 | CH      | tʃ  | **Ch**ina |
 | D       | d   | **d**ie |
@@ -55,14 +57,14 @@ The dictionary uses the ARPABET symbols to indicate pronunciation:
 | F       | f   | **f**ight |
 | G       | g   | **g**uy |
 | HH      | h   | **h**igh |
-| JH      | dʒ  | **j**ive |
+| J       | dʒ  | **j**ive |
 | K       | k   | **k**ite |
 | L       | l   | **l**ie |
 | M       | m   | **m**y |
 | N       | n   | **n**igh |
 | NG      | ŋ   | si**ng** |
 | P       | p   | **p**ie |
-| R       | ɹ   | **r**ye |
+| RR      | ɹ   | **r**ye |
 | S       | s   | **s**igh |
 | SH      | ʃ   | **sh**y |
 | T       | t   | **t**ie |
@@ -86,3 +88,5 @@ Copyright (C) 2016-2018 Reece H. Dunn (Cainteoir Technologies). All rights reser
 
 The American English Pronunciation Dictionary is released under a
 [2-clause BSD](COPYING) license.
+
+[wiki-respell]: https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key
