@@ -237,7 +237,8 @@ def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronun
                 out.append("II")
                 continue
         elif symbol_no_s == "OA":
-            assert ahead1 != "R", f"{word}: no OA before R, use AW or O"
+            cloth_environ = ahead1 in ("F", "G", "K", "N", "NG", "S", "SH", "TH")
+            assert cloth_environ, f"{word}: OA only before F, G, K, N, NG, S, SH, TH"
         elif symbol_no_s in ("A", "EH", "IH", "O", "U", "UH"):
             is_checked = (ahead1 is not None and not next_vowel) or is_interjection
             assert is_checked, f"{word}: checked vowels only before consonants (or be interjection)"
