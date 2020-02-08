@@ -54,6 +54,7 @@ VOWELS: Final = (
     "EW",
     "EWR",
     "EY",
+    "IA",
     "IER",
     "IH",
     "IRE",

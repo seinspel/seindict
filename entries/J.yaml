@@ -14,7 +14,7 @@ JACKSON: J A1 K S ə N
 JACKSONVILLE: J A1 K S ə N V IH2 L
 JACKY: J A1 K EE0
 JACOB: J EY1 K ə B #@@{ "name": "male" }@@ Daniel Jacob RRadcliffe
-JACOBEAN: J A2 K ə B EE1 ə N
+JACOBEAN: J A2 K ə B IA1 N
 JACOBIN: J A1 K ə B IH0 N
 JACOBITE: J A1 K ə B AHY2 T
 JACOBS'S: J EY1 K ə B Z ' IH0 Z
@@ -75,7 +75,7 @@ JANICE: J A1 N IH0 S
 JANIE: J EY1 N EE0
 JANIS: J A1 N IH0 S
 JANITOR: J A1 N ə T əR
-JANITORIAL: J A2 N IH0 T OR1 EE0 ə L
+JANITORIAL: J A2 N IH0 T OR1 IA0 L
 JANUARY: J A1 N EW0 EIR2 EE0
 JANUS: J EY1 N ə S
 JAP: J A1 P
@@ -128,7 +128,7 @@ JEEVES: J EE1 V Z
 JEEZ: J EE1 Z
 JEFF: J EH1 F #@@{ "name": "male" }@@ Jeffrey Alan "Jeff" RRawle
 JEFFERSON: J EH1 F əR S ə N #@@{ "name": "male" }@@ Jefferson Hall
-JEFFERSONIAN: J EH2 F əR S OH1 N EE0 ə N
+JEFFERSONIAN: J EH2 F əR S OH1 N IA0 N
 JEFFERY: J EH1 F əR EE0
 JEFFREY: J EH1 F RR EE0 #@@{ "name": "male" }@@ Jeffrey Alan "Jeff" RRawle
 JEFFRY: J EH1 F RR EE0
@@ -294,8 +294,8 @@ JONESES: J OH1 N Z IH0 Z
 JONSON: J O1 N S ə N
 JOPLIN: J O1 P L IH0 N
 JORDAN: J OR1 D ə N #@@{ "name": "family" }@@ Gerard Jordan
-JORDANIAN: J OR2 D EY1 N EE0 ə N
-JORDANIANS: J OR0 D EY1 N EE0 ə N Z
+JORDANIAN: J OR2 D EY1 N IA0 N
+JORDANIANS: J OR0 D EY1 N IA0 N Z
 JOSEF: J OH1 S IH0 F #@@{ "name": "male" }@@ Josef Altin (Yusuf/Yousef Altin)
 JOSEPH: J OH1 S IH0 F #@@{ "name": "male" }@@ Joseph Jason Namakaeha Momoa
 JOSEPHINE: J OH1 S IH0 F EE2 N #@@{ "name": "female" }@@ Josephine Gillan
@@ -321,7 +321,7 @@ JOURNEYMAN: J UR1 N EE0 M A2 N
 JOURNEYMAN'S: J UR1 N EE0 M ə N ' Z
 JOUST: J OW1 S T
 JOVE: J OH1 V
-JOVIAL: J OH1 V EE0 ə L
+JOVIAL: J OH1 V IA0 L
 JOWL: J OW1 L
 JOWLY: J OW1 L EE0
 JOY: J OY1
@@ -352,7 +352,7 @@ JUDAISM:
 JUDAS: J OO1 D ə S
 JUDD: J UH1 D
 JUDE: J OO1 D
-JUDEA: J OO0 D EE1 ə
+JUDEA: J OO0 D IA1
 JUDGE: J UH1 J
 JUDGED: J UH1 J D
 JUDGEMENT: J UH1 J M ə N T
@@ -396,15 +396,15 @@ JUKE: J OO1 K
 JUKEBOX: J OO1 K B O2 K S
 JUKEBOXES: J OO1 K B O2 K S IH0 Z
 JULEP: J OO1 L ə P
-JULIA: J OO1 L EE0 ə #@@{ "name": "female" }@@ Dame Julia Mary "Julie" Walters
-JULIAN: J OO1 L EE0 ə N #@@{ "name": "male" }@@ Paul Julian Whitehouse
+JULIA: J OO1 L IA0 #@@{ "name": "female" }@@ Dame Julia Mary "Julie" Walters
+JULIAN: J OO1 L IA0 N #@@{ "name": "male" }@@ Paul Julian Whitehouse
 JULIANA: J OO2 L EE0 A1 N ə
 JULIANN: J OO1 L EE0 A0 N
 JULIANNE: J OO1 L EE0 EH2 N
 JULIE: J OO1 L EE0 #@@{ "name": "female" }@@ Dame Julia Mary "Julie" Walters
-JULIEN: J OO1 L EE0 ə N
+JULIEN: J OO1 L IA0 N
 JULIET: J OO1 L EE0 EH2 T
-JULIUS: J OO1 L EE0 ə S #@@{ "name": "male" }@@ Hafþór/Hafthor Júlíus/Julius "Thor" Björnsson/Bjornsson
+JULIUS: J OO1 L IA0 S #@@{ "name": "male" }@@ Hafþór/Hafthor Júlíus/Julius "Thor" Björnsson/Bjornsson
 JULY:
 - J OO2 L AHY1
 - J ə L AHY1

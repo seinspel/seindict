@@ -29,6 +29,7 @@ The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate p
 | EW      | ju  | b**eau**ty |
 | EWR     | juɚ | p**ure** |
 | EY      | eɪ  | b**ai**t |
+| IA      | iə  | b**ea**trix |
 | IER     | iɚ  | b**eer** |
 | IH      | ɪ   | b**i**t |
 | IRE     | ɑɪɚ | p**yre** |
