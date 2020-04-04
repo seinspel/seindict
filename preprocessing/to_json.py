@@ -199,7 +199,7 @@ def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronun
     symbols = raw_pronun.strip().split(" ")
     symbol_iterator = enumerate(symbols)
     for i, symbol in symbol_iterator:
-        has_stress = symbol[0:-1] in VOWELS
+        has_stress = symbol[-1] in ("0", "1", "2")
         symbol_no_s = symbol[0:-1] if has_stress else symbol
         stress = symbol[-1] if has_stress else ""
         ahead1: Optional[str] = symbols[i + 1] if len(symbols) > i + 1 else None
