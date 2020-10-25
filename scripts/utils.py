@@ -183,17 +183,19 @@ def write_to_yaml(fpath: Path, yaml_obj: YAML, dictionary: RawDictionary) -> Non
 
 
 REPLACEMENTS = {
-    "SH": "ʃ",
-    "TH": "θ",
-    "WH": "ʍ",
-    "CH": "ʒ",
-    "AU": "a",
-    "NN": "n",
-    "LL": "l",
-    "TT": "t",
-    "OU": "u",
     "AI": "i",
+    "AU": "a",
+    "CH": "ʒ",
     "EE": "e",
+    "FF": "f",
+    "LL": "l",
+    "NN": "n",
+    "OU": "u",
+    "SH": "ʃ",
+    "SS": "s",
+    "TH": "θ",
+    "TT": "t",
+    "WH": "ʍ",
     # "ER": "r",  # causes problems
 }
 
@@ -231,15 +233,14 @@ class FindAndReplace:
         phoneme_patterns: List[Replacement],
         overrides: Optional[Dict[str, str]] = None,
         exclude: str = "",
+        leeway: int = 1,
     ):
         self.spelling_patterns = spelling_patterns
         self.phoneme_patterns = phoneme_patterns
-
         self.overrides: Dict[str, str] = overrides if overrides is not None else {}
-
         self.exclude: List[str] = exclude.split()
-
         self.is_active = False
+        self.leeway = leeway
 
     def __call__(self, word: str, pronun: str, dictionary):
         if word in self.overrides:
@@ -260,27 +261,25 @@ class FindAndReplace:
         if not present_stresses:
             return True
 
-        leeway = 1
-
         changed_anything = False
         new_pronun = pronun
         for source, target in present_stresses:
             new_pronun_split = new_pronun.split()
             source_split = source.split()
-            if source_split[0] not in new_pronun_split:
-                continue
-            # find index where `source` begins
-            phoneme_index = new_pronun_split.index(source_split[0])
-            if (
-                min(abs(pattern_index - phoneme_index) for pattern_index in pattern_indices)
-                > leeway
-            ):
+            # find indeces where `source` begins
+            phoneme_indices = [i for i, d in enumerate(new_pronun_split) if d == source_split[0]]
+            for phoneme_index in phoneme_indices:
+                if (
+                    min(abs(pattern_index - phoneme_index) for pattern_index in pattern_indices)
+                    > self.leeway
+                ):
+                    continue
+                new_pronun = new_pronun.replace(source, target)
+                changed_anything = True
+            if not changed_anything:
                 print(
-                    f"probably no candiate '{word}', letter indices: {pattern_indices}, sound index: {phoneme_index}"
+                    f"probably no candiate '{word}', letter indices: {pattern_indices}, sound index: {phoneme_indices}"
                 )
-                continue
-            new_pronun = new_pronun.replace(source, target)
-            changed_anything = True
         if not changed_anything:
             return True
         print(f"change '{word}', new pronun: '{new_pronun.replace(target, target.lower())}'")

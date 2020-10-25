@@ -64,7 +64,7 @@ ASCIICOMPRESSION: Dict[str, str] = {
     "DH"  : "d",
     "F"   : "e",
     "G"   : "f",
-    "HH"  : "g",
+    "H"   : "g",
     "J"   : "h",
     "K"   : "i",
     "L"   : "j",
