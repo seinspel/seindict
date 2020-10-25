@@ -1,2 +1,2 @@
-strictyaml
+ruamel.yaml
 typing_extensions

@@ -3,12 +3,11 @@
 from __future__ import annotations
 
 from pathlib import Path
-from collections import OrderedDict
 import json
-from typing import Union, List, Optional, Dict, TYPE_CHECKING, Tuple
+from typing import Union, List, Optional, Dict, Tuple
 from typing_extensions import Final, Literal
 
-from strictyaml import load, MapPattern, Str, Seq
+from ruamel.yaml import YAML
 
 from asciicompression import ASCIICOMPRESSION
 
@@ -132,14 +131,13 @@ class Pronunciation(List[str]):
     """Wrapper around list of strings that is used to have meaningful type information"""
 
 
-if TYPE_CHECKING:
-    RawDictionary = OrderedDict[str, Union[str, List[str], OrderedDict[str, str]]]
+RawDictionary = Dict[str, Union[str, List[str], Dict[str, str]]]
 Dictionary = Dict[str, Union[Pronunciation, List[Pronunciation], Dict[Identifier, Pronunciation]]]
 
 
 def main() -> None:
     base_path = Path("..") / "entries"
-    dictionary: RawDictionary = OrderedDict()
+    dictionary: RawDictionary = {}
     for yaml_file in YAML_FILES:
         dictionary.update(read_yaml_file(base_path / yaml_file))
         print(f"Parsed {yaml_file}")
@@ -157,15 +155,15 @@ def main() -> None:
 
 
 def read_yaml_file(fpath: Path) -> RawDictionary:
-    """Load the content of a YAML file as an ordered dictionary"""
-    raw_data = fpath.open().read()
-    schema = MapPattern(Str(), Str() | MapPattern(Str(), Str()) | Seq(Str()))
-    dictionary: RawDictionary = load(raw_data, schema).data
+    """Load the content of a YAML file as an ordered dictionary."""
+    yaml = YAML(typ="safe")
+    with fpath.open() as fp:
+        dictionary = yaml.load(fp)
     return dictionary
 
 
 def convert_all(dictionary: RawDictionary) -> Dictionary:
-    """Convert all entries in the raw dictionary from YAML file to our format"""
+    """Convert all entries in the raw dictionary from YAML file to our format."""
     converted: Dictionary = {}
     for word, value in dictionary.items():
         if isinstance(value, str):
@@ -174,12 +172,15 @@ def convert_all(dictionary: RawDictionary) -> Dictionary:
         elif isinstance(value, list):
             raw_pronun_list: List[str] = value
             converted[word] = [convert(raw_pronun, word) for raw_pronun in raw_pronun_list]
-        elif isinstance(value, OrderedDict):
-            raw_pronun_dict: OrderedDict[str, str] = value
-            converted[word] = {
-                ENSURE_IDENT[ident]: convert(raw_pronun, word, is_interjection=ident == "intj")
-                for ident, raw_pronun in raw_pronun_dict.items()
-            }
+        elif isinstance(value, dict):
+            raw_pronun_dict: Dict[str, str] = value
+            try:
+                converted[word] = {
+                    ENSURE_IDENT[ident]: convert(raw_pronun, word, is_interjection=ident == "intj")
+                    for ident, raw_pronun in raw_pronun_dict.items()
+                }
+            except KeyError as e:
+                raise ValueError(f"incorrect Identifier in {word}") from e
         else:
             raise ValueError(f"unexpected type: {type(value)}")
     return converted
@@ -195,6 +196,8 @@ def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronun
     Returns:
         converted pronunciation symbols
     """
+    assert isinstance(word, str), f"all entry keys must be strings ({word}: {raw_pronun})"
+    assert isinstance(raw_pronun, str), f"all pronunciations must be strings ({word}: {raw_pronun})"
     out = Pronunciation([])
     symbols = raw_pronun.strip().split(" ")
     symbol_iterator = enumerate(symbols)
