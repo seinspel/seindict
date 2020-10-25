@@ -1,14 +1,13 @@
 # Pronunciation dictionary for Seinspel
 
-This dictionary is based on [cmudict](https://en.wikipedia.org/wiki/CMU_Pronouncing_Dictionary).
+This dictionary is loosely based on [cmudict](https://en.wikipedia.org/wiki/CMU_Pronouncing_Dictionary).
 The entries can be found in `entries/` separated by the first letter of the words.
 
-The pronunciations in the dictionary don't follow a real spoken accent;
+The pronunciations in the dictionary don't follow any real spoken accent;
 rather they represent an amalgamation of the North American and British pronunciations.
 Using John Wells' lexical sets, it has the following mergers:
 
  *  TRAP-BATH
- *  NORTH-FORCE
  *  FLEECE-HAPPY
  *  KIT-EXPLORE
 
@@ -16,67 +15,69 @@ Using John Wells' lexical sets, it has the following mergers:
 
 The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate pronunciation:
 
-| Symbol  | IPA | Example |
-|---------|-----|------------------------------|
-| A       | æ   | b**a**t |
-| AH      | ɑ   | b**al**m |
-| AHY     | ɑɪ  | b**i**te |
-| AR      | ɑɚ  | b**ar** |
-| AW      | ɔ   | b**ough**t |
-| EE      | i   | b**ea**t |
-| EH      | ɛ   | b**e**t |
-| EIR     | eɚ  | b**are** |
-| EW      | ju  | b**eau**ty |
-| EWR     | juɚ | p**ure** |
-| EY      | eɪ  | b**ai**t |
-| IA      | iə  | b**ea**trix |
-| IER     | iɚ  | b**eer** |
-| IH      | ɪ   | b**i**t |
-| IRE     | ɑɪɚ | p**yre** |
-| O       | ɒ   | b**o**t |
-| OA      | ɒ/ɔ | b**o**ss (CLOTH vowel)|
-| OH      | oʊ  | b**oa**t |
-| OHR     | oɚ  | b**oar** |
-| OIR     | ɔɪɚ | c**oir** |
-| OO      | u   | b**oo**t |
-| OOR     | uɚ  | b**oor** |
-| OR      | ɔɚ  | b**or**t |
-| OW      | aʊ  | b**ou**t |
-| OWR     | aʊɚ | p**ower** |
-| OY      | ɔɪ  | b**oy** |
-| U       | ʊ   | b**oo**k |
-| UH      | ʌ   | b**u**tt |
-| UR      | ɝ   | b**ir**d |
-| ə       | ə   | comm**a** |
-| əR      | ɚ   | lett**er** |
-| B       | b   | **b**uy |
-| CH      | tʃ  | **Ch**ina |
-| D       | d   | **d**ie |
-| DH      | ð   | **th**y |
-| EL      | l̩   | bott**le** |
-| EM      | m̩   | rhyth**m** |
-| EN      | n̩   | butt**on** |
-| F       | f   | **f**ight |
-| G       | g   | **g**uy |
-| HH      | h   | **h**igh |
-| J       | dʒ  | **j**ive |
-| K       | k   | **k**ite |
-| L       | l   | **l**ie |
-| M       | m   | **m**y |
-| N       | n   | **n**igh |
-| NG      | ŋ   | si**ng** |
-| P       | p   | **p**ie |
-| RR      | ɹ   | **r**ye |
-| S       | s   | **s**igh |
-| SH      | ʃ   | **sh**y |
-| T       | t   | **t**ie |
-| TH      | θ   | **th**igh |
-| V       | v   | **v**ie |
-| W       | w   | **w**ise |
-| WH      | ʍ   | **wh**y |
-| Y       | j   | **y**acht |
-| Z       | z   | **z**oo |
-| ZH      | ʒ   | plea**s**ure |
+| Symbol  | IPA | Example     | Lexical set |
+|---------|-----|-------------|-------------|
+| A       | æ   | b**a**t     | TRAP        |
+| AH      | ɑ   | b**al**m    | PALM        |
+| AHY     | ɑɪ  | b**i**te    | PRICE       |
+| AR      | ɑɚ  | b**ar**     | START       |
+| AW      | ɔ   | b**ough**t  | THOUGHT     |
+| EE      | i   | b**ea**t    | FLEECE      |
+| EH      | ɛ   | b**e**t     | DRESS       |
+| EIR     | eɚ  | b**are**    | SQUARE      |
+| EW      | ju  | b**eau**ty  | (CUTE\*)    |
+| EWR     | juɚ | p**ure**    | (CURE\*)    |
+| EY      | eɪ  | b**ai**t    | FACE        |
+| IA      | iə  | b**ea**trix | (IAN\*)     |
+| IER     | iɚ  | b**eer**    | NEAR        |
+| IH      | ɪ   | b**i**t     | KIT         |
+| IRE     | ɑɪɚ | p**yre**    | (FIRE\*)    |
+| O       | ɒ   | b**o**t     | LOT         |
+| OA      | ɒ/ɔ | b**o**ss    | CLOTH       |
+| OH      | oʊ  | b**oa**t    | GOAT        |
+| OHR     | oɚ  | b**oar**    | FORCE       |
+| OIR     | ɔɪɚ | c**oir**    | (COIR\*)    |
+| OO      | u   | b**oo**t    | GOOSE       |
+| OOR     | uɚ  | b**oor**    | (POOR\*)    |
+| OR      | ɔɚ  | b**or**t    | NORTH       |
+| OW      | aʊ  | b**ou**t    | MOUTH       |
+| OWR     | aʊɚ | p**ower**   | (FLOUR\*)   |
+| OY      | ɔɪ  | b**oy**     | CHOICE      |
+| U       | ʊ   | b**oo**k    | FOOT        |
+| UH      | ʌ   | b**u**tt    | STRUT       |
+| UR      | ɝ   | b**ir**d    | NURSE       |
+| ə       | ə   | comm**a**   | commA       |
+| əR      | ɚ   | lett**er**  | lettER      |
+| B       | b   | **b**uy |  |
+| CH      | tʃ  | **Ch**ina |  |
+| D       | d   | **d**ie |  |
+| DH      | ð   | **th**y |  |
+| EL      | l̩   | bott**le** |  |
+| EM      | m̩   | rhyth**m** |  |
+| EN      | n̩   | butt**on** |  |
+| F       | f   | **f**ight |  |
+| G       | g   | **g**uy |  |
+| HH      | h   | **h**igh |  |
+| J       | dʒ  | **j**ive |  |
+| K       | k   | **k**ite |  |
+| L       | l   | **l**ie |  |
+| M       | m   | **m**y |  |
+| N       | n   | **n**igh |  |
+| NG      | ŋ   | si**ng** |  |
+| P       | p   | **p**ie |  |
+| RR      | ɹ   | **r**ye |  |
+| S       | s   | **s**igh |  |
+| SH      | ʃ   | **sh**y |  |
+| T       | t   | **t**ie |  |
+| TH      | θ   | **th**igh |  |
+| V       | v   | **v**ie |  |
+| W       | w   | **w**ise |  |
+| WH      | ʍ   | **wh**y |  |
+| Y       | j   | **y**acht |  |
+| Z       | z   | **z**oo |  |
+| ZH      | ʒ   | plea**s**ure |  |
+
+\* non-standard lexical set
 
 ## Context tags
 
