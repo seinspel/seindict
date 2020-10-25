@@ -87,7 +87,9 @@ ASCIICOMPRESSION: Dict[str, str] = {
     "EM"  : "{",
     "EN"  : "|",
     "II"  : "}",
-    "IA0"  : "[",
-    "IA1"  : "]",
+    "IA0" : "[",
+    "IA1" : "]",
+    "OHR0": "^",
+    "OHR1": "_",
     "'"   : "'",
 }

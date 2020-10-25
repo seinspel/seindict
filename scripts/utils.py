@@ -3,15 +3,10 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from collections import OrderedDict
-from typing import TYPE_CHECKING, List, Callable, Union, Dict, Optional, Iterator, Tuple, NamedTuple
+from typing import List, Callable, Union, Dict, Optional, Iterator, Tuple, NamedTuple
 from typing_extensions import Literal
 
-from strictyaml import as_document, load, MapPattern, Str, Seq
-from strictyaml.dumper import StrictYAMLDumper
-import ruamel
-
-SCHEMA = MapPattern(Str(), Str() | MapPattern(Str(), Str()) | Seq(Str()))
+from ruamel.yaml import YAML
 
 YAML_FILES: List[str] = [
     "A.yaml",
@@ -44,14 +39,15 @@ YAML_FILES: List[str] = [
 ]
 
 EntryType = Union[str, List[str], Dict[str, str]]
-if TYPE_CHECKING:
-    RawDictionary = OrderedDict[str, Union[str, List[str], OrderedDict[str, str]]]
+RawDictionary = Dict[str, Union[str, List[str], Dict[str, str]]]
 
 
-def read_yaml_file(fpath: Path):
+def read_yaml_file(fpath: Path) -> Tuple[YAML, RawDictionary]:
     """Load the content of a YAML file as an ordered dictionary"""
-    raw_data = fpath.open().read()
-    return load(raw_data, SCHEMA)
+    yaml_obj = YAML(typ="rt")
+    with  fpath.open() as fp:
+        dictionary = yaml_obj.load(fp)
+    return yaml_obj, dictionary
 
 
 def apply(
@@ -60,7 +56,7 @@ def apply(
         Callable[[str, List[str], RawDictionary], Union[bool, EntryType]]
     ] = None,
     pronun_dict_func: Optional[
-        Callable[[str, OrderedDict[str, str], RawDictionary], Union[bool, EntryType]]
+        Callable[[str, Dict[str, str], RawDictionary], Union[bool, EntryType]]
     ] = None,
     save_deleted_words: Optional[Path] = None,
     save_result: bool = False,
@@ -74,26 +70,26 @@ def apply(
     """
 
     assert mode in ("filter", "transform")
-    deleted_words: RawDictionary = OrderedDict()
+    deleted_words: RawDictionary = {}
     base_path = Path("..") / "entries"
     for yaml_file in YAML_FILES:
         num_removed = 0
         num_changed = 0
         yaml_path = base_path / yaml_file
-        yaml_dict = read_yaml_file(yaml_path)
-        dictionary: RawDictionary = yaml_dict.data
+        yaml_obj, dictionary = read_yaml_file(yaml_path)
         for word, value in dictionary.items():
+            assert isinstance(word, str)
             result: Union[bool, EntryType]
             if isinstance(value, str):
                 result = single_pronun_func(word, value, dictionary)
-            elif isinstance(value, OrderedDict) and pronun_dict_func is not None:
-                pronun_dict: OrderedDict[str, str] = value
+            elif isinstance(value, dict) and pronun_dict_func is not None:
+                pronun_dict: Dict[str, str] = value
                 result = pronun_dict_func(word, pronun_dict, dictionary)
             elif pronun_list_func is not None:
                 if isinstance(value, list):
                     pronun_list: List[str] = value
                     result = pronun_list_func(word, pronun_list, dictionary)
-                elif isinstance(value, OrderedDict):  # pronun_dict_func must be None
+                elif isinstance(value, dict):  # pronun_dict_func must be None
                     pronun_dict = value
                     result = pronun_list_func(word, list(pronun_dict.values()), dictionary)
                 else:
@@ -106,7 +102,7 @@ def apply(
                 if mode == "filter":
                     if isinstance(value, list):
                         pronun_list = value
-                    elif isinstance(value, OrderedDict):
+                    elif isinstance(value, dict):
                         pronun_list = list(value.values())
                     else:
                         raise ValueError(f"Unexpected type {type(value)}")
@@ -114,15 +110,15 @@ def apply(
                     result = single_pronun_func(word, pronun_list[0], dictionary)
                 elif mode == "transform":
                     # iterate over the pronunciations and transform them one-by-one
-                    new_pronuns: Union[OrderedDict[str, str], List[str]]
+                    new_pronuns: Union[Dict[str, str], List[str]]
                     entries: Union[Iterator[Tuple[str, str]], Iterator[Tuple[int, str]]]
                     if isinstance(value, list):
                         pronun_list = value
                         new_pronuns = [p for p in pronun_list]  # copy list
                         entries = enumerate(pronun_list)
-                    elif isinstance(value, OrderedDict):
+                    elif isinstance(value, dict):
                         pronun_dict = value
-                        new_pronuns = OrderedDict()
+                        new_pronuns = {}
                         entries = pronun_dict.items()
                     else:
                         raise ValueError(f"Unexpected type {type(value)}")
@@ -134,10 +130,10 @@ def apply(
             if isinstance(result, bool):
                 if not result:  # delete word
                     deleted_words[word] = value
-                    del yaml_dict[word]
+                    del dictionary[word]
                     num_removed += 1
             else:
-                yaml_dict[word] = result
+                dictionary[word] = result
                 num_changed += 1
         if num_removed:
             print(f"removed {num_removed} entries in {yaml_file}")
@@ -146,15 +142,16 @@ def apply(
         else:
             print(f"nothing changed or removed in {yaml_file}")
         if save_result:
-            yaml_path.open("w").write(dump(yaml_dict))
+            write_to_yaml(yaml_path, yaml_obj, dictionary)
         if only_first_file:
             break
     if save_deleted_words is not None:
-        write_to_yaml(save_deleted_words, deleted_words)
+        raise NotImplementedError()
+        # write_to_yaml(save_deleted_words, yaml_obj, deleted_words)
 
 
 def _iterate_over_subentries(
-    container: Union[OrderedDict[str, str], List[str]],
+    container: Union[Dict[str, str], List[str]],
     entries: Union[Iterator[Tuple[str, str]], Iterator[Tuple[int, str]]],
     single_pronun_func: Callable[[str, str, RawDictionary], Union[bool, EntryType]],
     word: str,
@@ -175,19 +172,14 @@ def _iterate_over_subentries(
     return container
 
 
-def write_to_yaml(fpath: Path, content: OrderedDict) -> None:
+def write_to_yaml(fpath: Path, yaml_obj: YAML, dictionary: RawDictionary) -> None:
     """Write an ordered dictionary as YAML to a file"""
-    if not content:
+    if not dictionary:
         return
-    yaml = as_document(content)
-    fpath.open("w").write(dump(yaml))
-
-
-def dump(yaml_dict):
-    """Render the YAML node and subnodes as string."""
-    return ruamel.yaml.dump(
-        yaml_dict.as_marked_up(), Dumper=StrictYAMLDumper, allow_unicode=True, width=1000
-    )
+    yaml_obj.allow_unicode = True
+    yaml_obj.width = 1000
+    with fpath.open("w") as fp:
+        yaml_obj.dump(dictionary, stream=fp)
 
 
 REPLACEMENTS = {
@@ -200,6 +192,8 @@ REPLACEMENTS = {
     "LL": "l",
     "TT": "t",
     "OU": "u",
+    "AI": "i",
+    "EE": "e",
     # "ER": "r",  # causes problems
 }
 
@@ -273,6 +267,8 @@ class FindAndReplace:
         for source, target in present_stresses:
             new_pronun_split = new_pronun.split()
             source_split = source.split()
+            if source_split[0] not in new_pronun_split:
+                continue
             # find index where `source` begins
             phoneme_index = new_pronun_split.index(source_split[0])
             if (

@@ -36,10 +36,11 @@ The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate p
 | O       | ɒ   | b**o**t |
 | OA      | ɒ/ɔ | b**o**ss (CLOTH vowel)|
 | OH      | oʊ  | b**oa**t |
+| OHR     | oɚ  | b**oar** |
 | OIR     | ɔɪɚ | c**oir** |
 | OO      | u   | b**oo**t |
 | OOR     | uɚ  | b**oor** |
-| OR      | oɚ  | b**oar** |
+| OR      | ɔɚ  | b**or**t |
 | OW      | aʊ  | b**ou**t |
 | OWR     | aʊɚ | p**ower** |
 | OY      | ɔɪ  | b**oy** |

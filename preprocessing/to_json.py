@@ -60,6 +60,7 @@ VOWELS: Final = (
     "O",
     "OA",
     "OH",
+    "OHR",
     "OIR",
     "OO",
     "OOR",
