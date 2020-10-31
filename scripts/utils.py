@@ -189,6 +189,7 @@ REPLACEMENTS = {
     "EE": "e",
     "FF": "f",
     "LL": "l",
+    "MM": "m",
     "NN": "n",
     "OU": "u",
     "SH": "ʃ",
