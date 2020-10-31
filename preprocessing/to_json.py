@@ -50,6 +50,7 @@ VOWELS: Final = (
     "EE",
     "EH",
     "EIR",
+    "EL",
     "EW",
     "EWR",
     "EY",
@@ -261,7 +262,7 @@ def count_vowels(phons: List[Optional[str]]) -> int:
     for phon in phons:
         if phon is None:
             continue
-        if phon[0:-1] in VOWELS or phon in ("ə", "əR"):
+        if phon[0:-1] in VOWELS or phon in ("EL", "ə", "əR"):
             num_vowels += 1
     return num_vowels
 
