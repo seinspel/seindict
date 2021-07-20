@@ -130,7 +130,7 @@ def apply(
             if isinstance(result, bool):
                 if not result:  # delete word
                     deleted_words[word] = value
-                    del dictionary[word]
+                    #del dictionary[word]
                     num_removed += 1
             else:
                 dictionary[word] = result
@@ -145,6 +145,7 @@ def apply(
             write_to_yaml(yaml_path, yaml_obj, dictionary)
         if only_first_file:
             break
+    print("\n".join(f"{k}: {v}" for k, v, in deleted_words.items()))
     if save_deleted_words is not None:
         raise NotImplementedError()
         # write_to_yaml(save_deleted_words, yaml_obj, deleted_words)
@@ -267,7 +268,7 @@ class FindAndReplace:
         for source, target in present_stresses:
             new_pronun_split = new_pronun.split()
             source_split = source.split()
-            # find indeces where `source` begins
+            # find indices where `source` begins
             phoneme_indices = [i for i, d in enumerate(new_pronun_split) if d == source_split[0]]
             for phoneme_index in phoneme_indices:
                 if (
