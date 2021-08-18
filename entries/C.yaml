@@ -918,10 +918,13 @@ CHAMBER: CH EY1 M B əR
 CHAMBERLAIN: CH EY1 M B əR L IH0 N
 CHAMBERS'S: CH EY1 M B əR Z ' IH0 Z
 CHAMELEON: K ə M EE1 L IA0 N
+CHAMOIS:
+- SH A0 M W AH1  #@@{ "usage": "animal"}
+- SH A1 M EE0  #@@{ "usage": "leather"}
 CHAMOMILE:
 - K A2 M ə M AHY1 L
 - K A2 M ə M EE1 L
-CHAMP: CH A1 M P #@@{ "name": "family" }@@ RRicky Champ
+CHAMP: CH A1 M P
 CHAMPAGNE: SH A0 M P EY1 N
 CHAMPAIGN: CH A0 M P EY1 N
 CHAMPION: CH A1 M P IA0 N

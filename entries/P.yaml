@@ -2036,7 +2036,9 @@ PRATTLING: P RR A1 T EL IH0 NG
 PRAWN: P RR AW1 N
 PRAXIS: P RR A1 K S IH0 S
 PRAY: P RR EY1
-PRAYER: P RR EIR1 #@@{ "usage": "action" }@@
+PRAYER:
+- P RR EIR1   #@@{ "usage": "action" }@@
+- P RR EY1 əR   #@@{ "usage": "person" }@@
 PRAYERFUL: P RR EIR1 F ə L
 PREACH: P RR EE1 CH
 PREACHER: P RR EE1 CH əR
