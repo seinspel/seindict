@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 from typing import List, Callable, Union, Dict, Optional, Iterator, Tuple, NamedTuple
-from typing_extensions import Literal
+from typing_extensions import Final, Literal
 
 from ruamel.yaml import YAML
 
@@ -136,7 +136,7 @@ def apply(
                 dictionary[word] = result
                 num_changed += 1
         if num_removed:
-            print(f"removed {num_removed} entries in {yaml_file}")
+            print(f"found {num_removed} entries in {yaml_file}")
         elif num_changed:
             print(f"changed {num_changed} entries in {yaml_file}")
         else:
@@ -145,6 +145,7 @@ def apply(
             write_to_yaml(yaml_path, yaml_obj, dictionary)
         if only_first_file:
             break
+    print(f"{len(deleted_words)} deleted in total")
     print("\n".join(f"{k}: {v}" for k, v, in deleted_words.items()))
     if save_deleted_words is not None:
         raise NotImplementedError()
@@ -288,3 +289,42 @@ class FindAndReplace:
         if self.is_active:
             return new_pronun
         return True
+
+
+VOWELS: Final = [
+    "A",
+    "AH",
+    "AHY",
+    "AR",
+    "AW",
+    "EE",
+    "EH",
+    "EIR",
+    "EL",
+    "EW",
+    "EWR",
+    "EY",
+    "IA",
+    "IER",
+    "IH",
+    "IRE",
+    "O",
+    "OA",
+    "OH",
+    "OHR",
+    "OIR",
+    "OO",
+    "OOR",
+    "OR",
+    "OW",
+    "OWR",
+    "OY",
+    "U",
+    "UH",
+    "UR",
+    "ə",
+    "əR",
+]
+
+def is_vowel(phon: str):
+    return phon[0:-1] in VOWELS or phon in ("EL", "ə", "əR")
