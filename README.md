@@ -20,28 +20,28 @@ The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate p
 | A       | æ   | b**a**t     | TRAP        |
 | AH      | ɑ   | b**al**m    | PALM        |
 | AHY     | ɑɪ  | b**i**te    | PRICE       |
-| AR      | ɑɚ  | b**ar**     | START       |
+| AH R    | ɑɚ  | b**ar**     | START       |
 | AW      | ɔ   | b**ough**t  | THOUGHT     |
 | EE      | i   | b**ea**t    | FLEECE      |
 | EH      | ɛ   | b**e**t     | DRESS       |
-| EIR     | eɚ  | b**are**    | SQUARE      |
+| EY R    | eɚ  | b**are**    | SQUARE      |
 | EW      | ju  | b**eau**ty  | (CUTE\*)    |
-| EWR     | juɚ | p**ure**    | (CURE\*)    |
+| EW R    | juɚ | p**ure**    | (CURE\*)    |
 | EY      | eɪ  | b**ai**t    | FACE        |
 | IA      | iə  | b**ea**trix | (IAN\*)     |
-| IER     | iɚ  | b**eer**    | NEAR        |
+| EE R    | iɚ  | b**eer**    | NEAR        |
 | IH      | ɪ   | b**i**t     | KIT         |
-| IRE     | ɑɪɚ | p**yre**    | (FIRE\*)    |
+| AHY R   | ɑɪɚ | p**yre**    | (FIRE\*)    |
 | O       | ɒ   | b**o**t     | LOT         |
 | OA      | ɒ/ɔ | b**o**ss    | CLOTH       |
 | OH      | oʊ  | b**oa**t    | GOAT        |
-| OHR     | oɚ  | b**oar**    | FORCE       |
-| OIR     | ɔɪɚ | c**oir**    | (COIR\*)    |
+| OH R    | oɚ  | b**oar**    | FORCE       |
+| OY R    | ɔɪɚ | c**oir**    | (COIR\*)    |
 | OO      | u   | b**oo**t    | GOOSE       |
-| OOR     | uɚ  | b**oor**    | (POOR\*)    |
+| OO R    | uɚ  | b**oor**    | (POOR\*)    |
 | OR      | ɔɚ  | b**or**t    | NORTH       |
 | OW      | aʊ  | b**ou**t    | MOUTH       |
-| OWR     | aʊɚ | p**ower**   | (FLOUR\*)   |
+| OW R    | aʊɚ | p**ower**   | (FLOUR\*)   |
 | OY      | ɔɪ  | b**oy**     | CHOICE      |
 | U       | ʊ   | b**oo**k    | FOOT        |
 | UH      | ʌ   | b**u**tt    | STRUT       |
