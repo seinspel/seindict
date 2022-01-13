@@ -243,10 +243,10 @@ JOBBER: J O1 B əR
 JOBLESS: J O1 B L ə S
 JOBLESSNESS: J O1 B L ə S N ə S
 JOBS'S: J O1 B Z ' IH0 Z
-JOCELYN: J OA1 S L IH2 N
+JOCELYN: J O1 S L IH2 N
 JOCK: J O1 K
 JOCKEY: J O1 K EE0
-JOCOSE: J OA2 K OH1 Z
+JOCOSE: J O2 K OH1 Z
 JOCULAR: J O1 K EW0 L əR
 JODHPUR: J O1 D P əR
 JODI: J OH1 D EE0
@@ -255,10 +255,10 @@ JODY: J OH1 D EE0
 JOE: J OH1 #@@{ "name": "male" }@@ Joseph Maxwell "Joe" Dempsie
 JOEL: J OH1 ə L #@@{ "name": "male" }@@ Joel Fry
 JOEY: J OH1 EE0
-JOG: J OA1 G
-JOGGED: J OA1 G D
-JOGGER: J OA1 G əR
-JOGGING: J OA1 G IH0 NG
+JOG: J O1 G
+JOGGED: J O1 G D
+JOGGER: J O1 G əR
+JOGGING: J O1 G IH0 NG
 JOHANNA: J ə H A1 N ə
 JOHANNESBURG: J OH2 H A1 N IH0 S B əR G
 JOHN: J O1 N #@@{ "name": ["male", "family"] }@@ Sir Michael John Gambon; Margaret John
@@ -288,7 +288,7 @@ JON: J O1 N #@@{ "name": "male" }@@ Jon Key
 JONAH: J OH1 N ə
 JONAS: J OH1 N ə S
 JONATHAN: J O1 N ə TH ə N #@@{ "name": "male" }@@ Nicholas Jonathan "Nick" Moran
-JONBENET'S: J OA1 N B ə N EY1 ' S
+JONBENET'S: J O1 N B ə N EY1 ' S
 JONES'S: J OH1 N Z ' IH0 Z
 JONESES: J OH1 N Z IH0 Z
 JONSON: J O1 N S ə N
@@ -301,10 +301,10 @@ JOSEPH: J OH1 S IH0 F #@@{ "name": "male" }@@ Joseph Jason Namakaeha Momoa
 JOSEPHINE: J OH1 S IH0 F EE2 N #@@{ "name": "female" }@@ Josephine Gillan
 JOSEPHUS: J OH0 S EE1 F ə S
 JOSH: J O1 SH #@@{ "name": "male" }@@ Joshua Colin M. "Josh" Herdman
-JOSHUA: J OA1 SH OO0 ə #@@{ "name": "male" }@@ Joshua Colin M. "Josh" Herdman
-JOSHUA'S: J OA1 SH OO2 ə ' Z
-JOSKE'S: J OA1 S K EE0 ' Z
-JOSS: J OA1 S
+JOSHUA: J O1 SH OO0 ə #@@{ "name": "male" }@@ Joshua Colin M. "Josh" Herdman
+JOSHUA'S: J O1 SH OO2 ə ' Z
+JOSKE'S: J O1 S K EE0 ' Z
+JOSS: J O1 S
 JOSTLE: J O1 S EL
 JOSTLED: J O1 S EL D
 JOSTLING: J O1 S EL IH0 NG

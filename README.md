@@ -34,7 +34,6 @@ The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate p
 | IA      | iə  | b**ea**trix | (IAN\*)     |
 | IH      | ɪ   | b**i**t     | KIT         |
 | O       | ɒ   | b**o**t     | LOT         |
-| OA      | ɒ/ɔ | b**o**ss    | CLOTH       |
 | OH      | oʊ  | b**oa**t    | GOAT        |
 | OH R    | oɚ  | b**oar**    | FORCE       |
 | OO      | u   | b**oo**t    | GOOSE       |
