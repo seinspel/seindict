@@ -19,29 +19,21 @@ The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate p
 |---------|-----|-------------|-------------|
 | A       | æ   | b**a**t     | TRAP        |
 | AH      | ɑ   | b**al**m    | PALM        |
-| AH R    | ɑɚ  | b**ar**     | START       |
 | AHY     | ɑɪ  | b**i**te    | PRICE       |
-| AHY R   | ɑɪɚ | p**yre**    | (FIRE\*)    |
+| AR      | ɑɚ  | b**ar**     | START       |
 | AW      | ɔ   | b**ough**t  | THOUGHT     |
-| AW R    | ɔɚ  | b**or**t    | NORTH       |
 | EE      | i   | b**ea**t    | FLEECE      |
-| EE R    | iɚ  | b**eer**    | NEAR        |
 | EH      | ɛ   | b**e**t     | DRESS       |
 | EW      | ju  | b**eau**ty  | (CUTE\*)    |
-| EW R    | juɚ | p**ure**    | (CURE\*)    |
 | EY      | eɪ  | b**ai**t    | FACE        |
-| EY R    | eɚ  | b**are**    | SQUARE      |
 | IA      | iə  | b**ea**trix | (IAN\*)     |
 | IH      | ɪ   | b**i**t     | KIT         |
 | O       | ɒ   | b**o**t     | LOT         |
 | OH      | oʊ  | b**oa**t    | GOAT        |
-| OH R    | oɚ  | b**oar**    | FORCE       |
 | OO      | u   | b**oo**t    | GOOSE       |
-| OO R    | uɚ  | b**oor**    | (POOR\*)    |
+| OR      | ɔɚ  | b**or**t    | NORTH       |
 | OW      | aʊ  | b**ou**t    | MOUTH       |
-| OW R    | aʊɚ | p**ower**   | (FLOUR\*)   |
 | OY      | ɔɪ  | b**oy**     | CHOICE      |
-| OY R    | ɔɪɚ | c**oir**    | (COIR\*)    |
 | U       | ʊ   | b**oo**k    | FOOT        |
 | UH      | ʌ   | b**u**tt    | STRUT       |
 | UR      | ɝ   | b**ir**d    | NURSE       |
