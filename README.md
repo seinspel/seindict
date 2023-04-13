@@ -15,7 +15,7 @@ Using John Wells' lexical sets, it has the following mergers:
 
 The pronunciation symbols were inspired by [Wikipedia's respelling][wiki-respell] symbols, but were modified to accommodate more dialects.
 
-Note that `AR` and `OR` should really be modeled as `A R` and `O R`, but that is maybe confusing to a lot of English speakers.
+Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E R`, and so on, but that is maybe confusing to a lot of English speakers.
 
 | Symbol  | IPA | Example     | Lexical set |
 |---------|-----|-------------|-------------|
@@ -26,10 +26,12 @@ Note that `AR` and `OR` should really be modeled as `A R` and `O R`, but that is
 | AW      | ɔ   | b**ough**t  | THOUGHT     |
 | EE      | i   | b**ea**t    | FLEECE      |
 | EH      | ɛ   | b**e**t     | DRESS       |
+| ER      | ɛr  | B**er**t    | (FERN\*)    |
 | EW      | ju  | b**eau**ty  | (CUTE\*)    |
 | EY      | eɪ  | b**ai**t    | FACE        |
 | IA      | iə  | b**ea**trix | (IAN\*)     |
 | IH      | ɪ   | b**i**t     | KIT         |
+| IR      | ɪr  | b**ir**d    | (FIR\*)     |
 | O       | ɒ   | b**o**t     | LOT         |
 | OH      | oʊ  | b**oa**t    | GOAT        |
 | OO      | u   | b**oo**t    | GOOSE       |
@@ -38,7 +40,7 @@ Note that `AR` and `OR` should really be modeled as `A R` and `O R`, but that is
 | OY      | ɔɪ  | b**oy**     | CHOICE      |
 | U       | ʊ   | b**oo**k    | FOOT        |
 | UH      | ʌ   | b**u**tt    | STRUT       |
-| UR      | ɝ   | b**ir**d    | NURSE       |
+| UR      | ɝ   | B**ur**t    | (FUR\*)     |
 | ə       | ə   | comm**a**   | commA       |
 | əR      | ɚ   | lett**er**  | lettER      |
 | B       | b   | **b**uy |  |
