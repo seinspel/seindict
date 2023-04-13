@@ -38,7 +38,7 @@ YAML_FILES: Final = (
     "_other.yaml",
 )
 
-VOWELS: Final = (
+VOWELS: Final = {
     "A",
     "AH",
     "AHY",
@@ -46,34 +46,26 @@ VOWELS: Final = (
     "AW",
     "EE",
     "EH",
-    "EIR",
     "EL",
     "EW",
-    "EWR",
     "EY",
     "IA",
-    "IER",
     "IH",
-    "IRE",
     "O",
     "OA",
     "OH",
-    "OHR",
-    "OIR",
     "OO",
-    "OOR",
     "OR",
     "OW",
-    "OWR",
     "OY",
     "U",
     "UH",
     "UR",
     "ə",
     "əR",
-)
+}
 
-UNAMBIGUOUS_BEFORE_LMN: Final = (
+UNAMBIGUOUS_BEFORE_LMN: Final = {
     "B",
     "CH",
     "D",
@@ -90,7 +82,7 @@ UNAMBIGUOUS_BEFORE_LMN: Final = (
     "V",
     "Z",
     "ZH",
-)
+}
 UNAMBIGUOUS_BEFORE_L: Final = UNAMBIGUOUS_BEFORE_LMN
 UNAMBIGUOUS_BEFORE_M: Final = UNAMBIGUOUS_BEFORE_LMN
 UNAMBIGUOUS_BEFORE_N: Final = UNAMBIGUOUS_BEFORE_LMN
@@ -111,6 +103,12 @@ SHORT_IDENTIFIERS: dict[Identifier, str] = {
     "verb": "v",  # verb
     "verb@past": "s",  # past form of a verb
 }
+
+# fmt: off
+ENGLISH_LETTERS: Final = {"'", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
+    "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Ç",
+    "É", "Ë", "Ï", "Ñ", "Ö", "Ü"}
+# fmt: on
 
 
 class Pronunciation(list[str]):
@@ -154,6 +152,7 @@ def read_yaml_file(fpath: Path) -> RawDictionary:
 
 
 def convert_any(word: str, value: Entry[str, str]) -> Entry[Identifier, Pronunciation]:
+    assert all(letter in ENGLISH_LETTERS for letter in word), word
     match value:
         case str() as raw_pronun:
             return convert(raw_pronun, word)
