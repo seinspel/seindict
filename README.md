@@ -43,16 +43,16 @@ Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E 
 | UR      | ɝ   | B**ur**t    | (FUR\*)     |
 | ə       | ə   | comm**a**   | commA       |
 | əR      | ɚ   | lett**er**  | lettER      |
+| EL      | l̩   | bott**le** |  |
+| EM      | m̩   | rhyth**m** |  |
+| EN      | n̩   | butt**on** |  |
 | B       | b   | **b**uy |  |
 | CH      | tʃ  | **Ch**ina |  |
 | D       | d   | **d**ie |  |
 | DH      | ð   | **th**y |  |
-| EL      | l̩   | bott**le** |  |
-| EM      | m̩   | rhyth**m** |  |
-| EN      | n̩   | butt**on** |  |
 | F       | f   | **f**ight |  |
 | G       | g   | **g**uy |  |
-| HH      | h   | **h**igh |  |
+| H       | h   | **h**igh |  |
 | J       | dʒ  | **j**ive |  |
 | K       | k   | **k**ite |  |
 | L       | l   | **l**ie |  |
@@ -60,7 +60,7 @@ Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E 
 | N       | n   | **n**igh |  |
 | NG      | ŋ   | si**ng** |  |
 | P       | p   | **p**ie |  |
-| RR      | ɹ   | **r**ye |  |
+| R       | ɹ   | **r**ye |  |
 | S       | s   | **s**igh |  |
 | SH      | ʃ   | **sh**y |  |
 | T       | t   | **t**ie |  |
