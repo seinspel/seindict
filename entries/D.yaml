@@ -2130,7 +2130,7 @@ DORCHESTER: D OR1 CH EH2 S T əR
 DORE: D OH1 R
 DOREEN: D OH0 R EE1 N
 DORIC: D O1 R IH0 K
-DORING: D AW1 R IH0 NG
+DORING: D OR1 IH0 NG
 DORIS: D O1 R IH0 S
 DORM: D OR1 M
 DORMANCY: D OR1 M ə N S EE0
@@ -2139,7 +2139,7 @@ DORMER: D OR1 M əR #@@{ "name": "family" }@@ Natalie Dormer
 DORMITORIES: D OR1 M ə T OH2 R EE0 Z
 DORMITORY: D OR1 M ə T OH2 R EE0
 DORMOUSE: D OR1 M OW2 S
-DOROTHEA: D AW2 R ə TH IA1
+DOROTHEA: D OR2 ə TH IA1
 DOROTHY: D O1 R ə TH EE0
 DORSAL: D OR1 S EL
 DORSET: D OR1 S IH0 T
@@ -2321,8 +2321,8 @@ DRAWBACK: D R AW1 B A2 K
 DRAWBRIDGE: D R AW1 B R IH2 J
 DRAWDOWN: D R AW1 D OW2 N
 DRAWER:
-- D R OR1   #@@{ "usage": "box" }@@
-- D R AW1 R əR   #@@{ "usage": "person", "root": "DRAW" }@@
+- D R AW1 R   #@@{ "usage": "box" }@@
+- D R AW1 əR   #@@{ "usage": "person", "root": "DRAW" }@@
 DRAWL: D R AW1 L
 DRAWN: D R AW1 N
 DRAY: D R EY1

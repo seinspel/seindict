@@ -13,7 +13,9 @@ Using John Wells' lexical sets, it has the following mergers:
 
 ## Symbols
 
-The dictionary uses [Wikipedia's respelling][wiki-respell] symbols to indicate pronunciation:
+The pronunciation symbols were inspired by [Wikipedia's respelling][wiki-respell] symbols, but were modified to accommodate more dialects.
+
+Note that `AR` and `OR` should really be modeled as `A R` and `O R`, but that is maybe confusing to a lot of English speakers.
 
 | Symbol  | IPA | Example     | Lexical set |
 |---------|-----|-------------|-------------|
