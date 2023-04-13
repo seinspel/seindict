@@ -199,6 +199,7 @@ REPLACEMENTS = {
     "TH": "θ",
     "TT": "t",
     "WH": "ʍ",
+    "EA": "ɛ",
     # "ER": "r",  # causes problems
 }
 
