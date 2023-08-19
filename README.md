@@ -17,6 +17,8 @@ The pronunciation symbols were inspired by [Wikipedia's respelling][wiki-respell
 
 Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E R`, and so on, but that is maybe confusing to a lot of English speakers.
 
+### Vowel sounds
+
 | Symbol  | IPA | Example     | Lexical set |
 |---------|-----|-------------|-------------|
 | A       | æ   | b**a**t     | TRAP        |
@@ -43,34 +45,39 @@ Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E 
 | UR      | ɝ   | B**ur**t    | (FUR\*)     |
 | ə       | ə   | comm**a**   | commA       |
 | əR      | ɚ   | lett**er**  | lettER      |
-| EL      | l̩   | bott**le** |  |
-| EM      | m̩   | rhyth**m** |  |
-| EN      | n̩   | butt**on** |  |
-| B       | b   | **b**uy |  |
-| CH      | tʃ  | **Ch**ina |  |
-| D       | d   | **d**ie |  |
-| DH      | ð   | **th**y |  |
-| F       | f   | **f**ight |  |
-| G       | g   | **g**uy |  |
-| H       | h   | **h**igh |  |
-| J       | dʒ  | **j**ive |  |
-| K       | k   | **k**ite |  |
-| L       | l   | **l**ie |  |
-| M       | m   | **m**y |  |
-| N       | n   | **n**igh |  |
-| NG      | ŋ   | si**ng** |  |
-| P       | p   | **p**ie |  |
-| R       | ɹ   | **r**ye |  |
-| S       | s   | **s**igh |  |
-| SH      | ʃ   | **sh**y |  |
-| T       | t   | **t**ie |  |
-| TH      | θ   | **th**igh |  |
-| V       | v   | **v**ie |  |
-| W       | w   | **w**ise |  |
-| WH      | ʍ   | **wh**y |  |
-| Y       | j   | **y**acht |  |
-| Z       | z   | **z**oo |  |
-| ZH      | ʒ   | plea**s**ure |  |
+
+### Non-vowel sounds
+
+| Symbol  | IPA | Example      |
+|---------|-----|--------------|
+| EL      | l̩   | bott**le**   |
+| EM      | m̩   | rhyth**m**   |
+| EN      | n̩   | butt**on**   |
+| B       | b   | **b**uy      |
+| CH      | tʃ  | **Ch**ina    |
+| D       | d   | **d**ie      |
+| DH      | ð   | **th**y      |
+| F       | f   | **f**ight    |
+| G       | g   | **g**uy      |
+| H       | h   | **h**igh     |
+| J       | dʒ  | **j**ive     |
+| K       | k   | **k**ite     |
+| L       | l   | **l**ie      |
+| M       | m   | **m**y       |
+| N       | n   | **n**igh     |
+| NG      | ŋ   | si**ng**     |
+| P       | p   | **p**ie      |
+| R       | ɹ   | **r**ye      |
+| S       | s   | **s**igh     |
+| SH      | ʃ   | **sh**y      |
+| T       | t   | **t**ie      |
+| TH      | θ   | **th**igh    |
+| V       | v   | **v**ie      |
+| W       | w   | **w**ise     |
+| WH      | ʍ   | **wh**y      |
+| Y       | j   | **y**acht    |
+| Z       | z   | **z**oo      |
+| ZH      | ʒ   | plea**s**ure |
 
 \* non-standard lexical set
 
