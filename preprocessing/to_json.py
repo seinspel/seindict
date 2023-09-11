@@ -54,7 +54,6 @@ VOWELS: Final = {
     "IH",
     "IR",
     "O",
-    "OA",
     "OH",
     "OO",
     "OR",
@@ -246,19 +245,18 @@ def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronun
                 if ahead1 is None and stress == "0":
                     out.append("II")
                     continue
-            case "OA":
-                cloth_environ = ahead1 in ("F", "G", "K", "N", "NG", "S", "SH", "TH")
-                assert cloth_environ, f"{word}: OA only before F, G, K, N, NG, S, SH, TH"
             case "A" | "EH" | "IH" | "O" | "U" | "UH":
                 is_checked = (ahead1 is not None and not next_vowel) or is_interjection
                 assert (
                     is_checked
                 ), f"{word}: checked vowels only before consonants (or be interjection)"
-            case "RR":
-                is_prevocalic = next_vowel or ahead1 == "W" or behind1 == "'"
-                assert (
-                    is_prevocalic
-                ), f"{word}: RR must be followed by a vowel or W, or preceded by '"
+                if ahead1 == "R" and not next_intervocalic:
+                    assert next_vowel, f"{word}: checked vowel can't be checked by R"
+            case "ER" | "IR" | "OR":  # | "AR"
+                not_prevocalic = ahead1 is None or not next_vowel
+                # assert not_prevocalic, f"{word}: ER, IR, and OR must not be followed by a vowel"
+                if not not_prevocalic:
+                    print(f"make sure this is a derived word: {word}")
             case _:
                 pass
 
