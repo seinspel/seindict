@@ -36,7 +36,7 @@ JAGGED:
   adj: J A1 G IH0 D
   verb: J A1 G D
 JAGS: J A1 G Z
-JAGUAR: J A1 G W AH2 R
+JAGUAR: J A1 G W AR2
 JAI:
 - J AHY1
 - H AHY1
@@ -48,7 +48,7 @@ JAIN:
 - J AHY1 N
 - J EY1 N
 JAINISM: J EY1 N IH0 Z ə M
-JAKARTA: J ə K AH1 R T ə
+JAKARTA: J ə K AR1 T ə
 JAKE: J EY1 K
 JALAPENO: H A2 L ə P EE1 N Y OH0
 JALAPEÑO: H A2 L ə P EE1 N Y OH0
@@ -83,12 +83,12 @@ JAP: J A1 P
 JAPAN: J ə P A1 N
 JAPANESE: J A2 P ə N EE1 Z
 JAPONICA: J ə P O1 N IH0 K ə
-JAR: J AH1 R
+JAR: J AR1
 JARED: J EY1 R IH0 D
-JARGON: J AH1 R G ə N
-JARRED: J AH1 R D
-JARRING: J AH1 R IH0 NG
-JARVIS: J AH1 R V IH0 S #@@{ "name": ["male", "family"] }@@ Robert Stephen "Robbie" Jarvis; Jarvis Branson Cocker
+JARGON: J AR1 G ə N
+JARRED: J AR1 D
+JARRING: J AR1 IH0 NG
+JARVIS: J AR1 V IH0 S #@@{ "name": ["male", "family"] }@@ Robert Stephen "Robbie" Jarvis; Jarvis Branson Cocker
 JASMINE: J A1 Z M IH0 N
 JASON: J EY1 S ə N #@@{ "name": "male" }@@ Jason Isaacs
 JASPER: J A1 S P əR
@@ -339,8 +339,8 @@ JUANITA:
 - W O0 N EE1 T ə
 - H W O0 N EE1 T ə
 JUAREZ:
-- W AH1 R EH2 Z
-- H W AH1 R EH2 Z
+- W AR1 EH2 Z
+- H W AR1 EH2 Z
 JUBILANT: J OO1 B ə L ə N T
 JUBILATION: J OO2 B ə L EY1 SH ə N
 JUBILEE:
@@ -432,7 +432,7 @@ JUNKER: J UH1 NG K əR
 JUNKET: J UH1 NG K IH0 T
 JUNKIE: J UH1 NG K EE0
 JUNKY: J UH1 NG K EE0
-JUNKYARD: J UH1 NG K Y AH2 R D
+JUNKYARD: J UH1 NG K Y AR2 D
 JUNO: J OO1 N OH0
 JUNTA: H U1 N T ə
 JUPITER: J OO1 P IH0 T əR
