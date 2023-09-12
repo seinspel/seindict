@@ -252,7 +252,7 @@ def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronun
                 ), f"{word}: checked vowels only before consonants (or be interjection)"
                 if ahead1 == "R" and not next_intervocalic:
                     assert next_vowel, f"{word}: checked vowel can't be checked by R"
-            case "ER" | "IR" | "OR":  # | "AR"
+            case "ER" | "IR" | "OR" | "əR":  # | "AR"
                 not_prevocalic = ahead1 is None or not next_vowel
                 # assert not_prevocalic, f"{word}: ER, IR, and OR must not be followed by a vowel"
                 if not not_prevocalic:
