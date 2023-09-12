@@ -46,7 +46,6 @@ VOWELS: Final = {
     "AW",
     "EE",
     "EH",
-    "EL",
     "ER",
     "EW",
     "EY",
@@ -220,31 +219,38 @@ def convert(raw_pronun: str, word: str, is_interjection: bool = False) -> Pronun
 
         # ================================ handle special cases ===================================
         match symbol_no_s:
-            case "ə":
-                if not next_intervocalic:
-                    # ignore apostrophes for this
-                    if behind1 == "'":
-                        behind1 = symbols[i - 2] if i > 1 else None
-                    # syllablic consonants
-                    match ahead1:
-                        case "L" if behind1 in UNAMBIGUOUS_BEFORE_L:
-                            out.append("EL")
-                            next(symbol_iterator)  # skip the next symbol
-                            continue
-                        case "M" if behind1 in UNAMBIGUOUS_BEFORE_M:
-                            out.append("EM")
-                            next(symbol_iterator)  # skip the next symbol
-                            continue
-                        case "N" if behind1 in UNAMBIGUOUS_BEFORE_N:
-                            out.append("EN")
-                            next(symbol_iterator)  # skip the next symbol
-                            continue
-                        case _:
-                            pass
-            case "EE":
-                if ahead1 is None and stress == "0":
-                    out.append("II")
-                    continue
+            # case "ə":
+            #     if not next_intervocalic:
+            #         # ignore apostrophes for this
+            #         if behind1 == "'":
+            #             behind1 = symbols[i - 2] if i > 1 else None
+            #         # syllablic consonants
+            #         match ahead1:
+            #             case "L" if behind1 in UNAMBIGUOUS_BEFORE_L:
+            #                 out.append("EL")
+            #                 next(symbol_iterator)  # skip the next symbol
+            #                 continue
+            #             case "M" if behind1 in UNAMBIGUOUS_BEFORE_M:
+            #                 out.append("EM")
+            #                 next(symbol_iterator)  # skip the next symbol
+            #                 continue
+            #             case "N" if behind1 in UNAMBIGUOUS_BEFORE_N:
+            #                 out.append("EN")
+            #                 next(symbol_iterator)  # skip the next symbol
+            #                 continue
+            #             case _:
+            #                 pass
+            # case "L":
+            #     if (
+            #         behind1 is not None
+            #         and count_vowels([behind1]) == 0
+            #         and (ahead1 is None or not next_vowel)
+            #     ):
+            #         assert behind1 in UNAMBIGUOUS_BEFORE_L, f"{word}: ambiguous syllabic L"
+            # case "EE":
+            #     if ahead1 is None and stress == "0":
+            #         out.append("II")
+            #         continue
             case "A" | "EH" | "IH" | "O" | "U" | "UH":
                 is_checked = (ahead1 is not None and not next_vowel) or is_interjection
                 assert (
@@ -270,7 +276,7 @@ def count_vowels(phons: list[str | None]) -> int:
     for phon in phons:
         if phon is None:
             continue
-        if phon[0:-1] in VOWELS or phon in ("EL", "ə", "əR"):
+        if phon[0:-1] in VOWELS or phon in ("ə", "əR"):
             num_vowels += 1
     return num_vowels
 
@@ -318,6 +324,8 @@ def maybe_discard_variants(pronun_list: list[Pronunciation]) -> list[Pronunciati
         # for each candidate, loop over the current bests and compare
         for j, current_best in enumerate(current_bests):
             diffs = get_differences(current_best, candidate)
+            if not diffs:
+                print(f"Identical variants: {candidate}")
             # number of differences that are expected because of length differences
             diffs_from_length = abs(len(current_best) - len(candidate))
             if (len(diffs) - diffs_from_length) > 2:

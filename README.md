@@ -15,8 +15,6 @@ Using John Wells' lexical sets, it has the following mergers:
 
 The pronunciation symbols were inspired by [Wikipedia's respelling][wiki-respell] symbols, but were modified to accommodate more dialects.
 
-Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E R`, and so on, but that is maybe confusing to a lot of English speakers.
-
 ### Vowel sounds
 
 | Symbol  | IPA | Example     | Lexical set |
@@ -31,6 +29,7 @@ Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E 
 | ER      | ɛr  | B**er**t    | (FERN\*)    |
 | EW      | ju  | b**eau**ty  | (CUTE\*)    |
 | EY      | eɪ  | b**ai**t    | FACE        |
+| II      |     | abb**ey**   | happY       |
 | IA      | iə  | b**ea**trix | (IAN\*)     |
 | IH      | ɪ   | b**i**t     | KIT         |
 | IR      | ɪr  | b**ir**d    | (FIR\*)     |
@@ -50,7 +49,6 @@ Note that `AR`, `ER`, `IR`, `OR` and `UR` should really be modeled as `A R`, `E 
 
 | Symbol  | IPA | Example      |
 |---------|-----|--------------|
-| EL      | l̩   | bott**le**   |
 | EM      | m̩   | rhyth**m**   |
 | EN      | n̩   | butt**on**   |
 | B       | b   | **b**uy      |
